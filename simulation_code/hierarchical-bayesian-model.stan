@@ -1,3 +1,6 @@
+// custom joint Bayesian hierarchical ordinal hurdle model with one-inflation
+// Copyright (C) 2020 Conor Goold
+
 functions{
 
   /****************************************************/
