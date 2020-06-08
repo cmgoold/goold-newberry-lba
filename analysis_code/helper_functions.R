@@ -1,0 +1,37 @@
+############################################################################
+# R functions for Goold & Newberry (2020):
+#     - Longitudinal behavioural assessment of shelter dogs predicts 
+#       behaviour post-adoption
+
+# Copyright Conor Goold (2020)
+# c.goold@leeds.ac.uk
+############################################################################
+
+get_needed_packages <- function(x){
+  needed <- c("rstan","coda")
+  if(sum(installed.packages() %in% needed) < length(needed)){
+    install.packages( needed[which( !(needed %in% installed.packages()))] )
+  } 
+  else{
+    "All packages are already installed"
+  }
+}
+
+#-----------------------------------------------------------------------------------------------
+# inverse logistic function
+inv_logit <- function(x) exp(x) / (1 + exp(x))
+
+#-----------------------------------------------------------------------------------------------
+# my highest density interval function, set with probability = 0.9, i.e. .5% - 95%
+my_HDI <- function(x) HPDinterval( obj = as.mcmc(x), prob = .9 )
+
+#-----------------------------------------------------------------------------------------------
+# clean scale
+center_scale <- function(x, mu, sd){
+  return(
+    (x - mu)/sd
+  )
+}
+
+
+
