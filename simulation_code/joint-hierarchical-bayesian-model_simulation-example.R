@@ -10,7 +10,7 @@
 # set the work diretory
 setwd("")
 # source the functions for the data simulation
-source("joint-hierarchial-bayesian-model_simulation-example_functions.R")
+source("~/Dropbox/PhD/PhD_NMBU/PaperIV/GooldNewberry2020-lba/simulation_code/joint-hierarchical-bayesian-model_simulation-example_functions.R")
 
 # DESCRIPTION:
 #   The model being estimated in the paper is a hierarchical Bayesian joint likelihood model for the shelter and post-adoption data
@@ -29,7 +29,7 @@ N_g = 8
 # number of data points for the first likelihood
 N_i = 3; 
 # number of data points for the second (joint) likelihood
-N_i_joint = 3;
+N_i_joint = 2;
 # correlation matrices for the individual, context and interaction effects
 Rho_j <- create_rand_corr_matrix(n = 6)
 Rho_g <- create_rand_corr_matrix(n = 6)

@@ -17,6 +17,15 @@ get_needed_packages <- function(x){
   }
 }
 
+# transform factors safely to numerics -----------------------------------------------
+as_numeric_safe <- function(x, remove_NAs=TRUE) {
+  message("Converting to character, then to numeric.")
+  message("Non-number formats will be converted to NAs.")
+  as_numeric <- suppressWarnings( as.numeric(as.character(x) ) )
+  if(remove_NAs) return( as_numeric[!is.na(as_numeric)] )
+  if(!remove_NAs) return( as_numeric )
+}
+
 #-----------------------------------------------------------------------------------------------
 # inverse logistic function
 inv_logit <- function(x) exp(x) / (1 + exp(x))
@@ -33,5 +42,10 @@ center_scale <- function(x, mu, sd){
   )
 }
 
-
+#-----------------------------------------------------------------------------------------------
+# make cross-classified interaction
+make_cc_interaction <- function(jj, gg){
+  N_g <- length(unique(gg))
+  jj*gg - ( (jj - 1)*(gg - 1) ) + (N_g-1)*(jj-1)
+}
 

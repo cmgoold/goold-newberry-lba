@@ -286,20 +286,20 @@ functions{
     // number of observations in slice in second dataset
     int n_2_obs_in_slice = obs_2_end - obs_2_start + 1;
     // number of g units in slice
-    int n_g_in_slice = N_g; //num_unique_values(gg_1);
+    int n_g_in_slice = N_g;
     // number of jg units in slice
     int n_jg_in_slice = n_j_in_slice * n_g_in_slice;
 
     /* create new id vectors needed for the slice */
     // new j vectors
-    int slice_jj_1[n_1_obs_in_slice] = make_slice_id(jj_1[obs_1_start:obs_1_end]); //make_slice_jj(start, end, jj_1, j_1_rows_start); //
-    // new j vectors
-    int slice_jj_2[n_2_obs_in_slice] = make_slice_id(jj_2[obs_2_start:obs_2_end]);//create_new_id_variable(jj_2[obs_2_start:obs_2_end]);
+    int slice_jj_1[n_1_obs_in_slice] = make_slice_id(jj_1[obs_1_start:obs_1_end]);
+    int slice_jj_2[n_2_obs_in_slice] = make_slice_id(jj_2[obs_2_start:obs_2_end]);
+    // new gg vectors
     int slice_gg_1[n_1_obs_in_slice] = gg_1[obs_1_start:obs_1_end];
     int slice_gg_2[n_2_obs_in_slice] = gg_2[obs_2_start:obs_2_end];
-    int slice_jjgg_1[n_1_obs_in_slice] = make_interaction(slice_jj_1, slice_gg_1, N_g);//slice_jj_1*slice_gg_1 - ((slice_jj_1-1)*(slice_gg_1-1)) + (N_g-1)*(slice_jj_1-1);
-    int slice_jjgg_2[n_2_obs_in_slice] = make_interaction(slice_jj_2, slice_gg_2, N_g);//slice_jj_2*slice_gg_2 - ((slice_jj_2-1)*(slice_gg_2-1)) + (N_g-1)*(slice_jj_2-1);
-
+    // new jjgg vectors
+    int slice_jjgg_1[n_1_obs_in_slice] = make_interaction(slice_jj_1, slice_gg_1, N_g);
+    int slice_jjgg_2[n_2_obs_in_slice] = make_interaction(slice_jj_2, slice_gg_2, N_g);
 
     /* slice up the data */
     matrix[n_j_in_slice, jj_levels] slice_r_j;
