@@ -285,7 +285,7 @@ functions{
     // number of observations in slice in second dataset
     int n_2_obs_in_slice = obs_2_end - obs_2_start + 1;
     // number of g units in slice
-    int n_g_in_slice = N_g; 
+    int n_g_in_slice = N_g;
     // number of jg units in slice
     int n_jg_in_slice = n_j_in_slice * n_g_in_slice;
 
@@ -349,9 +349,9 @@ functions{
     }//for
 
     for(n in 1:n_2_obs_in_slice){
-      slice_zeta[n] = slice_r_j[slice_jj_2[n], 4] + slice_r_g[slice_gg_2[n], 4] + slice_r_jg[slice_jjgg_2[n], 4] +
+      slice_zeta[n] += slice_r_j[slice_jj_2[n], 4] + slice_r_g[slice_gg_2[n], 4] + slice_r_jg[slice_jjgg_2[n], 4] +
                       (slice_r_j[slice_jj_2[n], 5] + slice_r_g[slice_gg_2[n], 5] + slice_r_jg[slice_jjgg_2[n], 5]) * slice_x_joint[n];
-      slice_nu[n] = slice_r_j[slice_jj_2[n], 6] + slice_r_g[slice_gg_2[n], 6] + slice_r_jg[slice_jjgg_2[n], 6];
+      slice_nu[n] += slice_r_j[slice_jj_2[n], 6] + slice_r_g[slice_gg_2[n], 6] + slice_r_jg[slice_jjgg_2[n], 6];
 
       theta[2,1] = Phi( (thresh[1] - slice_zeta[n])/epsilon);
       theta[2,2] = Phi( (thresh[2] - slice_zeta[n])/epsilon) -  Phi( (thresh[1] - slice_zeta[n])/epsilon);
@@ -512,9 +512,9 @@ model{
       }//for
 
     for(n in 1:N[2]){
-      zeta[n] = r_j[jj_2[n], 4] + r_g[gg_2[n], 4] + r_jg[jjgg_2[n], 4] +
+      zeta[n] += r_j[jj_2[n], 4] + r_g[gg_2[n], 4] + r_jg[jjgg_2[n], 4] +
                 (r_j[jj_2[n], 5] + r_g[gg_2[n], 5] + r_jg[jjgg_2[n], 5]) * x_joint[n];
-      nu[n] = r_j[jj_2[n], 6] + r_g[gg_2[n], 6] + r_jg[jjgg_2[n], 6];
+      nu[n] += r_j[jj_2[n], 6] + r_g[gg_2[n], 6] + r_jg[jjgg_2[n], 6];
 
       theta[2,1] = Phi( (thresh[1] - zeta[n])/epsilon);
       theta[2,2] = Phi( (thresh[2] - zeta[n])/epsilon) -  Phi( (thresh[1] - zeta[n])/epsilon);

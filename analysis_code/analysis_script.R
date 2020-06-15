@@ -278,33 +278,65 @@ stan_data <- list(
   jjgg_2 = d_a_stan$dog_context_id,
   jj_levels = 6, gg_levels = 6, jjgg_levels = 6, 
   use_reduce_sum = 1, 
+  grainsize = 20
+)
+
+#rstan::stan_rdump( ls(stan_data), "dog_data_for_cmdstan.R", envir = list2env(stan_data))
+# 
+
+d_s_stan <- d_s_order_by_id[ d_s_order_by_id$dog_id %in% 1:20 & d_s_order_by_id$day_since_arrival < 10, ]
+d_a_stan <- d_a_order_by_id[ d_a_order_by_id$dog_id %in% 1:20, ]
+X_s_stan <- X_s[ d_s_order_by_id$dog_id %in% 1:20 & d_s_order_by_id$day_since_arrival < 10, ]
+X_a_stan <- X_a[ d_a_order_by_id$dog_id %in% 1:20, ] 
+
+stan_data <- list(
+  N = c(nrow(d_s_stan), nrow(d_a_stan)), 
+  N_j = length(unique(d_s_stan$dog_id)),
+  N_g = length(unique(d_s_stan$context_id)),
+  N_jg = length(unique(d_s_stan$dog_context_id)),
+  N_x = c(ncol(X_s), ncol(X_a)), 
+  x = d_s_stan$day_since_arrival_Z,
+  x_joint = d_a_stan$days_after_adoption_Z,
+  X_1 = X_s_stan, 
+  X_2 = X_a_stan,
+  y = ifelse( is.na(d_s_stan$behaviour_code_colour), 0, d_s_stan$behaviour_code_colour),
+  y_joint = ifelse( is.na(d_a_stan$behaviour_code_colour), 0, d_a_stan$behaviour_code_colour),
+  K = 3, 
+  thresh = c(1.5, 2.5),
+  jj_1 = d_s_stan$dog_id, 
+  jj_2 = d_a_stan$dog_id, 
+  gg_1 = d_s_stan$context_id, 
+  gg_2 = d_a_stan$context_id, 
+  jjgg_1 = d_s_stan$dog_context_id, 
+  jjgg_2 = d_a_stan$dog_context_id,
+  jj_levels = 6, gg_levels = 6, jjgg_levels = 6, 
+  use_reduce_sum = 1, 
   grainsize = 1
 )
 
-rstan::stan_rdump( ls(stan_data), "dog_data_for_cmdstan.R", envir = list2env(stan_data))
-# 
-# cmdstanr::set_cmdstan_path("~/Documents/cmdstan-2.23.0")
-# jhb_model <- cmdstanr::cmdstan_model("jhb-ordinal-hurdle-model.stan", cpp_options = list(stan_threads = TRUE))
-# 
-# cmdstanr::set_num_threads(4)
-# 
-# start <- Sys.time()
-# fit <- jhb_model$sample(
-#   data = stan_data,
-#   chains = 1, cores = 4, 
-#   init = 0, refresh = 100
-# )
-# print(end <- Sys.time() - start)
-# 
-# 
-# print( rstan::read_stan_csv(fit$output_files()), pars = c("alpha", "beta", "sigma", 
-#                                                           "alpha_miss", "beta_miss",
-#                                                           "sigma_j", "sigma_g", "sigma_jg",
-#                                                           "kappa",
-#                                                           "delta","epsilon","gamma",
-#                                                           "delta_miss", "gamma_miss",
-#                                                           "Rho_j", "Rho_g", "Rho_jg"
-#                                                           ) 
-#        )
+cmdstanr::set_cmdstan_path("~/Documents/cmdstan-2.23.0")
+jhb_model <- cmdstanr::cmdstan_model("jhb-ordinal-hurdle-model.stan", cpp_options = list(stan_threads = TRUE))
+
+cmdstanr::set_num_threads(4)
+
+start <- Sys.time()
+fit <- jhb_model$sample(
+  data = stan_data,
+  chains = 1, cores = 4,
+  init = 0, refresh = 100,
+  iter_warmup = 250, iter_sampling = 2000
+)
+print(end <- Sys.time() - start)
+
+
+print( rstan::read_stan_csv(fit$output_files()), pars = c("alpha", "beta", "sigma",
+                                                          "alpha_miss", "beta_miss",
+                                                          "delta","epsilon","gamma",
+                                                          "delta_miss", "gamma_miss",
+                                                          "sigma_j", "sigma_g", "sigma_jg",
+                                                          "kappa",
+                                                          "Rho_j", "Rho_g", "Rho_jg"
+                                                          )
+       )
 
 
