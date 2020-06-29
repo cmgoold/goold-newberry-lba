@@ -15,7 +15,9 @@ get_needed_packages()
 # load the data
 d_s <- read.table("~/Dropbox/PhD/PhD_NMBU/PaperIV/GooldNewberry2020-lba/data/d_shelter_behaviour.txt", header = T)
 d_a <- read.table("~/Dropbox/PhD/PhD_NMBU/PaperIV/GooldNewberry2020-lba/data/d_post_adoption_behaviour.txt", header=T)
-d_dem <- read.csv("~/Dropbox/PhD/PhD_NMBU/PaperIV/GooldNewberry2020-lba/data/d_demographic_details.txt", header = T)
+d_dem <- read.csv("~/Dropbox/PhD/PhD_NMBU/PaperIV/GooldNewberry2020-lba/data/d_demographic_details.txt", header = T,
+                    na.strings = ""
+                  )
 
 # // contexts:
 #       1 = Interactions with dogs
@@ -136,6 +138,22 @@ table_3 <- data.frame(
 table_3[,"percent"] <- round(table_3$n_two_surveys/length(unique(d_a$dog_id))*100, 1)
 print(table_3)
 
+days_between_surveys <- unlist(lapply(split(d_a, d_a$dog_id, drop = T), 
+                                      function(x) {
+                                        if( all(is.na(x[x$survey_number %in% "Second", "behaviour_code_number"]))){# if one survey
+                                          NA
+                                        }
+                                        else{
+                                          diff(unique(x$days_after_adoption))
+                                        }
+                                        })
+                               )
+
+mean(days_between_surveys, na.rm = T)
+sd(days_between_surveys, na.rm = T)
+range(days_between_surveys, na.rm = T)
+
+
 ####################################################################################
 # Prepare the predictor variables for the model ------------------------------------
 ####################################################################################
@@ -148,11 +166,11 @@ dog_missing_neuter_status <- which( is.na( d_dem[ , "neuter_status"]) )
 d_dem[ dog_missing_neuter_status, "neuter_status"] <- "On Site"
 
 # two dogs are missing weight and age at departure values -- mean impute because the size is small
-dogs_missing_weights <- unique(d_dem[d_dem$latest_weight %in% NA, "dog_id"])
+dogs_missing_weights <- unique(d_dem[ is.na(d_dem$latest_weight), "dog_id"])
 d_dem[ d_dem$dog_id %in% dogs_missing_weights, "latest_weight"] <- table_1$latest_weight[[1]]
 
 # age at departure missing
-dogs_missing_age <- unique(d_dem[d_dem$estimated_age_at_departure %in% NA, "dog_id"])
+dogs_missing_age <- unique(d_dem[ is.na(d_dem$estimated_age_at_departure), "dog_id"])
 d_dem[ d_dem$dog_id %in% dogs_missing_age, "estimated_age_at_departure"] <- table_1$estimated_age_at_departure[[1]]
 
 # we mean center and standardise continuous variables
@@ -169,12 +187,23 @@ d_s$day_since_arrival_Z <- center_scale(x = d_s$day_since_arrival,
 dog_means_days_after_adoption <- 
   as_numeric_safe(
     unlist(
-  lapply(split(d_a, d_a$dog_id), function(x) mean(x$days_after_adoption) )
+  lapply(split(d_a, d_a$dog_id), 
+         function(x) {
+           # dogs with two surveys
+           if( all(is.na(x[x$survey_number %in% "Second", "behaviour_code_number"] ))){
+             mean(unique(x$days_after_adoption))
+           }
+           else{
+             # single survey
+             unique(x$days_after_adoption)
+           }
+           }
+         )
 ))
 
 d_a$days_after_adoption_Z <- center_scale(x = d_a$days_after_adoption, 
                                           mu = mean(dog_means_days_after_adoption),
-                                          sd = sd(dog_means_days_after_adoption)
+                                          sd = sd(d_a$days_after_adoption)
                                           )
 
 # length_of_stay_Z
@@ -279,7 +308,7 @@ stan_data <- list(
   grainsize = 20
 )
 
-rstan::stan_rdump( ls(stan_data), "dog_data_for_cmdstan.R", envir = list2env(stan_data))
+rstan::stan_rdump( list = ls(stan_data), file = "~/Documents/cmdstan-2.23.0/jhb-shelterdogs/real_analysis/dog_data_for_cmdstan.R", envir = list2env(stan_data))
 
 # OR USING CMDSTANR
 # cmdstanr::set_cmdstan_path("~/Documents/cmdstan-2.23.0")

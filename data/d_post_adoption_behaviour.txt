@@ -8,23 +8,23 @@
 4 1 "First" 26 "Friendly" 1 1
 4 1 "Second" 47 "Friendly" 1 1
 5 1 "First" 21 "Reactive to Dogs Aggressive" 16 3
-5 1 "Second" 21 NA NA NA
+5 1 "Second" 42 NA NA NA
 6 1 "First" 19 "Friendly" 1 1
 6 1 "Second" 40 "Friendly" 1 1
 7 1 "First" 24 "Playful" 2 1
 7 1 "Second" 53 "Playful" 2 1
 8 1 "First" 19 "Playful" 2 1
-8 1 "Second" 19 NA NA NA
+8 1 "Second" 40 NA NA NA
 9 1 "First" 15 "Friendly" 1 1
 9 1 "Second" 42 "Playful" 2 1
 10 1 "First" 15 "Playful" 2 1
 10 1 "Second" 35 "Playful" 2 1
 11 1 "First" 18 "Playful +" 13 2
-11 1 "Second" 18 NA NA NA
+11 1 "Second" 39 NA NA NA
 12 1 "First" 18 "Playful" 2 1
-12 1 "Second" 18 NA NA NA
+12 1 "Second" 39 NA NA NA
 13 1 "First" 21 "Playful" 2 1
-13 1 "Second" 21 NA NA NA
+13 1 "Second" 42 NA NA NA
 14 1 "First" 14 "Independent" 3 1
 14 1 "Second" 56 "Friendly" 1 1
 15 1 "First" 19 "Reactive to Dogs Aggressive" 16 3
@@ -34,11 +34,11 @@
 17 1 "First" 21 "Playful" 2 1
 17 1 "Second" 37 "Friendly" 1 1
 18 1 "First" 21 "Friendly" 1 1
-18 1 "Second" 21 NA NA NA
+18 1 "Second" 42 NA NA NA
 19 1 "First" 21 "Uncomfortable Avoids" 6 2
 19 1 "Second" 42 "Submissive" 4 1
 20 1 "First" 22 "Friendly" 1 1
-20 1 "Second" 22 NA NA NA
+20 1 "Second" 43 NA NA NA
 21 1 "First" 21 "Reactive to Dogs Non Aggressive" 9 2
 21 1 "Second" 49 "Reactive to Dogs Non Aggressive" 9 2
 22 1 "First" 19 "Friendly" 1 1
@@ -46,11 +46,11 @@
 23 1 "First" 19 "Playful" 2 1
 23 1 "Second" 42 "Playful" 2 1
 24 1 "First" 19 "Friendly" 1 1
-24 1 "Second" 19 NA NA NA
+24 1 "Second" 40 NA NA NA
 25 1 "First" 20 "Playful" 2 1
 25 1 "Second" 41 "Playful" 2 1
 26 1 "First" 14 "Independent" 3 1
-26 1 "Second" 14 NA NA NA
+26 1 "Second" 35 NA NA NA
 27 1 "First" 22 "Friendly" 1 1
 27 1 "Second" 43 "Friendly" 1 1
 28 1 "First" 16 "Reactive to Dogs Non Aggressive" 9 2
@@ -58,13 +58,13 @@
 29 1 "First" 19 "Reactive to Dogs Aggressive" 16 3
 29 1 "Second" 42 "Uncomfortable Avoids" 6 2
 30 1 "First" 27 "Playful" 2 1
-30 1 "Second" 27 NA NA NA
+30 1 "Second" 48 NA NA NA
 31 1 "First" 16 "Friendly" 1 1
-31 1 "Second" 16 NA NA NA
+31 1 "Second" 37 NA NA NA
 32 1 "First" 23 "Independent" 3 1
-32 1 "Second" 23 NA NA NA
+32 1 "Second" 44 NA NA NA
 33 1 "First" 21 "Reactive to Dogs Non Aggressive" 9 2
-33 1 "Second" 21 NA NA NA
+33 1 "Second" 42 NA NA NA
 34 1 "First" 24 "Playful" 2 1
 34 1 "Second" 41 "Playful" 2 1
 35 1 "First" 20 "Reactive to Dogs Aggressive" 16 3
@@ -72,33 +72,33 @@
 36 1 "First" 18 "No opinion" NA NA
 36 1 "Second" 38 "Playful" 2 1
 37 1 "First" 19 "Playful" 2 1
-37 1 "Second" 19 NA NA NA
+37 1 "Second" 40 NA NA NA
 38 1 "First" 17 "Friendly" 1 1
-38 1 "Second" 17 NA NA NA
+38 1 "Second" 38 NA NA NA
 39 1 "First" 24 "Playful" 2 1
-39 1 "Second" 24 NA NA NA
+39 1 "Second" 45 NA NA NA
 40 1 "First" 19 "Independent" 3 1
-40 1 "Second" 19 NA NA NA
+40 1 "Second" 40 NA NA NA
 41 1 "First" 14 "Reactive to Dogs Aggressive" 16 3
-41 1 "Second" 14 NA NA NA
+41 1 "Second" 35 NA NA NA
 42 1 "First" 17 "Playful +" 13 2
-42 1 "Second" 17 NA NA NA
+42 1 "Second" 38 NA NA NA
 43 1 "First" 15 "Friendly" 1 1
 43 1 "Second" 52 "Reactive to Dogs Aggressive" 16 3
 44 1 "First" 16 "Playful" 2 1
-44 1 "Second" 16 NA NA NA
+44 1 "Second" 37 NA NA NA
 45 1 "First" 17 "No opinion" NA NA
-45 1 "Second" 17 NA NA NA
+45 1 "Second" 38 NA NA NA
 46 1 "First" 19 "No opinion" NA NA
-46 1 "Second" 19 NA NA NA
+46 1 "Second" 40 NA NA NA
 47 1 "First" 18 "Playful" 2 1
-47 1 "Second" 18 NA NA NA
+47 1 "Second" 39 NA NA NA
 48 1 "First" 46 "Overstimulated" 14 3
 48 1 "Second" 67 "Overstimulated" 14 3
 49 1 "First" 15 "Friendly" 1 1
-49 1 "Second" 15 NA NA NA
+49 1 "Second" 36 NA NA NA
 50 1 "First" 17 "Friendly" 1 1
-50 1 "Second" 17 NA NA NA
+50 1 "Second" 38 NA NA NA
 51 1 "First" 21 "Independent" 3 1
 51 1 "Second" 36 "Independent" 3 1
 52 1 "First" 21 "Playful" 2 1
@@ -106,19 +106,19 @@
 53 1 "First" 15 "Independent" 3 1
 53 1 "Second" 51 "Reactive to Dogs Non Aggressive" 9 2
 54 1 "First" 17 "Sexual" 5 2
-54 1 "Second" 17 NA NA NA
+54 1 "Second" 38 NA NA NA
 55 1 "First" 22 "Friendly" 1 1
 55 1 "Second" 37 "Playful" 2 1
 56 1 "First" 35 "Friendly" 1 1
-56 1 "Second" 35 NA NA NA
+56 1 "Second" 56 NA NA NA
 57 1 "First" 15 "Reactive to Dogs Non Aggressive" 9 2
 57 1 "Second" 44 "Reactive to Dogs Aggressive" 16 3
 58 1 "First" 16 "No opinion" NA NA
 58 1 "Second" 37 "Friendly" 1 1
 59 1 "First" 18 "Friendly" 1 1
-59 1 "Second" 18 NA NA NA
+59 1 "Second" 39 NA NA NA
 60 1 "First" 15 "Reactive to Dogs Aggressive" 16 3
-60 1 "Second" 15 NA NA NA
+60 1 "Second" 36 NA NA NA
 61 1 "First" 20 "Independent" 3 1
 61 1 "Second" 41 "Independent" 3 1
 62 1 "First" 51 "Playful" 2 1
@@ -128,7 +128,7 @@
 64 1 "First" 15 "Reactive to Dogs Aggressive" 16 3
 64 1 "Second" 50 "Playful" 2 1
 65 1 "First" 29 "Independent" 3 1
-65 1 "Second" 29 NA NA NA
+65 1 "Second" 50 NA NA NA
 66 1 "First" 15 "Friendly" 1 1
 66 1 "Second" 36 "Reactive to Dogs Aggressive" 16 3
 67 1 "First" 17 "Playful" 2 1
@@ -160,7 +160,7 @@
 80 1 "First" 16 "Reactive to Dogs Aggressive" 16 3
 80 1 "Second" 37 "Reactive to Dogs Non Aggressive" 9 2
 81 1 "First" 17 "Friendly" 1 1
-81 1 "Second" 17 NA NA NA
+81 1 "Second" 38 NA NA NA
 82 1 "First" 16 "Submissive" 4 1
 82 1 "Second" 36 "Submissive" 4 1
 83 1 "First" 16 "Playful" 2 1
@@ -172,13 +172,13 @@
 86 1 "First" 16 "Playful +" 13 2
 86 1 "Second" 37 "Playful" 2 1
 87 1 "First" 16 "Uncomfortable Avoids" 6 2
-87 1 "Second" 16 NA NA NA
+87 1 "Second" 37 NA NA NA
 88 1 "First" 19 "Reactive to Dogs Non Aggressive" 9 2
 88 1 "Second" 38 "Friendly" 1 1
 89 1 "First" 15 "Reactive to Dogs Aggressive" 16 3
 89 1 "Second" 36 "Reactive to Dogs Aggressive" 16 3
 90 1 "First" 25 "Reactive to Dogs Non Aggressive" 9 2
-90 1 "Second" 25 NA NA NA
+90 1 "Second" 46 NA NA NA
 91 1 "First" 16 "Friendly" 1 1
 91 1 "Second" 37 "Friendly" 1 1
 92 1 "First" 23 "Reactive to Dogs Non Aggressive" 9 2
@@ -200,33 +200,33 @@
 100 1 "First" 19 "Friendly" 1 1
 100 1 "Second" 39 "Submissive" 4 1
 101 1 "First" 17 "Independent" 3 1
-101 1 "Second" 17 NA NA NA
+101 1 "Second" 38 NA NA NA
 102 1 "First" 22 "Friendly" 1 1
-102 1 "Second" 22 NA NA NA
+102 1 "Second" 43 NA NA NA
 103 1 "First" 16 "Uncomfortable Avoids" 6 2
 103 1 "Second" 43 "Independent" 3 1
 104 1 "First" 17 "Friendly" 1 1
-104 1 "Second" 17 NA NA NA
+104 1 "Second" 38 NA NA NA
 105 1 "First" 16 "Playful" 2 1
 105 1 "Second" 43 "Playful" 2 1
 106 1 "First" 23 "Friendly" 1 1
-106 1 "Second" 23 NA NA NA
+106 1 "Second" 44 NA NA NA
 107 1 "First" 19 "Playful +" 13 2
 107 1 "Second" 40 "Playful +" 13 2
 108 1 "First" 18 "Reactive to Dogs Aggressive" 16 3
-108 1 "Second" 18 NA NA NA
+108 1 "Second" 39 NA NA NA
 109 1 "First" 19 "Playful" 2 1
-109 1 "Second" 19 NA NA NA
+109 1 "Second" 40 NA NA NA
 110 1 "First" 14 "Reactive to Dogs Aggressive" 16 3
 110 1 "Second" 35 "Reactive to Dogs Aggressive" 16 3
 111 1 "First" 17 "Independent" 3 1
-111 1 "Second" 17 NA NA NA
+111 1 "Second" 38 NA NA NA
 112 1 "First" 17 "No opinion" NA NA
 112 1 "Second" 38 "Friendly" 1 1
 113 1 "First" 19 "Reactive to Dogs Aggressive" 16 3
-113 1 "Second" 19 NA NA NA
+113 1 "Second" 40 NA NA NA
 114 1 "First" 17 "Submissive" 4 1
-114 1 "Second" 17 NA NA NA
+114 1 "Second" 38 NA NA NA
 115 1 "First" 26 "Independent" 3 1
 115 1 "Second" 41 "Independent" 3 1
 116 1 "First" 29 "Chases" 7 2
@@ -234,19 +234,19 @@
 117 1 "First" 18 "No opinion" NA NA
 117 1 "Second" 40 "Reactive to Dogs Aggressive" 16 3
 118 1 "First" 36 "Playful" 2 1
-118 1 "Second" 36 NA NA NA
+118 1 "Second" 57 NA NA NA
 119 1 "First" 18 "No opinion" NA NA
 119 1 "Second" 36 "Friendly" 1 1
 120 1 "First" 17 "Friendly" 1 1
-120 1 "Second" 17 NA NA NA
+120 1 "Second" 38 NA NA NA
 121 1 "First" 23 "Reactive to Dogs Non Aggressive" 9 2
 121 1 "Second" 38 "Reactive to Dogs Aggressive" 16 3
 122 1 "First" 21 "Friendly" 1 1
-122 1 "Second" 21 NA NA NA
+122 1 "Second" 42 NA NA NA
 123 1 "First" 19 "Playful" 2 1
 123 1 "Second" 40 "Playful" 2 1
 124 1 "First" 38 "Friendly" 1 1
-124 1 "Second" 38 NA NA NA
+124 1 "Second" 59 NA NA NA
 125 1 "First" 20 "Friendly" 1 1
 125 1 "Second" 42 "Friendly" 1 1
 126 1 "First" 21 "Playful" 2 1
@@ -256,13 +256,13 @@
 128 1 "First" 17 "Reactive to Dogs Non Aggressive" 9 2
 128 1 "Second" 42 "Reactive to Dogs Non Aggressive" 9 2
 129 1 "First" 15 "Friendly" 1 1
-129 1 "Second" 15 NA NA NA
+129 1 "Second" 36 NA NA NA
 130 1 "First" 18 "Reactive to Dogs Non Aggressive" 9 2
 130 1 "Second" 38 "Playful" 2 1
 131 1 "First" 38 "Friendly" 1 1
-131 1 "Second" 38 NA NA NA
+131 1 "Second" 59 NA NA NA
 132 1 "First" 22 "Playful" 2 1
-132 1 "Second" 22 NA NA NA
+132 1 "Second" 43 NA NA NA
 133 1 "First" 19 "Playful" 2 1
 133 1 "Second" 40 "Playful" 2 1
 134 1 "First" 17 "Uncomfortable Avoids" 6 2
@@ -278,11 +278,11 @@
 139 1 "First" 7 "Playful" 2 1
 139 1 "Second" 41 "Playful" 2 1
 140 1 "First" 20 "Reactive to Dogs Aggressive" 16 3
-140 1 "Second" 20 NA NA NA
+140 1 "Second" 41 NA NA NA
 141 1 "First" 27 "Independent" 3 1
-141 1 "Second" 27 NA NA NA
+141 1 "Second" 48 NA NA NA
 142 1 "First" 17 "Playful" 2 1
-142 1 "Second" 17 NA NA NA
+142 1 "Second" 38 NA NA NA
 143 1 "First" 25 "Friendly" 1 1
 143 1 "Second" 37 "Playful" 2 1
 144 1 "First" 15 "Playful" 2 1
@@ -304,9 +304,9 @@
 152 1 "First" 23 "Playful" 2 1
 152 1 "Second" 37 "Playful" 2 1
 153 1 "First" 26 "Playful +" 13 2
-153 1 "Second" 26 NA NA NA
+153 1 "Second" 47 NA NA NA
 154 1 "First" 21 "Playful" 2 1
-154 1 "Second" 21 NA NA NA
+154 1 "Second" 42 NA NA NA
 155 1 "First" 21 "Reactive to Dogs Non Aggressive" 9 2
 155 1 "Second" 43 "Reactive to Dogs Non Aggressive" 9 2
 156 1 "First" 22 "Playful" 2 1
@@ -320,7 +320,7 @@
 160 1 "First" 23 "Uncomfortable Avoids" 6 2
 160 1 "Second" 37 "Reactive to Dogs Non Aggressive" 9 2
 161 1 "First" 24 "Playful" 2 1
-161 1 "Second" 24 NA NA NA
+161 1 "Second" 45 NA NA NA
 162 1 "First" 21 "Uncomfortable Approaches" 12 2
 162 1 "Second" 36 "Playful" 2 1
 163 1 "First" 23 "Playful" 2 1
@@ -332,35 +332,35 @@
 166 1 "First" 24 "Playful" 2 1
 166 1 "Second" 42 "Playful" 2 1
 167 1 "First" 19 "Reactive to Dogs Aggressive" 16 3
-167 1 "Second" 19 NA NA NA
+167 1 "Second" 40 NA NA NA
 168 1 "First" 22 "Playful" 2 1
-168 1 "Second" 22 NA NA NA
+168 1 "Second" 43 NA NA NA
 169 1 "First" 22 "Independent" 3 1
 169 1 "Second" 39 "Independent" 3 1
 170 1 "First" 20 "Friendly" 1 1
 170 1 "Second" 35 "Friendly" 1 1
 171 1 "First" 20 "Playful" 2 1
-171 1 "Second" 20 NA NA NA
+171 1 "Second" 41 NA NA NA
 172 1 "First" 20 "Friendly" 1 1
-172 1 "Second" 20 NA NA NA
+172 1 "Second" 41 NA NA NA
 173 1 "First" 24 "Friendly" 1 1
-173 1 "Second" 24 NA NA NA
+173 1 "Second" 45 NA NA NA
 174 1 "First" 21 "Playful" 2 1
 174 1 "Second" 43 "Friendly" 1 1
 175 1 "First" 21 "Playful" 2 1
 175 1 "Second" 43 "Friendly" 1 1
 176 1 "First" 16 "Friendly" 1 1
-176 1 "Second" 16 NA NA NA
+176 1 "Second" 37 NA NA NA
 177 1 "First" 20 "Independent" 3 1
 177 1 "Second" 41 "Friendly" 1 1
 178 1 "First" 21 "Reactive to Dogs Aggressive" 16 3
-178 1 "Second" 21 NA NA NA
+178 1 "Second" 42 NA NA NA
 179 1 "First" 24 "Playful +" 13 2
-179 1 "Second" 24 NA NA NA
+179 1 "Second" 45 NA NA NA
 180 1 "First" 25 "Playful" 2 1
-180 1 "Second" 25 NA NA NA
+180 1 "Second" 46 NA NA NA
 181 1 "First" 27 "Friendly" 1 1
-181 1 "Second" 27 NA NA NA
+181 1 "Second" 48 NA NA NA
 182 1 "First" 20 "Playful" 2 1
 182 1 "Second" 42 "Playful" 2 1
 183 1 "First" 16 "Uncomfortable Avoids" 6 2
@@ -370,13 +370,13 @@
 185 1 "First" 22 "Playful" 2 1
 185 1 "Second" 37 "Reactive to Dogs Aggressive" 16 3
 186 1 "First" 20 "Playful" 2 1
-186 1 "Second" 20 NA NA NA
+186 1 "Second" 41 NA NA NA
 187 1 "First" 23 "Reactive to Dogs Non Aggressive" 9 2
-187 1 "Second" 23 NA NA NA
+187 1 "Second" 44 NA NA NA
 188 1 "First" 25 "Playful" 2 1
 188 1 "Second" 40 "Playful" 2 1
 189 1 "First" 20 "No opinion" NA NA
-189 1 "Second" 20 NA NA NA
+189 1 "Second" 41 NA NA NA
 190 1 "First" 22 "Reactive to Dogs Non Aggressive" 9 2
 190 1 "Second" 39 "Reactive to Dogs Non Aggressive" 9 2
 191 1 "First" 15 "Friendly" 1 1
@@ -384,19 +384,19 @@
 192 1 "First" 27 "Playful +" 13 2
 192 1 "Second" 40 "Playful +" 13 2
 193 1 "First" 21 "Playful" 2 1
-193 1 "Second" 21 NA NA NA
+193 1 "Second" 42 NA NA NA
 194 1 "First" 22 "Playful +" 13 2
-194 1 "Second" 22 NA NA NA
+194 1 "Second" 43 NA NA NA
 195 1 "First" 23 "Friendly" 1 1
-195 1 "Second" 23 NA NA NA
+195 1 "Second" 44 NA NA NA
 196 1 "First" 19 "Playful" 2 1
-196 1 "Second" 19 NA NA NA
+196 1 "Second" 40 NA NA NA
 197 1 "First" 20 "Playful" 2 1
-197 1 "Second" 20 NA NA NA
+197 1 "Second" 41 NA NA NA
 198 1 "First" 20 "Reactive to Dogs Non Aggressive" 9 2
-198 1 "Second" 20 NA NA NA
+198 1 "Second" 41 NA NA NA
 199 1 "First" 19 "Playful" 2 1
-199 1 "Second" 19 NA NA NA
+199 1 "Second" 40 NA NA NA
 200 1 "First" 18 "Focused" 11 2
 200 1 "Second" 36 "Playful" 2 1
 201 1 "First" 18 "Friendly" 1 1
@@ -410,7 +410,7 @@
 205 1 "First" 15 "Uncomfortable Avoids" 6 2
 205 1 "Second" 36 "Friendly" 1 1
 206 1 "First" 22 "Friendly" 1 1
-206 1 "Second" 22 NA NA NA
+206 1 "Second" 43 NA NA NA
 207 1 "First" 19 "Reactive to Dogs Aggressive" 16 3
 207 1 "Second" 39 "Reactive to Dogs Aggressive" 16 3
 208 1 "First" 23 "Friendly" 1 1
@@ -418,9 +418,9 @@
 209 1 "First" 19 "Reactive to Dogs Aggressive" 16 3
 209 1 "Second" 44 "Reactive to Dogs Aggressive" 16 3
 210 1 "First" 17 "Uncomfortable Avoids" 6 2
-210 1 "Second" 17 NA NA NA
+210 1 "Second" 38 NA NA NA
 211 1 "First" 23 "Playful" 2 1
-211 1 "Second" 23 NA NA NA
+211 1 "Second" 44 NA NA NA
 212 1 "First" 21 "Independent" 3 1
 212 1 "Second" 37 "Friendly" 1 1
 213 1 "First" 18 "Playful" 2 1
@@ -428,17 +428,17 @@
 214 1 "First" 22 "Friendly" 1 1
 214 1 "Second" 35 "Reactive to Dogs Non Aggressive" 9 2
 215 1 "First" 17 "Reactive to Dogs Non Aggressive" 9 2
-215 1 "Second" 17 NA NA NA
+215 1 "Second" 38 NA NA NA
 216 1 "First" 20 "Playful" 2 1
-216 1 "Second" 20 NA NA NA
+216 1 "Second" 41 NA NA NA
 217 1 "First" 18 "Playful" 2 1
-217 1 "Second" 18 NA NA NA
+217 1 "Second" 39 NA NA NA
 218 1 "First" 18 "Friendly" 1 1
 218 1 "Second" 36 "Friendly" 1 1
 219 1 "First" 16 "Submissive" 4 1
-219 1 "Second" 16 NA NA NA
+219 1 "Second" 37 NA NA NA
 220 1 "First" 17 "Submissive" 4 1
-220 1 "Second" 17 NA NA NA
+220 1 "Second" 38 NA NA NA
 221 1 "First" 15 "Friendly" 1 1
 221 1 "Second" 43 "Submissive" 4 1
 222 1 "First" 21 "Playful" 2 1
@@ -456,7 +456,7 @@
 228 1 "First" 19 "Friendly" 1 1
 228 1 "Second" 40 "Friendly" 1 1
 229 1 "First" 17 "Friendly" 1 1
-229 1 "Second" 17 NA NA NA
+229 1 "Second" 38 NA NA NA
 230 1 "First" 21 "Playful +" 13 2
 230 1 "Second" 37 "Playful +" 13 2
 231 1 "First" 22 "Friendly" 1 1
@@ -464,23 +464,23 @@
 232 1 "First" 22 "Uncomfortable Avoids" 6 2
 232 1 "Second" 40 "Uncomfortable Avoids" 6 2
 233 1 "First" 15 "Reactive to Dogs Non Aggressive" 9 2
-233 1 "Second" 15 NA NA NA
+233 1 "Second" 36 NA NA NA
 234 1 "First" 15 "Playful" 2 1
-234 1 "Second" 15 NA NA NA
+234 1 "Second" 36 NA NA NA
 235 1 "First" 19 "Friendly" 1 1
-235 1 "Second" 19 NA NA NA
+235 1 "Second" 40 NA NA NA
 236 1 "First" 17 "Friendly" 1 1
-236 1 "Second" 17 NA NA NA
+236 1 "Second" 38 NA NA NA
 237 1 "First" 22 "Friendly" 1 1
 237 1 "Second" 36 "Independent" 3 1
 238 1 "First" 22 "Independent" 3 1
 238 1 "Second" 37 "Reactive to Dogs Non Aggressive" 9 2
 239 1 "First" 17 "Friendly" 1 1
-239 1 "Second" 17 NA NA NA
+239 1 "Second" 38 NA NA NA
 240 1 "First" 16 "Reactive to Dogs Non Aggressive" 9 2
-240 1 "Second" 16 NA NA NA
+240 1 "Second" 37 NA NA NA
 241 1 "First" 15 "Friendly" 1 1
-241 1 "Second" 15 NA NA NA
+241 1 "Second" 36 NA NA NA
 1 2 "First" 16 "Friendly" 1 1
 1 2 "Second" 20 "Excitable" 2 1
 2 2 "First" 18 "Independent" 3 1
@@ -490,23 +490,23 @@
 4 2 "First" 26 "Uncomfortable Avoids" 5 2
 4 2 "Second" 47 "Uncomfortable Avoids" 5 2
 5 2 "First" 21 "Friendly" 1 1
-5 2 "Second" 21 NA NA NA
+5 2 "Second" 42 NA NA NA
 6 2 "First" 19 "Excitable" 2 1
 6 2 "Second" 40 "Excitable" 2 1
 7 2 "First" 24 "Reactive to People Non Aggressive" 9 2
 7 2 "Second" 53 "Excitable" 2 1
 8 2 "First" 19 "Excitable" 2 1
-8 2 "Second" 19 NA NA NA
+8 2 "Second" 40 NA NA NA
 9 2 "First" 15 "Friendly" 1 1
 9 2 "Second" 42 "Excitable" 2 1
 10 2 "First" 15 "Friendly" 1 1
 10 2 "Second" 35 "Excitable" 2 1
 11 2 "First" 18 "Excitable" 2 1
-11 2 "Second" 18 NA NA NA
+11 2 "Second" 39 NA NA NA
 12 2 "First" 18 "Independent" 3 1
-12 2 "Second" 18 NA NA NA
+12 2 "Second" 39 NA NA NA
 13 2 "First" 21 "Excitable" 2 1
-13 2 "Second" 21 NA NA NA
+13 2 "Second" 42 NA NA NA
 14 2 "First" 14 "Excitable" 2 1
 14 2 "Second" 56 "Excitable" 2 1
 15 2 "First" 19 "Friendly" 1 1
@@ -516,11 +516,11 @@
 17 2 "First" 21 "Uncomfortable Avoids" 5 2
 17 2 "Second" 37 "Friendly" 1 1
 18 2 "First" 21 "Friendly" 1 1
-18 2 "Second" 21 NA NA NA
+18 2 "Second" 42 NA NA NA
 19 2 "First" 21 "Friendly" 1 1
 19 2 "Second" 42 "Friendly" 1 1
 20 2 "First" 22 "Excitable" 2 1
-20 2 "Second" 22 NA NA NA
+20 2 "Second" 43 NA NA NA
 21 2 "First" 21 "Excitable" 2 1
 21 2 "Second" 49 "Friendly" 1 1
 22 2 "First" 19 "Friendly" 1 1
@@ -528,11 +528,11 @@
 23 2 "First" 19 "Independent" 3 1
 23 2 "Second" 42 "Independent" 3 1
 24 2 "First" 19 "Friendly" 1 1
-24 2 "Second" 19 NA NA NA
+24 2 "Second" 40 NA NA NA
 25 2 "First" 20 "Friendly" 1 1
 25 2 "Second" 41 "Excitable" 2 1
 26 2 "First" 14 "Independent" 3 1
-26 2 "Second" 14 NA NA NA
+26 2 "Second" 35 NA NA NA
 27 2 "First" 22 "Friendly" 1 1
 27 2 "Second" 43 "Friendly" 1 1
 28 2 "First" 16 "Independent" 3 1
@@ -540,13 +540,13 @@
 29 2 "First" 19 "Friendly" 1 1
 29 2 "Second" 42 "Friendly" 1 1
 30 2 "First" 27 "Uncomfortable Avoids" 5 2
-30 2 "Second" 27 NA NA NA
+30 2 "Second" 48 NA NA NA
 31 2 "First" 16 "Friendly" 1 1
-31 2 "Second" 16 NA NA NA
+31 2 "Second" 37 NA NA NA
 32 2 "First" 23 "Independent" 3 1
-32 2 "Second" 23 NA NA NA
+32 2 "Second" 44 NA NA NA
 33 2 "First" 21 "Friendly" 1 1
-33 2 "Second" 21 NA NA NA
+33 2 "Second" 42 NA NA NA
 34 2 "First" 24 "Friendly" 1 1
 34 2 "Second" 41 "Friendly" 1 1
 35 2 "First" 20 "Uncomfortable Avoids" 5 2
@@ -554,33 +554,33 @@
 36 2 "First" 18 "No opinion" NA NA
 36 2 "Second" 38 "Excitable" 2 1
 37 2 "First" 19 "Friendly" 1 1
-37 2 "Second" 19 NA NA NA
+37 2 "Second" 40 NA NA NA
 38 2 "First" 17 "Excitable" 2 1
-38 2 "Second" 17 NA NA NA
+38 2 "Second" 38 NA NA NA
 39 2 "First" 24 "Friendly" 1 1
-39 2 "Second" 24 NA NA NA
+39 2 "Second" 45 NA NA NA
 40 2 "First" 19 "Reactive to People Non Aggressive" 9 2
-40 2 "Second" 19 NA NA NA
+40 2 "Second" 40 NA NA NA
 41 2 "First" 14 "Friendly" 1 1
-41 2 "Second" 14 NA NA NA
+41 2 "Second" 35 NA NA NA
 42 2 "First" 17 "Excitable" 2 1
-42 2 "Second" 17 NA NA NA
+42 2 "Second" 38 NA NA NA
 43 2 "First" 15 "Friendly" 1 1
 43 2 "Second" 52 "Friendly" 1 1
 44 2 "First" 16 "Friendly" 1 1
-44 2 "Second" 16 NA NA NA
+44 2 "Second" 37 NA NA NA
 45 2 "First" 17 "Independent" 3 1
-45 2 "Second" 17 NA NA NA
+45 2 "Second" 38 NA NA NA
 46 2 "First" 19 "No opinion" NA NA
-46 2 "Second" 19 NA NA NA
+46 2 "Second" 40 NA NA NA
 47 2 "First" 18 "Friendly" 1 1
-47 2 "Second" 18 NA NA NA
+47 2 "Second" 39 NA NA NA
 48 2 "First" 46 "Friendly" 1 1
 48 2 "Second" 67 "Friendly" 1 1
 49 2 "First" 15 "Uncomfortable Avoids" 5 2
-49 2 "Second" 15 NA NA NA
+49 2 "Second" 36 NA NA NA
 50 2 "First" 17 "Friendly" 1 1
-50 2 "Second" 17 NA NA NA
+50 2 "Second" 38 NA NA NA
 51 2 "First" 21 "Friendly" 1 1
 51 2 "Second" 36 "Friendly" 1 1
 52 2 "First" 21 "Friendly" 1 1
@@ -588,19 +588,19 @@
 53 2 "First" 15 "Friendly" 1 1
 53 2 "Second" 51 "Excitable" 2 1
 54 2 "First" 17 "Excitable" 2 1
-54 2 "Second" 17 NA NA NA
+54 2 "Second" 38 NA NA NA
 55 2 "First" 22 "Friendly" 1 1
 55 2 "Second" 37 "Uncomfortable Avoids" 5 2
 56 2 "First" 35 "Excitable" 2 1
-56 2 "Second" 35 NA NA NA
+56 2 "Second" 56 NA NA NA
 57 2 "First" 15 "Excitable" 2 1
 57 2 "Second" 44 "Excitable" 2 1
 58 2 "First" 16 "Excitable" 2 1
 58 2 "Second" 37 "Excitable" 2 1
 59 2 "First" 18 "Friendly" 1 1
-59 2 "Second" 18 NA NA NA
+59 2 "Second" 39 NA NA NA
 60 2 "First" 15 "Friendly" 1 1
-60 2 "Second" 15 NA NA NA
+60 2 "Second" 36 NA NA NA
 61 2 "First" 20 "Friendly" 1 1
 61 2 "Second" 41 "Friendly" 1 1
 62 2 "First" 51 "Friendly" 1 1
@@ -610,7 +610,7 @@
 64 2 "First" 15 "Excitable" 2 1
 64 2 "Second" 50 "Submissive" 4 1
 65 2 "First" 29 "Friendly" 1 1
-65 2 "Second" 29 NA NA NA
+65 2 "Second" 50 NA NA NA
 66 2 "First" 15 "Excitable" 2 1
 66 2 "Second" 36 "Friendly" 1 1
 67 2 "First" 17 "Friendly" 1 1
@@ -642,7 +642,7 @@
 80 2 "First" 16 "Friendly" 1 1
 80 2 "Second" 37 "Excitable" 2 1
 81 2 "First" 17 "Independent" 3 1
-81 2 "Second" 17 NA NA NA
+81 2 "Second" 38 NA NA NA
 82 2 "First" 16 "Friendly" 1 1
 82 2 "Second" 36 "Excitable" 2 1
 83 2 "First" 16 "Friendly" 1 1
@@ -654,13 +654,13 @@
 86 2 "First" 16 "Friendly" 1 1
 86 2 "Second" 37 "Excitable" 2 1
 87 2 "First" 16 "Excitable" 2 1
-87 2 "Second" 16 NA NA NA
+87 2 "Second" 37 NA NA NA
 88 2 "First" 19 "Friendly" 1 1
 88 2 "Second" 38 "Friendly" 1 1
 89 2 "First" 15 "Friendly" 1 1
 89 2 "Second" 36 "Friendly" 1 1
 90 2 "First" 25 "Reactive to People Non Aggressive" 9 2
-90 2 "Second" 25 NA NA NA
+90 2 "Second" 46 NA NA NA
 91 2 "First" 16 "Friendly" 1 1
 91 2 "Second" 37 "Excitable" 2 1
 92 2 "First" 23 "Excitable" 2 1
@@ -682,33 +682,33 @@
 100 2 "First" 19 "Friendly" 1 1
 100 2 "Second" 39 "Friendly" 1 1
 101 2 "First" 17 "Independent" 3 1
-101 2 "Second" 17 NA NA NA
+101 2 "Second" 38 NA NA NA
 102 2 "First" 22 "Reactive to People Non Aggressive" 9 2
-102 2 "Second" 22 NA NA NA
+102 2 "Second" 43 NA NA NA
 103 2 "First" 16 "Uncomfortable Avoids" 5 2
 103 2 "Second" 43 "Independent" 3 1
 104 2 "First" 17 "Friendly" 1 1
-104 2 "Second" 17 NA NA NA
+104 2 "Second" 38 NA NA NA
 105 2 "First" 16 "Uncomfortable Avoids" 5 2
 105 2 "Second" 43 "Uncomfortable Avoids" 5 2
 106 2 "First" 23 "Uncomfortable Avoids" 5 2
-106 2 "Second" 23 NA NA NA
+106 2 "Second" 44 NA NA NA
 107 2 "First" 19 "Excitable" 2 1
 107 2 "Second" 40 "Excitable" 2 1
 108 2 "First" 18 "Excitable" 2 1
-108 2 "Second" 18 NA NA NA
+108 2 "Second" 39 NA NA NA
 109 2 "First" 19 "Friendly" 1 1
-109 2 "Second" 19 NA NA NA
+109 2 "Second" 40 NA NA NA
 110 2 "First" 14 "Friendly" 1 1
 110 2 "Second" 35 "Reactive to People Aggressive" 13 3
 111 2 "First" 17 "Excitable" 2 1
-111 2 "Second" 17 NA NA NA
+111 2 "Second" 38 NA NA NA
 112 2 "First" 17 "Independent" 3 1
 112 2 "Second" 38 "Friendly" 1 1
 113 2 "First" 19 "Independent" 3 1
-113 2 "Second" 19 NA NA NA
+113 2 "Second" 40 NA NA NA
 114 2 "First" 17 "Friendly" 1 1
-114 2 "Second" 17 NA NA NA
+114 2 "Second" 38 NA NA NA
 115 2 "First" 26 "Friendly" 1 1
 115 2 "Second" 41 "Independent" 3 1
 116 2 "First" 29 "Excitable" 2 1
@@ -716,19 +716,19 @@
 117 2 "First" 18 "Uncomfortable Avoids" 5 2
 117 2 "Second" 40 "Reactive to People Aggressive" 13 3
 118 2 "First" 36 "Excitable" 2 1
-118 2 "Second" 36 NA NA NA
+118 2 "Second" 57 NA NA NA
 119 2 "First" 18 "Friendly" 1 1
 119 2 "Second" 36 "Excitable" 2 1
 120 2 "First" 17 "Excitable" 2 1
-120 2 "Second" 17 NA NA NA
+120 2 "Second" 38 NA NA NA
 121 2 "First" 23 "Reactive to People Aggressive" 13 3
 121 2 "Second" 38 "Uncomfortable Avoids" 5 2
 122 2 "First" 21 "Independent" 3 1
-122 2 "Second" 21 NA NA NA
+122 2 "Second" 42 NA NA NA
 123 2 "First" 19 "Friendly" 1 1
 123 2 "Second" 40 "Independent" 3 1
 124 2 "First" 38 "Friendly" 1 1
-124 2 "Second" 38 NA NA NA
+124 2 "Second" 59 NA NA NA
 125 2 "First" 20 "Friendly" 1 1
 125 2 "Second" 42 "Friendly" 1 1
 126 2 "First" 21 "Friendly" 1 1
@@ -738,13 +738,13 @@
 128 2 "First" 17 "Friendly" 1 1
 128 2 "Second" 42 "Friendly" 1 1
 129 2 "First" 15 "Independent" 3 1
-129 2 "Second" 15 NA NA NA
+129 2 "Second" 36 NA NA NA
 130 2 "First" 18 "Excitable" 2 1
 130 2 "Second" 38 "Independent" 3 1
 131 2 "First" 38 "Excitable" 2 1
-131 2 "Second" 38 NA NA NA
+131 2 "Second" 59 NA NA NA
 132 2 "First" 22 "Friendly" 1 1
-132 2 "Second" 22 NA NA NA
+132 2 "Second" 43 NA NA NA
 133 2 "First" 19 "Friendly" 1 1
 133 2 "Second" 40 "Excitable" 2 1
 134 2 "First" 17 "Friendly" 1 1
@@ -760,11 +760,11 @@
 139 2 "First" 7 "Excitable" 2 1
 139 2 "Second" 41 "Excitable" 2 1
 140 2 "First" 20 "Reactive to People Aggressive" 13 3
-140 2 "Second" 20 NA NA NA
+140 2 "Second" 41 NA NA NA
 141 2 "First" 27 "Reactive to People Non Aggressive" 9 2
-141 2 "Second" 27 NA NA NA
+141 2 "Second" 48 NA NA NA
 142 2 "First" 17 "Independent" 3 1
-142 2 "Second" 17 NA NA NA
+142 2 "Second" 38 NA NA NA
 143 2 "First" 25 "Friendly" 1 1
 143 2 "Second" 37 "Friendly" 1 1
 144 2 "First" 15 "Friendly" 1 1
@@ -786,9 +786,9 @@
 152 2 "First" 23 "Friendly" 1 1
 152 2 "Second" 37 "Friendly" 1 1
 153 2 "First" 26 "Excitable" 2 1
-153 2 "Second" 26 NA NA NA
+153 2 "Second" 47 NA NA NA
 154 2 "First" 21 "Reactive to People Non Aggressive" 9 2
-154 2 "Second" 21 NA NA NA
+154 2 "Second" 42 NA NA NA
 155 2 "First" 21 "Friendly" 1 1
 155 2 "Second" 43 "Friendly" 1 1
 156 2 "First" 22 "Friendly" 1 1
@@ -802,7 +802,7 @@
 160 2 "First" 23 "Friendly" 1 1
 160 2 "Second" 37 "Excitable" 2 1
 161 2 "First" 24 "Friendly" 1 1
-161 2 "Second" 24 NA NA NA
+161 2 "Second" 45 NA NA NA
 162 2 "First" 21 "Friendly" 1 1
 162 2 "Second" 36 "Friendly" 1 1
 163 2 "First" 23 "Friendly" 1 1
@@ -814,35 +814,35 @@
 166 2 "First" 24 "Friendly" 1 1
 166 2 "Second" 42 "Independent" 3 1
 167 2 "First" 19 "Friendly" 1 1
-167 2 "Second" 19 NA NA NA
+167 2 "Second" 40 NA NA NA
 168 2 "First" 22 "Friendly" 1 1
-168 2 "Second" 22 NA NA NA
+168 2 "Second" 43 NA NA NA
 169 2 "First" 22 "Independent" 3 1
 169 2 "Second" 39 "Independent" 3 1
 170 2 "First" 20 "Excitable" 2 1
 170 2 "Second" 35 "Friendly" 1 1
 171 2 "First" 20 "Excitable" 2 1
-171 2 "Second" 20 NA NA NA
+171 2 "Second" 41 NA NA NA
 172 2 "First" 20 "Friendly" 1 1
-172 2 "Second" 20 NA NA NA
+172 2 "Second" 41 NA NA NA
 173 2 "First" 24 "Excitable" 2 1
-173 2 "Second" 24 NA NA NA
+173 2 "Second" 45 NA NA NA
 174 2 "First" 21 "Excitable" 2 1
 174 2 "Second" 43 "Independent" 3 1
 175 2 "First" 21 "Excitable" 2 1
 175 2 "Second" 43 "Independent" 3 1
 176 2 "First" 16 "Friendly" 1 1
-176 2 "Second" 16 NA NA NA
+176 2 "Second" 37 NA NA NA
 177 2 "First" 20 "Excitable" 2 1
 177 2 "Second" 41 "Excitable" 2 1
 178 2 "First" 21 "Friendly" 1 1
-178 2 "Second" 21 NA NA NA
+178 2 "Second" 42 NA NA NA
 179 2 "First" 24 "Friendly" 1 1
-179 2 "Second" 24 NA NA NA
+179 2 "Second" 45 NA NA NA
 180 2 "First" 25 "Uncomfortable Avoids" 5 2
-180 2 "Second" 25 NA NA NA
+180 2 "Second" 46 NA NA NA
 181 2 "First" 27 "Independent" 3 1
-181 2 "Second" 27 NA NA NA
+181 2 "Second" 48 NA NA NA
 182 2 "First" 20 "Friendly" 1 1
 182 2 "Second" 42 "Submissive" 4 1
 183 2 "First" 16 "Uncomfortable Avoids" 5 2
@@ -852,13 +852,13 @@
 185 2 "First" 22 "Excitable" 2 1
 185 2 "Second" 37 "Friendly" 1 1
 186 2 "First" 20 "Friendly" 1 1
-186 2 "Second" 20 NA NA NA
+186 2 "Second" 41 NA NA NA
 187 2 "First" 23 "Excitable" 2 1
-187 2 "Second" 23 NA NA NA
+187 2 "Second" 44 NA NA NA
 188 2 "First" 25 "Excitable" 2 1
 188 2 "Second" 40 "Excitable" 2 1
 189 2 "First" 20 "Uncomfortable Avoids" 5 2
-189 2 "Second" 20 NA NA NA
+189 2 "Second" 41 NA NA NA
 190 2 "First" 22 "Friendly" 1 1
 190 2 "Second" 39 "Friendly" 1 1
 191 2 "First" 15 "Friendly" 1 1
@@ -866,19 +866,19 @@
 192 2 "First" 27 "Excitable" 2 1
 192 2 "Second" 40 "Excitable" 2 1
 193 2 "First" 21 "Excitable" 2 1
-193 2 "Second" 21 NA NA NA
+193 2 "Second" 42 NA NA NA
 194 2 "First" 22 "Excitable" 2 1
-194 2 "Second" 22 NA NA NA
+194 2 "Second" 43 NA NA NA
 195 2 "First" 23 "Excitable" 2 1
-195 2 "Second" 23 NA NA NA
+195 2 "Second" 44 NA NA NA
 196 2 "First" 19 "Friendly" 1 1
-196 2 "Second" 19 NA NA NA
+196 2 "Second" 40 NA NA NA
 197 2 "First" 20 "Excitable" 2 1
-197 2 "Second" 20 NA NA NA
+197 2 "Second" 41 NA NA NA
 198 2 "First" 20 "Excitable" 2 1
-198 2 "Second" 20 NA NA NA
+198 2 "Second" 41 NA NA NA
 199 2 "First" 19 "Friendly" 1 1
-199 2 "Second" 19 NA NA NA
+199 2 "Second" 40 NA NA NA
 200 2 "First" 18 "Friendly" 1 1
 200 2 "Second" 36 "Friendly" 1 1
 201 2 "First" 18 "Excitable" 2 1
@@ -892,7 +892,7 @@
 205 2 "First" 15 "Friendly" 1 1
 205 2 "Second" 36 "Excitable" 2 1
 206 2 "First" 22 "Friendly" 1 1
-206 2 "Second" 22 NA NA NA
+206 2 "Second" 43 NA NA NA
 207 2 "First" 19 "Friendly" 1 1
 207 2 "Second" 39 "Excitable" 2 1
 208 2 "First" 23 "Friendly" 1 1
@@ -900,9 +900,9 @@
 209 2 "First" 19 "Submissive" 4 1
 209 2 "Second" 44 "Friendly" 1 1
 210 2 "First" 17 "Uncomfortable Avoids" 5 2
-210 2 "Second" 17 NA NA NA
+210 2 "Second" 38 NA NA NA
 211 2 "First" 23 "Friendly" 1 1
-211 2 "Second" 23 NA NA NA
+211 2 "Second" 44 NA NA NA
 212 2 "First" 21 "Friendly" 1 1
 212 2 "Second" 37 "Independent" 3 1
 213 2 "First" 18 "Excitable" 2 1
@@ -910,17 +910,17 @@
 214 2 "First" 22 "Friendly" 1 1
 214 2 "Second" 35 "Friendly" 1 1
 215 2 "First" 17 "Friendly" 1 1
-215 2 "Second" 17 NA NA NA
+215 2 "Second" 38 NA NA NA
 216 2 "First" 20 "Submissive" 4 1
-216 2 "Second" 20 NA NA NA
+216 2 "Second" 41 NA NA NA
 217 2 "First" 18 "Friendly" 1 1
-217 2 "Second" 18 NA NA NA
+217 2 "Second" 39 NA NA NA
 218 2 "First" 18 "Independent" 3 1
 218 2 "Second" 36 "Independent" 3 1
 219 2 "First" 16 "Submissive" 4 1
-219 2 "Second" 16 NA NA NA
+219 2 "Second" 37 NA NA NA
 220 2 "First" 17 "Excitable" 2 1
-220 2 "Second" 17 NA NA NA
+220 2 "Second" 38 NA NA NA
 221 2 "First" 15 "Friendly" 1 1
 221 2 "Second" 43 "Independent" 3 1
 222 2 "First" 21 "Uncomfortable Avoids" 5 2
@@ -938,7 +938,7 @@
 228 2 "First" 19 "Friendly" 1 1
 228 2 "Second" 40 "Friendly" 1 1
 229 2 "First" 17 "Friendly" 1 1
-229 2 "Second" 17 NA NA NA
+229 2 "Second" 38 NA NA NA
 230 2 "First" 21 "Uncomfortable Avoids" 5 2
 230 2 "Second" 37 "Uncomfortable Avoids" 5 2
 231 2 "First" 22 "Friendly" 1 1
@@ -946,23 +946,23 @@
 232 2 "First" 22 "Friendly" 1 1
 232 2 "Second" 40 "Excitable" 2 1
 233 2 "First" 15 "Independent" 3 1
-233 2 "Second" 15 NA NA NA
+233 2 "Second" 36 NA NA NA
 234 2 "First" 15 "Friendly" 1 1
-234 2 "Second" 15 NA NA NA
+234 2 "Second" 36 NA NA NA
 235 2 "First" 19 "Friendly" 1 1
-235 2 "Second" 19 NA NA NA
+235 2 "Second" 40 NA NA NA
 236 2 "First" 17 "Friendly" 1 1
-236 2 "Second" 17 NA NA NA
+236 2 "Second" 38 NA NA NA
 237 2 "First" 22 "Excitable" 2 1
 237 2 "Second" 36 "Independent" 3 1
 238 2 "First" 22 "Excitable" 2 1
 238 2 "Second" 37 "Friendly" 1 1
 239 2 "First" 17 "Friendly" 1 1
-239 2 "Second" 17 NA NA NA
+239 2 "Second" 38 NA NA NA
 240 2 "First" 16 "Independent" 3 1
-240 2 "Second" 16 NA NA NA
+240 2 "Second" 37 NA NA NA
 241 2 "First" 15 "Friendly" 1 1
-241 2 "Second" 15 NA NA NA
+241 2 "Second" 36 NA NA NA
 1 3 "First" 16 "Excitable" 2 1
 1 3 "Second" 20 "Excitable" 2 1
 2 3 "First" 18 "Friendly" 1 1
@@ -972,23 +972,23 @@
 4 3 "First" 26 "Excitable" 2 1
 4 3 "Second" 47 "Excitable" 2 1
 5 3 "First" 21 "Friendly" 1 1
-5 3 "Second" 21 NA NA NA
+5 3 "Second" 42 NA NA NA
 6 3 "First" 19 "Excitable" 2 1
 6 3 "Second" 40 "Excitable" 2 1
 7 3 "First" 24 "Excitable" 2 1
 7 3 "Second" 53 "Excitable" 2 1
 8 3 "First" 19 "Excitable" 2 1
-8 3 "Second" 19 NA NA NA
+8 3 "Second" 40 NA NA NA
 9 3 "First" 15 "Friendly" 1 1
 9 3 "Second" 42 "Excitable" 2 1
 10 3 "First" 15 "Friendly" 1 1
 10 3 "Second" 35 "Excitable" 2 1
 11 3 "First" 18 "Excitable" 2 1
-11 3 "Second" 18 NA NA NA
+11 3 "Second" 39 NA NA NA
 12 3 "First" 18 "Excitable" 2 1
-12 3 "Second" 18 NA NA NA
+12 3 "Second" 39 NA NA NA
 13 3 "First" 21 "Excitable" 2 1
-13 3 "Second" 21 NA NA NA
+13 3 "Second" 42 NA NA NA
 14 3 "First" 14 "Excitable" 2 1
 14 3 "Second" 56 "Excitable" 2 1
 15 3 "First" 19 "Reactive to People Non Aggressive" 9 2
@@ -998,11 +998,11 @@
 17 3 "First" 21 "No opinion" NA NA
 17 3 "Second" 37 "Friendly" 1 1
 18 3 "First" 21 "Friendly" 1 1
-18 3 "Second" 21 NA NA NA
+18 3 "Second" 42 NA NA NA
 19 3 "First" 21 "Friendly" 1 1
 19 3 "Second" 42 "Friendly" 1 1
 20 3 "First" 22 "Excitable" 2 1
-20 3 "Second" 22 NA NA NA
+20 3 "Second" 43 NA NA NA
 21 3 "First" 21 "Friendly" 1 1
 21 3 "Second" 49 "Friendly" 1 1
 22 3 "First" 19 "Excitable" 2 1
@@ -1010,11 +1010,11 @@
 23 3 "First" 19 "Friendly" 1 1
 23 3 "Second" 42 "Independent" 3 1
 24 3 "First" 19 "Excitable" 2 1
-24 3 "Second" 19 NA NA NA
+24 3 "Second" 40 NA NA NA
 25 3 "First" 20 "Excitable" 2 1
 25 3 "Second" 41 "Excitable" 2 1
 26 3 "First" 14 "Friendly" 1 1
-26 3 "Second" 14 NA NA NA
+26 3 "Second" 35 NA NA NA
 27 3 "First" 22 "Friendly" 1 1
 27 3 "Second" 43 "Friendly" 1 1
 28 3 "First" 16 "Excitable" 2 1
@@ -1022,13 +1022,13 @@
 29 3 "First" 19 "Friendly" 1 1
 29 3 "Second" 42 "Excitable" 2 1
 30 3 "First" 27 "Friendly" 1 1
-30 3 "Second" 27 NA NA NA
+30 3 "Second" 48 NA NA NA
 31 3 "First" 16 "Friendly" 1 1
-31 3 "Second" 16 NA NA NA
+31 3 "Second" 37 NA NA NA
 32 3 "First" 23 "Excitable" 2 1
-32 3 "Second" 23 NA NA NA
+32 3 "Second" 44 NA NA NA
 33 3 "First" 21 "Friendly" 1 1
-33 3 "Second" 21 NA NA NA
+33 3 "Second" 42 NA NA NA
 34 3 "First" 24 "Excitable" 2 1
 34 3 "Second" 41 "Friendly" 1 1
 35 3 "First" 20 "Uncomfortable Avoids" 5 2
@@ -1036,33 +1036,33 @@
 36 3 "First" 18 "Excitable" 2 1
 36 3 "Second" 38 "Excitable" 2 1
 37 3 "First" 19 "Friendly" 1 1
-37 3 "Second" 19 NA NA NA
+37 3 "Second" 40 NA NA NA
 38 3 "First" 17 "Excitable" 2 1
-38 3 "Second" 17 NA NA NA
+38 3 "Second" 38 NA NA NA
 39 3 "First" 24 "Excitable" 2 1
-39 3 "Second" 24 NA NA NA
+39 3 "Second" 45 NA NA NA
 40 3 "First" 19 "Friendly" 1 1
-40 3 "Second" 19 NA NA NA
+40 3 "Second" 40 NA NA NA
 41 3 "First" 14 "Excitable" 2 1
-41 3 "Second" 14 NA NA NA
+41 3 "Second" 35 NA NA NA
 42 3 "First" 17 "Excitable" 2 1
-42 3 "Second" 17 NA NA NA
+42 3 "Second" 38 NA NA NA
 43 3 "First" 15 "Friendly" 1 1
 43 3 "Second" 52 "Friendly" 1 1
 44 3 "First" 16 "Friendly" 1 1
-44 3 "Second" 16 NA NA NA
+44 3 "Second" 37 NA NA NA
 45 3 "First" 17 "Friendly" 1 1
-45 3 "Second" 17 NA NA NA
+45 3 "Second" 38 NA NA NA
 46 3 "First" 19 "Friendly" 1 1
-46 3 "Second" 19 NA NA NA
+46 3 "Second" 40 NA NA NA
 47 3 "First" 18 "Excitable" 2 1
-47 3 "Second" 18 NA NA NA
+47 3 "Second" 39 NA NA NA
 48 3 "First" 46 "Friendly" 1 1
 48 3 "Second" 67 "Excitable" 2 1
 49 3 "First" 15 "Friendly" 1 1
-49 3 "Second" 15 NA NA NA
+49 3 "Second" 36 NA NA NA
 50 3 "First" 17 "Friendly" 1 1
-50 3 "Second" 17 NA NA NA
+50 3 "Second" 38 NA NA NA
 51 3 "First" 21 "Excitable" 2 1
 51 3 "Second" 36 "Friendly" 1 1
 52 3 "First" 21 "Excitable" 2 1
@@ -1070,19 +1070,19 @@
 53 3 "First" 15 "Excitable" 2 1
 53 3 "Second" 51 "Excitable" 2 1
 54 3 "First" 17 "Friendly" 1 1
-54 3 "Second" 17 NA NA NA
+54 3 "Second" 38 NA NA NA
 55 3 "First" 22 "Friendly" 1 1
 55 3 "Second" 37 "Excitable" 2 1
 56 3 "First" 35 "Excitable" 2 1
-56 3 "Second" 35 NA NA NA
+56 3 "Second" 56 NA NA NA
 57 3 "First" 15 "Excitable" 2 1
 57 3 "Second" 44 "Excitable" 2 1
 58 3 "First" 16 "No opinion" NA NA
 58 3 "Second" 37 "Excitable" 2 1
 59 3 "First" 18 "Friendly" 1 1
-59 3 "Second" 18 NA NA NA
+59 3 "Second" 39 NA NA NA
 60 3 "First" 15 "Friendly" 1 1
-60 3 "Second" 15 NA NA NA
+60 3 "Second" 36 NA NA NA
 61 3 "First" 20 "Friendly" 1 1
 61 3 "Second" 41 "Friendly" 1 1
 62 3 "First" 51 "Excitable" 2 1
@@ -1092,7 +1092,7 @@
 64 3 "First" 15 "Excitable" 2 1
 64 3 "Second" 50 "Excitable" 2 1
 65 3 "First" 29 "Excitable" 2 1
-65 3 "Second" 29 NA NA NA
+65 3 "Second" 50 NA NA NA
 66 3 "First" 15 "Friendly" 1 1
 66 3 "Second" 36 "Friendly" 1 1
 67 3 "First" 17 "Friendly" 1 1
@@ -1124,7 +1124,7 @@
 80 3 "First" 16 "Excitable" 2 1
 80 3 "Second" 37 "Excitable" 2 1
 81 3 "First" 17 "Independent" 3 1
-81 3 "Second" 17 NA NA NA
+81 3 "Second" 38 NA NA NA
 82 3 "First" 16 "Friendly" 1 1
 82 3 "Second" 36 "Excitable" 2 1
 83 3 "First" 16 "Friendly" 1 1
@@ -1136,13 +1136,13 @@
 86 3 "First" 16 "Excitable" 2 1
 86 3 "Second" 37 "Excitable" 2 1
 87 3 "First" 16 "Excitable" 2 1
-87 3 "Second" 16 NA NA NA
+87 3 "Second" 37 NA NA NA
 88 3 "First" 19 "Friendly" 1 1
 88 3 "Second" 38 "Friendly" 1 1
 89 3 "First" 15 "Friendly" 1 1
 89 3 "Second" 36 "Friendly" 1 1
 90 3 "First" 25 "Reactive to People Non Aggressive" 9 2
-90 3 "Second" 25 NA NA NA
+90 3 "Second" 46 NA NA NA
 91 3 "First" 16 "Excitable" 2 1
 91 3 "Second" 37 "Excitable" 2 1
 92 3 "First" 23 "Excitable" 2 1
@@ -1164,33 +1164,33 @@
 100 3 "First" 19 "Friendly" 1 1
 100 3 "Second" 39 "Friendly" 1 1
 101 3 "First" 17 "Excitable" 2 1
-101 3 "Second" 17 NA NA NA
+101 3 "Second" 38 NA NA NA
 102 3 "First" 22 "Excitable" 2 1
-102 3 "Second" 22 NA NA NA
+102 3 "Second" 43 NA NA NA
 103 3 "First" 16 "Uncomfortable Avoids" 5 2
 103 3 "Second" 43 "Independent" 3 1
 104 3 "First" 17 "Excitable" 2 1
-104 3 "Second" 17 NA NA NA
+104 3 "Second" 38 NA NA NA
 105 3 "First" 16 "Friendly" 1 1
 105 3 "Second" 43 "Excitable" 2 1
 106 3 "First" 23 "Independent" 3 1
-106 3 "Second" 23 NA NA NA
+106 3 "Second" 44 NA NA NA
 107 3 "First" 19 "Excitable" 2 1
 107 3 "Second" 40 "Excitable" 2 1
 108 3 "First" 18 "Friendly" 1 1
-108 3 "Second" 18 NA NA NA
+108 3 "Second" 39 NA NA NA
 109 3 "First" 19 "Excitable" 2 1
-109 3 "Second" 19 NA NA NA
+109 3 "Second" 40 NA NA NA
 110 3 "First" 14 "Friendly" 1 1
 110 3 "Second" 35 "Excitable" 2 1
 111 3 "First" 17 "Excitable" 2 1
-111 3 "Second" 17 NA NA NA
+111 3 "Second" 38 NA NA NA
 112 3 "First" 17 "Friendly" 1 1
 112 3 "Second" 38 "Excitable" 2 1
 113 3 "First" 19 "Friendly" 1 1
-113 3 "Second" 19 NA NA NA
+113 3 "Second" 40 NA NA NA
 114 3 "First" 17 "Excitable" 2 1
-114 3 "Second" 17 NA NA NA
+114 3 "Second" 38 NA NA NA
 115 3 "First" 26 "No opinion" NA NA
 115 3 "Second" 41 "Friendly" 1 1
 116 3 "First" 29 "Excitable" 2 1
@@ -1198,19 +1198,19 @@
 117 3 "First" 18 "Independent" 3 1
 117 3 "Second" 40 "Friendly" 1 1
 118 3 "First" 36 "Excitable" 2 1
-118 3 "Second" 36 NA NA NA
+118 3 "Second" 57 NA NA NA
 119 3 "First" 18 "Friendly" 1 1
 119 3 "Second" 36 "Excitable" 2 1
 120 3 "First" 17 "Excitable" 2 1
-120 3 "Second" 17 NA NA NA
+120 3 "Second" 38 NA NA NA
 121 3 "First" 23 "Friendly" 1 1
 121 3 "Second" 38 "Friendly" 1 1
 122 3 "First" 21 "Independent" 3 1
-122 3 "Second" 21 NA NA NA
+122 3 "Second" 42 NA NA NA
 123 3 "First" 19 "Friendly" 1 1
 123 3 "Second" 40 "Excitable" 2 1
 124 3 "First" 38 "Friendly" 1 1
-124 3 "Second" 38 NA NA NA
+124 3 "Second" 59 NA NA NA
 125 3 "First" 20 "Excitable" 2 1
 125 3 "Second" 42 "Friendly" 1 1
 126 3 "First" 21 "Excitable" 2 1
@@ -1220,13 +1220,13 @@
 128 3 "First" 17 "Excitable" 2 1
 128 3 "Second" 42 "Excitable" 2 1
 129 3 "First" 15 "Excitable" 2 1
-129 3 "Second" 15 NA NA NA
+129 3 "Second" 36 NA NA NA
 130 3 "First" 18 "Excitable" 2 1
 130 3 "Second" 38 "Excitable" 2 1
 131 3 "First" 38 "Excitable" 2 1
-131 3 "Second" 38 NA NA NA
+131 3 "Second" 59 NA NA NA
 132 3 "First" 22 "Friendly" 1 1
-132 3 "Second" 22 NA NA NA
+132 3 "Second" 43 NA NA NA
 133 3 "First" 19 "Friendly" 1 1
 133 3 "Second" 40 "Excitable" 2 1
 134 3 "First" 17 "Friendly" 1 1
@@ -1242,11 +1242,11 @@
 139 3 "First" 7 "Excitable" 2 1
 139 3 "Second" 41 "Excitable" 2 1
 140 3 "First" 20 "No opinion" NA NA
-140 3 "Second" 20 NA NA NA
+140 3 "Second" 41 NA NA NA
 141 3 "First" 27 "Excitable" 2 1
-141 3 "Second" 27 NA NA NA
+141 3 "Second" 48 NA NA NA
 142 3 "First" 17 "Excitable" 2 1
-142 3 "Second" 17 NA NA NA
+142 3 "Second" 38 NA NA NA
 143 3 "First" 25 "Excitable" 2 1
 143 3 "Second" 37 "Excitable" 2 1
 144 3 "First" 15 "Excitable" 2 1
@@ -1268,9 +1268,9 @@
 152 3 "First" 23 "Friendly" 1 1
 152 3 "Second" 37 "Excitable" 2 1
 153 3 "First" 26 "Excitable" 2 1
-153 3 "Second" 26 NA NA NA
+153 3 "Second" 47 NA NA NA
 154 3 "First" 21 "Excitable" 2 1
-154 3 "Second" 21 NA NA NA
+154 3 "Second" 42 NA NA NA
 155 3 "First" 21 "Friendly" 1 1
 155 3 "Second" 43 "Friendly" 1 1
 156 3 "First" 22 "Friendly" 1 1
@@ -1284,7 +1284,7 @@
 160 3 "First" 23 "Excitable" 2 1
 160 3 "Second" 37 "Excitable" 2 1
 161 3 "First" 24 "Excitable" 2 1
-161 3 "Second" 24 NA NA NA
+161 3 "Second" 45 NA NA NA
 162 3 "First" 21 "Excitable" 2 1
 162 3 "Second" 36 "Friendly" 1 1
 163 3 "First" 23 "Excitable" 2 1
@@ -1296,35 +1296,35 @@
 166 3 "First" 24 "Friendly" 1 1
 166 3 "Second" 42 "Excitable" 2 1
 167 3 "First" 19 "Friendly" 1 1
-167 3 "Second" 19 NA NA NA
+167 3 "Second" 40 NA NA NA
 168 3 "First" 22 "Friendly" 1 1
-168 3 "Second" 22 NA NA NA
+168 3 "Second" 43 NA NA NA
 169 3 "First" 22 "Friendly" 1 1
 169 3 "Second" 39 "Friendly" 1 1
 170 3 "First" 20 "Friendly" 1 1
 170 3 "Second" 35 "Friendly" 1 1
 171 3 "First" 20 "Reactive to People Non Aggressive" 9 2
-171 3 "Second" 20 NA NA NA
+171 3 "Second" 41 NA NA NA
 172 3 "First" 20 "Excitable" 2 1
-172 3 "Second" 20 NA NA NA
+172 3 "Second" 41 NA NA NA
 173 3 "First" 24 "Excitable" 2 1
-173 3 "Second" 24 NA NA NA
+173 3 "Second" 45 NA NA NA
 174 3 "First" 21 "Excitable" 2 1
 174 3 "Second" 43 "Independent" 3 1
 175 3 "First" 21 "Excitable" 2 1
 175 3 "Second" 43 "Independent" 3 1
 176 3 "First" 16 "No opinion" NA NA
-176 3 "Second" 16 NA NA NA
+176 3 "Second" 37 NA NA NA
 177 3 "First" 20 "Excitable" 2 1
 177 3 "Second" 41 "Excitable" 2 1
 178 3 "First" 21 "Friendly" 1 1
-178 3 "Second" 21 NA NA NA
+178 3 "Second" 42 NA NA NA
 179 3 "First" 24 "Friendly" 1 1
-179 3 "Second" 24 NA NA NA
+179 3 "Second" 45 NA NA NA
 180 3 "First" 25 "Friendly" 1 1
-180 3 "Second" 25 NA NA NA
+180 3 "Second" 46 NA NA NA
 181 3 "First" 27 "Excitable" 2 1
-181 3 "Second" 27 NA NA NA
+181 3 "Second" 48 NA NA NA
 182 3 "First" 20 "Excitable" 2 1
 182 3 "Second" 42 "Friendly" 1 1
 183 3 "First" 16 "Submissive" 4 1
@@ -1334,13 +1334,13 @@
 185 3 "First" 22 "Excitable" 2 1
 185 3 "Second" 37 "Excitable" 2 1
 186 3 "First" 20 "Excitable" 2 1
-186 3 "Second" 20 NA NA NA
+186 3 "Second" 41 NA NA NA
 187 3 "First" 23 "Friendly" 1 1
-187 3 "Second" 23 NA NA NA
+187 3 "Second" 44 NA NA NA
 188 3 "First" 25 "Excitable" 2 1
 188 3 "Second" 40 "Excitable" 2 1
 189 3 "First" 20 "Uncomfortable Avoids" 5 2
-189 3 "Second" 20 NA NA NA
+189 3 "Second" 41 NA NA NA
 190 3 "First" 22 "Friendly" 1 1
 190 3 "Second" 39 "Friendly" 1 1
 191 3 "First" 15 "Excitable" 2 1
@@ -1348,19 +1348,19 @@
 192 3 "First" 27 "Excitable" 2 1
 192 3 "Second" 40 "Excitable" 2 1
 193 3 "First" 21 "Excitable" 2 1
-193 3 "Second" 21 NA NA NA
+193 3 "Second" 42 NA NA NA
 194 3 "First" 22 "Excitable" 2 1
-194 3 "Second" 22 NA NA NA
+194 3 "Second" 43 NA NA NA
 195 3 "First" 23 "Excitable" 2 1
-195 3 "Second" 23 NA NA NA
+195 3 "Second" 44 NA NA NA
 196 3 "First" 19 "Friendly" 1 1
-196 3 "Second" 19 NA NA NA
+196 3 "Second" 40 NA NA NA
 197 3 "First" 20 "Excitable" 2 1
-197 3 "Second" 20 NA NA NA
+197 3 "Second" 41 NA NA NA
 198 3 "First" 20 "Excitable" 2 1
-198 3 "Second" 20 NA NA NA
+198 3 "Second" 41 NA NA NA
 199 3 "First" 19 "Friendly" 1 1
-199 3 "Second" 19 NA NA NA
+199 3 "Second" 40 NA NA NA
 200 3 "First" 18 "Friendly" 1 1
 200 3 "Second" 36 "Friendly" 1 1
 201 3 "First" 18 "Excitable" 2 1
@@ -1374,7 +1374,7 @@
 205 3 "First" 15 "Excitable" 2 1
 205 3 "Second" 36 "Excitable" 2 1
 206 3 "First" 22 "Excitable" 2 1
-206 3 "Second" 22 NA NA NA
+206 3 "Second" 43 NA NA NA
 207 3 "First" 19 "Friendly" 1 1
 207 3 "Second" 39 "Friendly" 1 1
 208 3 "First" 23 "Excitable" 2 1
@@ -1382,9 +1382,9 @@
 209 3 "First" 19 "Submissive" 4 1
 209 3 "Second" 44 "Friendly" 1 1
 210 3 "First" 17 "Friendly" 1 1
-210 3 "Second" 17 NA NA NA
+210 3 "Second" 38 NA NA NA
 211 3 "First" 23 "Excitable" 2 1
-211 3 "Second" 23 NA NA NA
+211 3 "Second" 44 NA NA NA
 212 3 "First" 21 "Friendly" 1 1
 212 3 "Second" 37 "Friendly" 1 1
 213 3 "First" 18 "Reactive to People Non Aggressive" 9 2
@@ -1392,17 +1392,17 @@
 214 3 "First" 22 "Friendly" 1 1
 214 3 "Second" 35 "Friendly" 1 1
 215 3 "First" 17 "Excitable" 2 1
-215 3 "Second" 17 NA NA NA
+215 3 "Second" 38 NA NA NA
 216 3 "First" 20 "Excitable" 2 1
-216 3 "Second" 20 NA NA NA
+216 3 "Second" 41 NA NA NA
 217 3 "First" 18 "Excitable" 2 1
-217 3 "Second" 18 NA NA NA
+217 3 "Second" 39 NA NA NA
 218 3 "First" 18 "Excitable" 2 1
 218 3 "Second" 36 "Friendly" 1 1
 219 3 "First" 16 "Friendly" 1 1
-219 3 "Second" 16 NA NA NA
+219 3 "Second" 37 NA NA NA
 220 3 "First" 17 "Excitable" 2 1
-220 3 "Second" 17 NA NA NA
+220 3 "Second" 38 NA NA NA
 221 3 "First" 15 "Friendly" 1 1
 221 3 "Second" 43 "Friendly" 1 1
 222 3 "First" 21 "No opinion" NA NA
@@ -1420,7 +1420,7 @@
 228 3 "First" 19 "Friendly" 1 1
 228 3 "Second" 40 "Friendly" 1 1
 229 3 "First" 17 "Friendly" 1 1
-229 3 "Second" 17 NA NA NA
+229 3 "Second" 38 NA NA NA
 230 3 "First" 21 "Excitable" 2 1
 230 3 "Second" 37 "Excitable" 2 1
 231 3 "First" 22 "Excitable" 2 1
@@ -1428,23 +1428,23 @@
 232 3 "First" 22 "Excitable" 2 1
 232 3 "Second" 40 "Excitable" 2 1
 233 3 "First" 15 "Excitable" 2 1
-233 3 "Second" 15 NA NA NA
+233 3 "Second" 36 NA NA NA
 234 3 "First" 15 "Friendly" 1 1
-234 3 "Second" 15 NA NA NA
+234 3 "Second" 36 NA NA NA
 235 3 "First" 19 "Friendly" 1 1
-235 3 "Second" 19 NA NA NA
+235 3 "Second" 40 NA NA NA
 236 3 "First" 17 "Friendly" 1 1
-236 3 "Second" 17 NA NA NA
+236 3 "Second" 38 NA NA NA
 237 3 "First" 22 "Excitable" 2 1
 237 3 "Second" 36 "Friendly" 1 1
 238 3 "First" 22 "Excitable" 2 1
 238 3 "Second" 37 "Friendly" 1 1
 239 3 "First" 17 "Excitable" 2 1
-239 3 "Second" 17 NA NA NA
+239 3 "Second" 38 NA NA NA
 240 3 "First" 16 "Friendly" 1 1
-240 3 "Second" 16 NA NA NA
+240 3 "Second" 37 NA NA NA
 241 3 "First" 15 "Excitable" 2 1
-241 3 "Second" 15 NA NA NA
+241 3 "Second" 36 NA NA NA
 1 4 "First" 16 "Relaxed" 1 1
 1 4 "Second" 20 "Relaxed" 1 1
 2 4 "First" 18 "Relaxed" 1 1
@@ -1454,23 +1454,23 @@
 4 4 "First" 26 "Relaxed" 1 1
 4 4 "Second" 47 "Relaxed" 1 1
 5 4 "First" 21 "Relaxed" 1 1
-5 4 "Second" 21 NA NA NA
+5 4 "Second" 42 NA NA NA
 6 4 "First" 19 "Excitable" 2 1
 6 4 "Second" 40 "Uncomfortable Avoids" 5 2
 7 4 "First" 24 "Relaxed" 1 1
 7 4 "Second" 53 "Relaxed" 1 1
 8 4 "First" 19 "Relaxed" 1 1
-8 4 "Second" 19 NA NA NA
+8 4 "Second" 40 NA NA NA
 9 4 "First" 15 "Relaxed" 1 1
 9 4 "Second" 42 "Submissive" 3 1
 10 4 "First" 15 "Relaxed" 1 1
 10 4 "Second" 35 "Excitable" 2 1
 11 4 "First" 18 "Relaxed" 1 1
-11 4 "Second" 18 NA NA NA
+11 4 "Second" 39 NA NA NA
 12 4 "First" 18 "Relaxed" 1 1
-12 4 "Second" 18 NA NA NA
+12 4 "Second" 39 NA NA NA
 13 4 "First" 21 "Excitable" 2 1
-13 4 "Second" 21 NA NA NA
+13 4 "Second" 42 NA NA NA
 14 4 "First" 14 "Submissive" 3 1
 14 4 "Second" 56 "Relaxed" 1 1
 15 4 "First" 19 "Relaxed" 1 1
@@ -1480,11 +1480,11 @@
 17 4 "First" 21 "Submissive" 3 1
 17 4 "Second" 37 "Relaxed" 1 1
 18 4 "First" 21 "Relaxed" 1 1
-18 4 "Second" 21 NA NA NA
+18 4 "Second" 42 NA NA NA
 19 4 "First" 21 "Relaxed" 1 1
 19 4 "Second" 42 "Relaxed" 1 1
 20 4 "First" 22 "Submissive" 3 1
-20 4 "Second" 22 NA NA NA
+20 4 "Second" 43 NA NA NA
 21 4 "First" 21 "Excitable" 2 1
 21 4 "Second" 49 "Relaxed" 1 1
 22 4 "First" 19 "Relaxed" 1 1
@@ -1492,11 +1492,11 @@
 23 4 "First" 19 "Relaxed" 1 1
 23 4 "Second" 42 "Relaxed" 1 1
 24 4 "First" 19 "Relaxed" 1 1
-24 4 "Second" 19 NA NA NA
+24 4 "Second" 40 NA NA NA
 25 4 "First" 20 "Relaxed" 1 1
 25 4 "Second" 41 "Relaxed" 1 1
 26 4 "First" 14 "Relaxed" 1 1
-26 4 "Second" 14 NA NA NA
+26 4 "Second" 35 NA NA NA
 27 4 "First" 22 "Relaxed" 1 1
 27 4 "Second" 43 "Relaxed" 1 1
 28 4 "First" 16 "Relaxed" 1 1
@@ -1504,13 +1504,13 @@
 29 4 "First" 19 "Relaxed" 1 1
 29 4 "Second" 42 "Relaxed" 1 1
 30 4 "First" 27 "Relaxed" 1 1
-30 4 "Second" 27 NA NA NA
+30 4 "Second" 48 NA NA NA
 31 4 "First" 16 "Uncomfortable Avoids" 5 2
-31 4 "Second" 16 NA NA NA
+31 4 "Second" 37 NA NA NA
 32 4 "First" 23 "Relaxed" 1 1
-32 4 "Second" 23 NA NA NA
+32 4 "Second" 44 NA NA NA
 33 4 "First" 21 "Relaxed" 1 1
-33 4 "Second" 21 NA NA NA
+33 4 "Second" 42 NA NA NA
 34 4 "First" 24 "Uncomfortable Avoids" 5 2
 34 4 "Second" 41 "Relaxed" 1 1
 35 4 "First" 20 "Relaxed" 1 1
@@ -1518,33 +1518,33 @@
 36 4 "First" 18 "Relaxed" 1 1
 36 4 "Second" 38 "Uncomfortable Avoids" 5 2
 37 4 "First" 19 "Relaxed" 1 1
-37 4 "Second" 19 NA NA NA
+37 4 "Second" 40 NA NA NA
 38 4 "First" 17 "Relaxed" 1 1
-38 4 "Second" 17 NA NA NA
+38 4 "Second" 38 NA NA NA
 39 4 "First" 24 "Relaxed" 1 1
-39 4 "Second" 24 NA NA NA
+39 4 "Second" 45 NA NA NA
 40 4 "First" 19 "Relaxed" 1 1
-40 4 "Second" 19 NA NA NA
+40 4 "Second" 40 NA NA NA
 41 4 "First" 14 "Relaxed" 1 1
-41 4 "Second" 14 NA NA NA
+41 4 "Second" 35 NA NA NA
 42 4 "First" 17 "Relaxed" 1 1
-42 4 "Second" 17 NA NA NA
+42 4 "Second" 38 NA NA NA
 43 4 "First" 15 "Relaxed" 1 1
 43 4 "Second" 52 "Relaxed" 1 1
 44 4 "First" 16 "Relaxed" 1 1
-44 4 "Second" 16 NA NA NA
+44 4 "Second" 37 NA NA NA
 45 4 "First" 17 "Relaxed" 1 1
-45 4 "Second" 17 NA NA NA
+45 4 "Second" 38 NA NA NA
 46 4 "First" 19 "Relaxed" 1 1
-46 4 "Second" 19 NA NA NA
+46 4 "Second" 40 NA NA NA
 47 4 "First" 18 "Excitable" 2 1
-47 4 "Second" 18 NA NA NA
+47 4 "Second" 39 NA NA NA
 48 4 "First" 46 "Relaxed" 1 1
 48 4 "Second" 67 "Relaxed" 1 1
 49 4 "First" 15 "Submissive" 3 1
-49 4 "Second" 15 NA NA NA
+49 4 "Second" 36 NA NA NA
 50 4 "First" 17 "Relaxed" 1 1
-50 4 "Second" 17 NA NA NA
+50 4 "Second" 38 NA NA NA
 51 4 "First" 21 "Relaxed" 1 1
 51 4 "Second" 36 "Relaxed" 1 1
 52 4 "First" 21 "Stressed" 4 1
@@ -1552,19 +1552,19 @@
 53 4 "First" 15 "Relaxed" 1 1
 53 4 "Second" 51 "Submissive" 3 1
 54 4 "First" 17 "Excitable" 2 1
-54 4 "Second" 17 NA NA NA
+54 4 "Second" 38 NA NA NA
 55 4 "First" 22 "Relaxed" 1 1
 55 4 "Second" 37 "Relaxed" 1 1
 56 4 "First" 35 "Excitable" 2 1
-56 4 "Second" 35 NA NA NA
+56 4 "Second" 56 NA NA NA
 57 4 "First" 15 "Excitable" 2 1
 57 4 "Second" 44 "Uncomfortable Avoids" 5 2
 58 4 "First" 16 "Excitable" 2 1
 58 4 "Second" 37 "Excitable" 2 1
 59 4 "First" 18 "Relaxed" 1 1
-59 4 "Second" 18 NA NA NA
+59 4 "Second" 39 NA NA NA
 60 4 "First" 15 "Relaxed" 1 1
-60 4 "Second" 15 NA NA NA
+60 4 "Second" 36 NA NA NA
 61 4 "First" 20 "Relaxed" 1 1
 61 4 "Second" 41 "Relaxed" 1 1
 62 4 "First" 51 "Relaxed" 1 1
@@ -1574,7 +1574,7 @@
 64 4 "First" 15 "Relaxed" 1 1
 64 4 "Second" 50 "Relaxed" 1 1
 65 4 "First" 29 "Relaxed" 1 1
-65 4 "Second" 29 NA NA NA
+65 4 "Second" 50 NA NA NA
 66 4 "First" 15 "Relaxed" 1 1
 66 4 "Second" 36 "Stressed" 4 1
 67 4 "First" 17 "Relaxed" 1 1
@@ -1606,7 +1606,7 @@
 80 4 "First" 16 "Relaxed" 1 1
 80 4 "Second" 37 "Relaxed" 1 1
 81 4 "First" 17 "Relaxed" 1 1
-81 4 "Second" 17 NA NA NA
+81 4 "Second" 38 NA NA NA
 82 4 "First" 16 "Excitable" 2 1
 82 4 "Second" 36 "Relaxed" 1 1
 83 4 "First" 16 "Relaxed" 1 1
@@ -1618,13 +1618,13 @@
 86 4 "First" 16 "Excitable" 2 1
 86 4 "Second" 37 "Excitable" 2 1
 87 4 "First" 16 "Relaxed" 1 1
-87 4 "Second" 16 NA NA NA
+87 4 "Second" 37 NA NA NA
 88 4 "First" 19 "Relaxed" 1 1
 88 4 "Second" 38 "Relaxed" 1 1
 89 4 "First" 15 "Relaxed" 1 1
 89 4 "Second" 36 "Relaxed" 1 1
 90 4 "First" 25 "No opinion" NA NA
-90 4 "Second" 25 NA NA NA
+90 4 "Second" 46 NA NA NA
 91 4 "First" 16 "Excitable" 2 1
 91 4 "Second" 37 "Relaxed" 1 1
 92 4 "First" 23 "Excitable" 2 1
@@ -1646,33 +1646,33 @@
 100 4 "First" 19 "Relaxed" 1 1
 100 4 "Second" 39 "Relaxed" 1 1
 101 4 "First" 17 "Excitable" 2 1
-101 4 "Second" 17 NA NA NA
+101 4 "Second" 38 NA NA NA
 102 4 "First" 22 "Excitable" 2 1
-102 4 "Second" 22 NA NA NA
+102 4 "Second" 43 NA NA NA
 103 4 "First" 16 "Relaxed" 1 1
 103 4 "Second" 43 "Relaxed" 1 1
 104 4 "First" 17 "Excitable" 2 1
-104 4 "Second" 17 NA NA NA
+104 4 "Second" 38 NA NA NA
 105 4 "First" 16 "Relaxed" 1 1
 105 4 "Second" 43 "Relaxed" 1 1
 106 4 "First" 23 "Relaxed" 1 1
-106 4 "Second" 23 NA NA NA
+106 4 "Second" 44 NA NA NA
 107 4 "First" 19 "Relaxed" 1 1
 107 4 "Second" 40 "Relaxed" 1 1
 108 4 "First" 18 "Excitable" 2 1
-108 4 "Second" 18 NA NA NA
+108 4 "Second" 39 NA NA NA
 109 4 "First" 19 "Excitable" 2 1
-109 4 "Second" 19 NA NA NA
+109 4 "Second" 40 NA NA NA
 110 4 "First" 14 "Relaxed" 1 1
 110 4 "Second" 35 "Relaxed" 1 1
 111 4 "First" 17 "Relaxed" 1 1
-111 4 "Second" 17 NA NA NA
+111 4 "Second" 38 NA NA NA
 112 4 "First" 17 "Relaxed" 1 1
 112 4 "Second" 38 "Excitable" 2 1
 113 4 "First" 19 "Relaxed" 1 1
-113 4 "Second" 19 NA NA NA
+113 4 "Second" 40 NA NA NA
 114 4 "First" 17 "Relaxed" 1 1
-114 4 "Second" 17 NA NA NA
+114 4 "Second" 38 NA NA NA
 115 4 "First" 26 "Relaxed" 1 1
 115 4 "Second" 41 "Relaxed" 1 1
 116 4 "First" 29 "Relaxed" 1 1
@@ -1680,19 +1680,19 @@
 117 4 "First" 18 "Relaxed" 1 1
 117 4 "Second" 40 "Reactive to People Aggressive" 11 3
 118 4 "First" 36 "Relaxed" 1 1
-118 4 "Second" 36 NA NA NA
+118 4 "Second" 57 NA NA NA
 119 4 "First" 18 "Relaxed" 1 1
 119 4 "Second" 36 "Uncomfortable Avoids" 5 2
 120 4 "First" 17 "Relaxed" 1 1
-120 4 "Second" 17 NA NA NA
+120 4 "Second" 38 NA NA NA
 121 4 "First" 23 "Relaxed" 1 1
 121 4 "Second" 38 "Uncomfortable Avoids" 5 2
 122 4 "First" 21 "Relaxed" 1 1
-122 4 "Second" 21 NA NA NA
+122 4 "Second" 42 NA NA NA
 123 4 "First" 19 "Relaxed" 1 1
 123 4 "Second" 40 "Relaxed" 1 1
 124 4 "First" 38 "Relaxed" 1 1
-124 4 "Second" 38 NA NA NA
+124 4 "Second" 59 NA NA NA
 125 4 "First" 20 "Relaxed" 1 1
 125 4 "Second" 42 "Relaxed" 1 1
 126 4 "First" 21 "Relaxed" 1 1
@@ -1702,13 +1702,13 @@
 128 4 "First" 17 "Relaxed" 1 1
 128 4 "Second" 42 "Stressed" 4 1
 129 4 "First" 15 "Relaxed" 1 1
-129 4 "Second" 15 NA NA NA
+129 4 "Second" 36 NA NA NA
 130 4 "First" 18 "Excitable" 2 1
 130 4 "Second" 38 "Relaxed" 1 1
 131 4 "First" 38 "Relaxed" 1 1
-131 4 "Second" 38 NA NA NA
+131 4 "Second" 59 NA NA NA
 132 4 "First" 22 "Relaxed" 1 1
-132 4 "Second" 22 NA NA NA
+132 4 "Second" 43 NA NA NA
 133 4 "First" 19 "Relaxed" 1 1
 133 4 "Second" 40 "Relaxed" 1 1
 134 4 "First" 17 "Relaxed" 1 1
@@ -1724,11 +1724,11 @@
 139 4 "First" 7 "Submissive" 3 1
 139 4 "Second" 41 "Excitable" 2 1
 140 4 "First" 20 "Relaxed" 1 1
-140 4 "Second" 20 NA NA NA
+140 4 "Second" 41 NA NA NA
 141 4 "First" 27 "Relaxed" 1 1
-141 4 "Second" 27 NA NA NA
+141 4 "Second" 48 NA NA NA
 142 4 "First" 17 "Relaxed" 1 1
-142 4 "Second" 17 NA NA NA
+142 4 "Second" 38 NA NA NA
 143 4 "First" 25 "Relaxed" 1 1
 143 4 "Second" 37 "Relaxed" 1 1
 144 4 "First" 15 "Relaxed" 1 1
@@ -1750,9 +1750,9 @@
 152 4 "First" 23 "Relaxed" 1 1
 152 4 "Second" 37 "Excitable" 2 1
 153 4 "First" 26 "Excitable" 2 1
-153 4 "Second" 26 NA NA NA
+153 4 "Second" 47 NA NA NA
 154 4 "First" 21 "Relaxed" 1 1
-154 4 "Second" 21 NA NA NA
+154 4 "Second" 42 NA NA NA
 155 4 "First" 21 "Relaxed" 1 1
 155 4 "Second" 43 "Relaxed" 1 1
 156 4 "First" 22 "Relaxed" 1 1
@@ -1766,7 +1766,7 @@
 160 4 "First" 23 "Excitable" 2 1
 160 4 "Second" 37 "Stressed" 4 1
 161 4 "First" 24 "Relaxed" 1 1
-161 4 "Second" 24 NA NA NA
+161 4 "Second" 45 NA NA NA
 162 4 "First" 21 "Relaxed" 1 1
 162 4 "Second" 36 "Excitable" 2 1
 163 4 "First" 23 "Relaxed" 1 1
@@ -1778,35 +1778,35 @@
 166 4 "First" 24 "Relaxed" 1 1
 166 4 "Second" 42 "Excitable" 2 1
 167 4 "First" 19 "Relaxed" 1 1
-167 4 "Second" 19 NA NA NA
+167 4 "Second" 40 NA NA NA
 168 4 "First" 22 "Relaxed" 1 1
-168 4 "Second" 22 NA NA NA
+168 4 "Second" 43 NA NA NA
 169 4 "First" 22 "Relaxed" 1 1
 169 4 "Second" 39 "Relaxed" 1 1
 170 4 "First" 20 "Reactive to People Aggressive" 11 3
 170 4 "Second" 35 "Relaxed" 1 1
 171 4 "First" 20 "Relaxed" 1 1
-171 4 "Second" 20 NA NA NA
+171 4 "Second" 41 NA NA NA
 172 4 "First" 20 "Relaxed" 1 1
-172 4 "Second" 20 NA NA NA
+172 4 "Second" 41 NA NA NA
 173 4 "First" 24 "Excitable" 2 1
-173 4 "Second" 24 NA NA NA
+173 4 "Second" 45 NA NA NA
 174 4 "First" 21 "Relaxed" 1 1
 174 4 "Second" 43 "Relaxed" 1 1
 175 4 "First" 21 "Relaxed" 1 1
 175 4 "Second" 43 "Relaxed" 1 1
 176 4 "First" 16 "Relaxed" 1 1
-176 4 "Second" 16 NA NA NA
+176 4 "Second" 37 NA NA NA
 177 4 "First" 20 "Stressed" 4 1
 177 4 "Second" 41 "Relaxed" 1 1
 178 4 "First" 21 "Relaxed" 1 1
-178 4 "Second" 21 NA NA NA
+178 4 "Second" 42 NA NA NA
 179 4 "First" 24 "Relaxed" 1 1
-179 4 "Second" 24 NA NA NA
+179 4 "Second" 45 NA NA NA
 180 4 "First" 25 "Relaxed" 1 1
-180 4 "Second" 25 NA NA NA
+180 4 "Second" 46 NA NA NA
 181 4 "First" 27 "Relaxed" 1 1
-181 4 "Second" 27 NA NA NA
+181 4 "Second" 48 NA NA NA
 182 4 "First" 20 "Relaxed" 1 1
 182 4 "Second" 42 "Relaxed" 1 1
 183 4 "First" 16 "Relaxed" 1 1
@@ -1816,13 +1816,13 @@
 185 4 "First" 22 "Relaxed" 1 1
 185 4 "Second" 37 "Relaxed" 1 1
 186 4 "First" 20 "Relaxed" 1 1
-186 4 "Second" 20 NA NA NA
+186 4 "Second" 41 NA NA NA
 187 4 "First" 23 "Relaxed" 1 1
-187 4 "Second" 23 NA NA NA
+187 4 "Second" 44 NA NA NA
 188 4 "First" 25 "Relaxed" 1 1
 188 4 "Second" 40 "Relaxed" 1 1
 189 4 "First" 20 "Relaxed" 1 1
-189 4 "Second" 20 NA NA NA
+189 4 "Second" 41 NA NA NA
 190 4 "First" 22 "Relaxed" 1 1
 190 4 "Second" 39 "Relaxed" 1 1
 191 4 "First" 15 "Relaxed" 1 1
@@ -1830,19 +1830,19 @@
 192 4 "First" 27 "Excitable" 2 1
 192 4 "Second" 40 "Excitable" 2 1
 193 4 "First" 21 "Relaxed" 1 1
-193 4 "Second" 21 NA NA NA
+193 4 "Second" 42 NA NA NA
 194 4 "First" 22 "Excitable" 2 1
-194 4 "Second" 22 NA NA NA
+194 4 "Second" 43 NA NA NA
 195 4 "First" 23 "Relaxed" 1 1
-195 4 "Second" 23 NA NA NA
+195 4 "Second" 44 NA NA NA
 196 4 "First" 19 "Excitable" 2 1
-196 4 "Second" 19 NA NA NA
+196 4 "Second" 40 NA NA NA
 197 4 "First" 20 "Relaxed" 1 1
-197 4 "Second" 20 NA NA NA
+197 4 "Second" 41 NA NA NA
 198 4 "First" 20 "Relaxed" 1 1
-198 4 "Second" 20 NA NA NA
+198 4 "Second" 41 NA NA NA
 199 4 "First" 19 "Relaxed" 1 1
-199 4 "Second" 19 NA NA NA
+199 4 "Second" 40 NA NA NA
 200 4 "First" 18 "Relaxed" 1 1
 200 4 "Second" 36 "Relaxed" 1 1
 201 4 "First" 18 "Relaxed" 1 1
@@ -1856,7 +1856,7 @@
 205 4 "First" 15 "Relaxed" 1 1
 205 4 "Second" 36 "Relaxed" 1 1
 206 4 "First" 22 "Relaxed" 1 1
-206 4 "Second" 22 NA NA NA
+206 4 "Second" 43 NA NA NA
 207 4 "First" 19 "Relaxed" 1 1
 207 4 "Second" 39 "Relaxed" 1 1
 208 4 "First" 23 "Submissive" 3 1
@@ -1864,9 +1864,9 @@
 209 4 "First" 19 "Relaxed" 1 1
 209 4 "Second" 44 "Uncomfortable Avoids" 5 2
 210 4 "First" 17 "Uncomfortable Avoids" 5 2
-210 4 "Second" 17 NA NA NA
+210 4 "Second" 38 NA NA NA
 211 4 "First" 23 "Relaxed" 1 1
-211 4 "Second" 23 NA NA NA
+211 4 "Second" 44 NA NA NA
 212 4 "First" 21 "Relaxed" 1 1
 212 4 "Second" 37 "Relaxed" 1 1
 213 4 "First" 18 "Relaxed" 1 1
@@ -1874,17 +1874,17 @@
 214 4 "First" 22 "Relaxed" 1 1
 214 4 "Second" 35 "Relaxed" 1 1
 215 4 "First" 17 "Relaxed" 1 1
-215 4 "Second" 17 NA NA NA
+215 4 "Second" 38 NA NA NA
 216 4 "First" 20 "Relaxed" 1 1
-216 4 "Second" 20 NA NA NA
+216 4 "Second" 41 NA NA NA
 217 4 "First" 18 "Relaxed" 1 1
-217 4 "Second" 18 NA NA NA
+217 4 "Second" 39 NA NA NA
 218 4 "First" 18 "Relaxed" 1 1
 218 4 "Second" 36 "Relaxed" 1 1
 219 4 "First" 16 "Relaxed" 1 1
-219 4 "Second" 16 NA NA NA
+219 4 "Second" 37 NA NA NA
 220 4 "First" 17 "Relaxed" 1 1
-220 4 "Second" 17 NA NA NA
+220 4 "Second" 38 NA NA NA
 221 4 "First" 15 "Relaxed" 1 1
 221 4 "Second" 43 "Relaxed" 1 1
 222 4 "First" 21 "Relaxed" 1 1
@@ -1902,7 +1902,7 @@
 228 4 "First" 19 "Relaxed" 1 1
 228 4 "Second" 40 "Relaxed" 1 1
 229 4 "First" 17 "Relaxed" 1 1
-229 4 "Second" 17 NA NA NA
+229 4 "Second" 38 NA NA NA
 230 4 "First" 21 "Relaxed" 1 1
 230 4 "Second" 37 "Excitable" 2 1
 231 4 "First" 22 "Relaxed" 1 1
@@ -1910,23 +1910,23 @@
 232 4 "First" 22 "Relaxed" 1 1
 232 4 "Second" 40 "Excitable" 2 1
 233 4 "First" 15 "Stressed" 4 1
-233 4 "Second" 15 NA NA NA
+233 4 "Second" 36 NA NA NA
 234 4 "First" 15 "Relaxed" 1 1
-234 4 "Second" 15 NA NA NA
+234 4 "Second" 36 NA NA NA
 235 4 "First" 19 "Relaxed" 1 1
-235 4 "Second" 19 NA NA NA
+235 4 "Second" 40 NA NA NA
 236 4 "First" 17 "Relaxed" 1 1
-236 4 "Second" 17 NA NA NA
+236 4 "Second" 38 NA NA NA
 237 4 "First" 22 "Relaxed" 1 1
 237 4 "Second" 36 "Relaxed" 1 1
 238 4 "First" 22 "Relaxed" 1 1
 238 4 "Second" 37 "Relaxed" 1 1
 239 4 "First" 17 "Excitable" 2 1
-239 4 "Second" 17 NA NA NA
+239 4 "Second" 38 NA NA NA
 240 4 "First" 16 "Relaxed" 1 1
-240 4 "Second" 16 NA NA NA
+240 4 "Second" 37 NA NA NA
 241 4 "First" 15 "Relaxed" 1 1
-241 4 "Second" 15 NA NA NA
+241 4 "Second" 36 NA NA NA
 1 5 "First" 16 "Relaxed" 1 1
 1 5 "Second" 20 "Relaxed" 1 1
 2 5 "First" 18 "Relaxed" 1 1
@@ -1936,23 +1936,23 @@
 4 5 "First" 26 "Relaxed" 1 1
 4 5 "Second" 47 "Relaxed" 1 1
 5 5 "First" 21 "Relaxed" 1 1
-5 5 "Second" 21 NA NA NA
+5 5 "Second" 42 NA NA NA
 6 5 "First" 19 "Relaxed" 1 1
 6 5 "Second" 40 "Relaxed" 1 1
 7 5 "First" 24 "Relaxed" 1 1
 7 5 "Second" 53 "Reactive to Dogs Aggressive" 9 3
 8 5 "First" 19 "Relaxed" 1 1
-8 5 "Second" 19 NA NA NA
+8 5 "Second" 40 NA NA NA
 9 5 "First" 15 "Relaxed" 1 1
 9 5 "Second" 42 "Reactive to People Non Aggressive" 7 2
 10 5 "First" 15 "Relaxed" 1 1
 10 5 "Second" 35 "Relaxed" 1 1
 11 5 "First" 18 "Relaxed" 1 1
-11 5 "Second" 18 NA NA NA
+11 5 "Second" 39 NA NA NA
 12 5 "First" 18 "Relaxed" 1 1
-12 5 "Second" 18 NA NA NA
+12 5 "Second" 39 NA NA NA
 13 5 "First" 21 "Relaxed" 1 1
-13 5 "Second" 21 NA NA NA
+13 5 "Second" 42 NA NA NA
 14 5 "First" 14 "Relaxed" 1 1
 14 5 "Second" 56 "Relaxed" 1 1
 15 5 "First" 19 "Relaxed" 1 1
@@ -1962,11 +1962,11 @@
 17 5 "First" 21 "Vocal" 2 1
 17 5 "Second" 37 "Reactive to People Aggressive" 11 3
 18 5 "First" 21 "Relaxed" 1 1
-18 5 "Second" 21 NA NA NA
+18 5 "Second" 42 NA NA NA
 19 5 "First" 21 "Vocal" 2 1
 19 5 "Second" 42 "Relaxed" 1 1
 20 5 "First" 22 "Relaxed" 1 1
-20 5 "Second" 22 NA NA NA
+20 5 "Second" 43 NA NA NA
 21 5 "First" 21 "Relaxed" 1 1
 21 5 "Second" 49 "Relaxed" 1 1
 22 5 "First" 19 "Relaxed" 1 1
@@ -1974,11 +1974,11 @@
 23 5 "First" 19 "Relaxed" 1 1
 23 5 "Second" 42 "Relaxed" 1 1
 24 5 "First" 19 "Relaxed" 1 1
-24 5 "Second" 19 NA NA NA
+24 5 "Second" 40 NA NA NA
 25 5 "First" 20 "Relaxed" 1 1
 25 5 "Second" 41 "Relaxed" 1 1
 26 5 "First" 14 "Relaxed" 1 1
-26 5 "Second" 14 NA NA NA
+26 5 "Second" 35 NA NA NA
 27 5 "First" 22 "Relaxed" 1 1
 27 5 "Second" 43 "Relaxed" 1 1
 28 5 "First" 16 "Relaxed" 1 1
@@ -1986,13 +1986,13 @@
 29 5 "First" 19 "Relaxed" 1 1
 29 5 "Second" 42 "Relaxed" 1 1
 30 5 "First" 27 "Relaxed" 1 1
-30 5 "Second" 27 NA NA NA
+30 5 "Second" 48 NA NA NA
 31 5 "First" 16 "Relaxed" 1 1
-31 5 "Second" 16 NA NA NA
+31 5 "Second" 37 NA NA NA
 32 5 "First" 23 "Relaxed" 1 1
-32 5 "Second" 23 NA NA NA
+32 5 "Second" 44 NA NA NA
 33 5 "First" 21 "Relaxed" 1 1
-33 5 "Second" 21 NA NA NA
+33 5 "Second" 42 NA NA NA
 34 5 "First" 24 "Relaxed" 1 1
 34 5 "Second" 41 "Relaxed" 1 1
 35 5 "First" 20 "Relaxed" 1 1
@@ -2000,33 +2000,33 @@
 36 5 "First" 18 "Relaxed" 1 1
 36 5 "Second" 38 "Relaxed" 1 1
 37 5 "First" 19 "Relaxed" 1 1
-37 5 "Second" 19 NA NA NA
+37 5 "Second" 40 NA NA NA
 38 5 "First" 17 "Relaxed" 1 1
-38 5 "Second" 17 NA NA NA
+38 5 "Second" 38 NA NA NA
 39 5 "First" 24 "Relaxed" 1 1
-39 5 "Second" 24 NA NA NA
+39 5 "Second" 45 NA NA NA
 40 5 "First" 19 "Relaxed" 1 1
-40 5 "Second" 19 NA NA NA
+40 5 "Second" 40 NA NA NA
 41 5 "First" 14 "Relaxed" 1 1
-41 5 "Second" 14 NA NA NA
+41 5 "Second" 35 NA NA NA
 42 5 "First" 17 "Relaxed" 1 1
-42 5 "Second" 17 NA NA NA
+42 5 "Second" 38 NA NA NA
 43 5 "First" 15 "Vocal" 2 1
 43 5 "Second" 52 "Reactive to People Non Aggressive" 7 2
 44 5 "First" 16 "Relaxed" 1 1
-44 5 "Second" 16 NA NA NA
+44 5 "Second" 37 NA NA NA
 45 5 "First" 17 "Relaxed" 1 1
-45 5 "Second" 17 NA NA NA
+45 5 "Second" 38 NA NA NA
 46 5 "First" 19 "Relaxed" 1 1
-46 5 "Second" 19 NA NA NA
+46 5 "Second" 40 NA NA NA
 47 5 "First" 18 "Relaxed" 1 1
-47 5 "Second" 18 NA NA NA
+47 5 "Second" 39 NA NA NA
 48 5 "First" 46 "Relaxed" 1 1
 48 5 "Second" 67 "Relaxed" 1 1
 49 5 "First" 15 "Relaxed" 1 1
-49 5 "Second" 15 NA NA NA
+49 5 "Second" 36 NA NA NA
 50 5 "First" 17 "Relaxed" 1 1
-50 5 "Second" 17 NA NA NA
+50 5 "Second" 38 NA NA NA
 51 5 "First" 21 "Relaxed" 1 1
 51 5 "Second" 36 "Relaxed" 1 1
 52 5 "First" 21 "Relaxed" 1 1
@@ -2034,19 +2034,19 @@
 53 5 "First" 15 "Relaxed" 1 1
 53 5 "Second" 51 "Relaxed" 1 1
 54 5 "First" 17 "Relaxed" 1 1
-54 5 "Second" 17 NA NA NA
+54 5 "Second" 38 NA NA NA
 55 5 "First" 22 "Relaxed" 1 1
 55 5 "Second" 37 "Relaxed" 1 1
 56 5 "First" 35 "Vocal" 2 1
-56 5 "Second" 35 NA NA NA
+56 5 "Second" 56 NA NA NA
 57 5 "First" 15 "Stressed" 4 1
 57 5 "Second" 44 "Stressed +" 5 2
 58 5 "First" 16 "Vocal" 2 1
 58 5 "Second" 37 "Relaxed" 1 1
 59 5 "First" 18 "Relaxed" 1 1
-59 5 "Second" 18 NA NA NA
+59 5 "Second" 39 NA NA NA
 60 5 "First" 15 "Relaxed" 1 1
-60 5 "Second" 15 NA NA NA
+60 5 "Second" 36 NA NA NA
 61 5 "First" 20 "Relaxed" 1 1
 61 5 "Second" 41 "Relaxed" 1 1
 62 5 "First" 51 "Relaxed" 1 1
@@ -2056,7 +2056,7 @@
 64 5 "First" 15 "Relaxed" 1 1
 64 5 "Second" 50 "Relaxed" 1 1
 65 5 "First" 29 "Relaxed" 1 1
-65 5 "Second" 29 NA NA NA
+65 5 "Second" 50 NA NA NA
 66 5 "First" 15 "Relaxed" 1 1
 66 5 "Second" 36 "Reactive to People Non Aggressive" 7 2
 67 5 "First" 17 "Relaxed" 1 1
@@ -2088,7 +2088,7 @@
 80 5 "First" 16 "Relaxed" 1 1
 80 5 "Second" 37 "Relaxed" 1 1
 81 5 "First" 17 "Relaxed" 1 1
-81 5 "Second" 17 NA NA NA
+81 5 "Second" 38 NA NA NA
 82 5 "First" 16 "Relaxed" 1 1
 82 5 "Second" 36 "Relaxed" 1 1
 83 5 "First" 16 "Relaxed" 1 1
@@ -2100,13 +2100,13 @@
 86 5 "First" 16 "Relaxed" 1 1
 86 5 "Second" 37 "Relaxed" 1 1
 87 5 "First" 16 "Relaxed" 1 1
-87 5 "Second" 16 NA NA NA
+87 5 "Second" 37 NA NA NA
 88 5 "First" 19 "Relaxed" 1 1
 88 5 "Second" 38 "Relaxed" 1 1
 89 5 "First" 15 "Relaxed" 1 1
 89 5 "Second" 36 "Relaxed" 1 1
 90 5 "First" 25 "Relaxed" 1 1
-90 5 "Second" 25 NA NA NA
+90 5 "Second" 46 NA NA NA
 91 5 "First" 16 "Relaxed" 1 1
 91 5 "Second" 37 "Relaxed" 1 1
 92 5 "First" 23 "Relaxed" 1 1
@@ -2128,33 +2128,33 @@
 100 5 "First" 19 "Relaxed" 1 1
 100 5 "Second" 39 "Relaxed" 1 1
 101 5 "First" 17 "Stressed" 4 1
-101 5 "Second" 17 NA NA NA
+101 5 "Second" 38 NA NA NA
 102 5 "First" 22 "Relaxed" 1 1
-102 5 "Second" 22 NA NA NA
+102 5 "Second" 43 NA NA NA
 103 5 "First" 16 "Relaxed" 1 1
 103 5 "Second" 43 "Relaxed" 1 1
 104 5 "First" 17 "Relaxed" 1 1
-104 5 "Second" 17 NA NA NA
+104 5 "Second" 38 NA NA NA
 105 5 "First" 16 "Relaxed" 1 1
 105 5 "Second" 43 "Relaxed" 1 1
 106 5 "First" 23 "Relaxed" 1 1
-106 5 "Second" 23 NA NA NA
+106 5 "Second" 44 NA NA NA
 107 5 "First" 19 "Relaxed" 1 1
 107 5 "Second" 40 "Relaxed" 1 1
 108 5 "First" 18 "Relaxed" 1 1
-108 5 "Second" 18 NA NA NA
+108 5 "Second" 39 NA NA NA
 109 5 "First" 19 "Stressed +" 5 2
-109 5 "Second" 19 NA NA NA
+109 5 "Second" 40 NA NA NA
 110 5 "First" 14 "Relaxed" 1 1
 110 5 "Second" 35 "Relaxed" 1 1
 111 5 "First" 17 "Stressed" 4 1
-111 5 "Second" 17 NA NA NA
+111 5 "Second" 38 NA NA NA
 112 5 "First" 17 "Relaxed" 1 1
 112 5 "Second" 38 "Stressed" 4 1
 113 5 "First" 19 "Relaxed" 1 1
-113 5 "Second" 19 NA NA NA
+113 5 "Second" 40 NA NA NA
 114 5 "First" 17 "Stressed" 4 1
-114 5 "Second" 17 NA NA NA
+114 5 "Second" 38 NA NA NA
 115 5 "First" 26 "Relaxed" 1 1
 115 5 "Second" 41 "Relaxed" 1 1
 116 5 "First" 29 "Relaxed" 1 1
@@ -2162,19 +2162,19 @@
 117 5 "First" 18 "Relaxed" 1 1
 117 5 "Second" 40 "Reactive to People Aggressive" 11 3
 118 5 "First" 36 "Relaxed" 1 1
-118 5 "Second" 36 NA NA NA
+118 5 "Second" 57 NA NA NA
 119 5 "First" 18 "Relaxed" 1 1
 119 5 "Second" 36 "No opinion" NA NA
 120 5 "First" 17 "Relaxed" 1 1
-120 5 "Second" 17 NA NA NA
+120 5 "Second" 38 NA NA NA
 121 5 "First" 23 "Relaxed" 1 1
 121 5 "Second" 38 "Relaxed" 1 1
 122 5 "First" 21 "Relaxed" 1 1
-122 5 "Second" 21 NA NA NA
+122 5 "Second" 42 NA NA NA
 123 5 "First" 19 "Relaxed" 1 1
 123 5 "Second" 40 "Reactive to People Non Aggressive" 7 2
 124 5 "First" 38 "Relaxed" 1 1
-124 5 "Second" 38 NA NA NA
+124 5 "Second" 59 NA NA NA
 125 5 "First" 20 "Relaxed" 1 1
 125 5 "Second" 42 "Relaxed" 1 1
 126 5 "First" 21 "Stressed" 4 1
@@ -2184,13 +2184,13 @@
 128 5 "First" 17 "Relaxed" 1 1
 128 5 "Second" 42 "Relaxed" 1 1
 129 5 "First" 15 "Relaxed" 1 1
-129 5 "Second" 15 NA NA NA
+129 5 "Second" 36 NA NA NA
 130 5 "First" 18 "Relaxed" 1 1
 130 5 "Second" 38 "Relaxed" 1 1
 131 5 "First" 38 "Relaxed" 1 1
-131 5 "Second" 38 NA NA NA
+131 5 "Second" 59 NA NA NA
 132 5 "First" 22 "Relaxed" 1 1
-132 5 "Second" 22 NA NA NA
+132 5 "Second" 43 NA NA NA
 133 5 "First" 19 "Relaxed" 1 1
 133 5 "Second" 40 "Relaxed" 1 1
 134 5 "First" 17 "Relaxed" 1 1
@@ -2206,11 +2206,11 @@
 139 5 "First" 7 "Relaxed" 1 1
 139 5 "Second" 41 "Stressed +" 5 2
 140 5 "First" 20 "Relaxed" 1 1
-140 5 "Second" 20 NA NA NA
+140 5 "Second" 41 NA NA NA
 141 5 "First" 27 "Relaxed" 1 1
-141 5 "Second" 27 NA NA NA
+141 5 "Second" 48 NA NA NA
 142 5 "First" 17 "Relaxed" 1 1
-142 5 "Second" 17 NA NA NA
+142 5 "Second" 38 NA NA NA
 143 5 "First" 25 "Stressed" 4 1
 143 5 "Second" 37 "Stressed" 4 1
 144 5 "First" 15 "Stressed" 4 1
@@ -2232,9 +2232,9 @@
 152 5 "First" 23 "Relaxed" 1 1
 152 5 "Second" 37 "Relaxed" 1 1
 153 5 "First" 26 "Relaxed" 1 1
-153 5 "Second" 26 NA NA NA
+153 5 "Second" 47 NA NA NA
 154 5 "First" 21 "Relaxed" 1 1
-154 5 "Second" 21 NA NA NA
+154 5 "Second" 42 NA NA NA
 155 5 "First" 21 "Relaxed" 1 1
 155 5 "Second" 43 "Relaxed" 1 1
 156 5 "First" 22 "Relaxed" 1 1
@@ -2248,7 +2248,7 @@
 160 5 "First" 23 "Relaxed" 1 1
 160 5 "Second" 37 "Reactive to People Non Aggressive" 7 2
 161 5 "First" 24 "Relaxed" 1 1
-161 5 "Second" 24 NA NA NA
+161 5 "Second" 45 NA NA NA
 162 5 "First" 21 "Stressed +" 5 2
 162 5 "Second" 36 "Stressed" 4 1
 163 5 "First" 23 "Relaxed" 1 1
@@ -2260,35 +2260,35 @@
 166 5 "First" 24 "Relaxed" 1 1
 166 5 "Second" 42 "Relaxed" 1 1
 167 5 "First" 19 "Reactive to Dogs Non Aggressive" 6 2
-167 5 "Second" 19 NA NA NA
+167 5 "Second" 40 NA NA NA
 168 5 "First" 22 "Relaxed" 1 1
-168 5 "Second" 22 NA NA NA
+168 5 "Second" 43 NA NA NA
 169 5 "First" 22 "Relaxed" 1 1
 169 5 "Second" 39 "Relaxed" 1 1
 170 5 "First" 20 "Reactive to People Non Aggressive" 7 2
 170 5 "Second" 35 "Relaxed" 1 1
 171 5 "First" 20 "Relaxed" 1 1
-171 5 "Second" 20 NA NA NA
+171 5 "Second" 41 NA NA NA
 172 5 "First" 20 "Relaxed" 1 1
-172 5 "Second" 20 NA NA NA
+172 5 "Second" 41 NA NA NA
 173 5 "First" 24 "Stressed" 4 1
-173 5 "Second" 24 NA NA NA
+173 5 "Second" 45 NA NA NA
 174 5 "First" 21 "Vocal" 2 1
 174 5 "Second" 43 "Reactive to Dogs Aggressive" 9 3
 175 5 "First" 21 "Vocal" 2 1
 175 5 "Second" 43 "Reactive to Dogs Aggressive" 9 3
 176 5 "First" 16 "Relaxed" 1 1
-176 5 "Second" 16 NA NA NA
+176 5 "Second" 37 NA NA NA
 177 5 "First" 20 "Stressed" 4 1
 177 5 "Second" 41 "Relaxed" 1 1
 178 5 "First" 21 "Relaxed" 1 1
-178 5 "Second" 21 NA NA NA
+178 5 "Second" 42 NA NA NA
 179 5 "First" 24 "Relaxed" 1 1
-179 5 "Second" 24 NA NA NA
+179 5 "Second" 45 NA NA NA
 180 5 "First" 25 "Reactive to Dogs Non Aggressive" 6 2
-180 5 "Second" 25 NA NA NA
+180 5 "Second" 46 NA NA NA
 181 5 "First" 27 "Relaxed" 1 1
-181 5 "Second" 27 NA NA NA
+181 5 "Second" 48 NA NA NA
 182 5 "First" 20 "Relaxed" 1 1
 182 5 "Second" 42 "Stressed" 4 1
 183 5 "First" 16 "Relaxed" 1 1
@@ -2298,13 +2298,13 @@
 185 5 "First" 22 "Relaxed" 1 1
 185 5 "Second" 37 "Reactive to People Non Aggressive" 7 2
 186 5 "First" 20 "Stressed" 4 1
-186 5 "Second" 20 NA NA NA
+186 5 "Second" 41 NA NA NA
 187 5 "First" 23 "Relaxed" 1 1
-187 5 "Second" 23 NA NA NA
+187 5 "Second" 44 NA NA NA
 188 5 "First" 25 "Relaxed" 1 1
 188 5 "Second" 40 "Relaxed" 1 1
 189 5 "First" 20 "Relaxed" 1 1
-189 5 "Second" 20 NA NA NA
+189 5 "Second" 41 NA NA NA
 190 5 "First" 22 "Relaxed" 1 1
 190 5 "Second" 39 "Relaxed" 1 1
 191 5 "First" 15 "Relaxed" 1 1
@@ -2312,19 +2312,19 @@
 192 5 "First" 27 "Relaxed" 1 1
 192 5 "Second" 40 "Relaxed" 1 1
 193 5 "First" 21 "Relaxed" 1 1
-193 5 "Second" 21 NA NA NA
+193 5 "Second" 42 NA NA NA
 194 5 "First" 22 "Relaxed" 1 1
-194 5 "Second" 22 NA NA NA
+194 5 "Second" 43 NA NA NA
 195 5 "First" 23 "Relaxed" 1 1
-195 5 "Second" 23 NA NA NA
+195 5 "Second" 44 NA NA NA
 196 5 "First" 19 "Relaxed" 1 1
-196 5 "Second" 19 NA NA NA
+196 5 "Second" 40 NA NA NA
 197 5 "First" 20 "Stressed" 4 1
-197 5 "Second" 20 NA NA NA
+197 5 "Second" 41 NA NA NA
 198 5 "First" 20 "Stressed" 4 1
-198 5 "Second" 20 NA NA NA
+198 5 "Second" 41 NA NA NA
 199 5 "First" 19 "Relaxed" 1 1
-199 5 "Second" 19 NA NA NA
+199 5 "Second" 40 NA NA NA
 200 5 "First" 18 "Relaxed" 1 1
 200 5 "Second" 36 "Relaxed" 1 1
 201 5 "First" 18 "Relaxed" 1 1
@@ -2338,7 +2338,7 @@
 205 5 "First" 15 "Relaxed" 1 1
 205 5 "Second" 36 "Relaxed" 1 1
 206 5 "First" 22 "Relaxed" 1 1
-206 5 "Second" 22 NA NA NA
+206 5 "Second" 43 NA NA NA
 207 5 "First" 19 "Relaxed" 1 1
 207 5 "Second" 39 "Vocal" 2 1
 208 5 "First" 23 "Relaxed" 1 1
@@ -2346,9 +2346,9 @@
 209 5 "First" 19 "Relaxed" 1 1
 209 5 "Second" 44 "Relaxed" 1 1
 210 5 "First" 17 "Stressed" 4 1
-210 5 "Second" 17 NA NA NA
+210 5 "Second" 38 NA NA NA
 211 5 "First" 23 "Relaxed" 1 1
-211 5 "Second" 23 NA NA NA
+211 5 "Second" 44 NA NA NA
 212 5 "First" 21 "Relaxed" 1 1
 212 5 "Second" 37 "Relaxed" 1 1
 213 5 "First" 18 "Stressed" 4 1
@@ -2356,17 +2356,17 @@
 214 5 "First" 22 "Relaxed" 1 1
 214 5 "Second" 35 "Relaxed" 1 1
 215 5 "First" 17 "Relaxed" 1 1
-215 5 "Second" 17 NA NA NA
+215 5 "Second" 38 NA NA NA
 216 5 "First" 20 "Relaxed" 1 1
-216 5 "Second" 20 NA NA NA
+216 5 "Second" 41 NA NA NA
 217 5 "First" 18 "Relaxed" 1 1
-217 5 "Second" 18 NA NA NA
+217 5 "Second" 39 NA NA NA
 218 5 "First" 18 "Relaxed" 1 1
 218 5 "Second" 36 "Relaxed" 1 1
 219 5 "First" 16 "Relaxed" 1 1
-219 5 "Second" 16 NA NA NA
+219 5 "Second" 37 NA NA NA
 220 5 "First" 17 "Relaxed" 1 1
-220 5 "Second" 17 NA NA NA
+220 5 "Second" 38 NA NA NA
 221 5 "First" 15 "Relaxed" 1 1
 221 5 "Second" 43 "Relaxed" 1 1
 222 5 "First" 21 "Stressed" 4 1
@@ -2384,7 +2384,7 @@
 228 5 "First" 19 "Relaxed" 1 1
 228 5 "Second" 40 "Relaxed" 1 1
 229 5 "First" 17 "Relaxed" 1 1
-229 5 "Second" 17 NA NA NA
+229 5 "Second" 38 NA NA NA
 230 5 "First" 21 "Relaxed" 1 1
 230 5 "Second" 37 "Relaxed" 1 1
 231 5 "First" 22 "Relaxed" 1 1
@@ -2392,23 +2392,23 @@
 232 5 "First" 22 "Relaxed" 1 1
 232 5 "Second" 40 "Relaxed" 1 1
 233 5 "First" 15 "Vocal" 2 1
-233 5 "Second" 15 NA NA NA
+233 5 "Second" 36 NA NA NA
 234 5 "First" 15 "Relaxed" 1 1
-234 5 "Second" 15 NA NA NA
+234 5 "Second" 36 NA NA NA
 235 5 "First" 19 "Relaxed" 1 1
-235 5 "Second" 19 NA NA NA
+235 5 "Second" 40 NA NA NA
 236 5 "First" 17 "Relaxed" 1 1
-236 5 "Second" 17 NA NA NA
+236 5 "Second" 38 NA NA NA
 237 5 "First" 22 "Relaxed" 1 1
 237 5 "Second" 36 "Relaxed" 1 1
 238 5 "First" 22 "Relaxed" 1 1
 238 5 "Second" 37 "Relaxed" 1 1
 239 5 "First" 17 "Reactive to People Non Aggressive" 7 2
-239 5 "Second" 17 NA NA NA
+239 5 "Second" 38 NA NA NA
 240 5 "First" 16 "Relaxed" 1 1
-240 5 "Second" 16 NA NA NA
+240 5 "Second" 37 NA NA NA
 241 5 "First" 15 "Vocal" 2 1
-241 5 "Second" 15 NA NA NA
+241 5 "Second" 36 NA NA NA
 1 6 "First" 16 "Relaxed" 1 1
 1 6 "Second" 20 "Reactive to Dogs Non Aggressive" 6 2
 2 6 "First" 18 "Excitable" 2 1
@@ -2418,23 +2418,23 @@
 4 6 "First" 26 "Excitable" 2 1
 4 6 "Second" 47 "Excitable" 2 1
 5 6 "First" 21 "Relaxed" 1 1
-5 6 "Second" 21 NA NA NA
+5 6 "Second" 42 NA NA NA
 6 6 "First" 19 "Relaxed" 1 1
 6 6 "Second" 40 "Excitable" 2 1
 7 6 "First" 24 "Excitable" 2 1
 7 6 "Second" 53 "Relaxed" 1 1
 8 6 "First" 19 "Excitable" 2 1
-8 6 "Second" 19 NA NA NA
+8 6 "Second" 40 NA NA NA
 9 6 "First" 15 "Relaxed" 1 1
 9 6 "Second" 42 "Reactive to Dogs Non Aggressive" 6 2
 10 6 "First" 15 "Excitable" 2 1
 10 6 "Second" 35 "Relaxed" 1 1
 11 6 "First" 18 "Relaxed" 1 1
-11 6 "Second" 18 NA NA NA
+11 6 "Second" 39 NA NA NA
 12 6 "First" 18 "Excitable" 2 1
-12 6 "Second" 18 NA NA NA
+12 6 "Second" 39 NA NA NA
 13 6 "First" 21 "Excitable" 2 1
-13 6 "Second" 21 NA NA NA
+13 6 "Second" 42 NA NA NA
 14 6 "First" 14 "Excitable" 2 1
 14 6 "Second" 56 "Excitable" 2 1
 15 6 "First" 19 "Relaxed" 1 1
@@ -2444,11 +2444,11 @@
 17 6 "First" 21 "Relaxed" 1 1
 17 6 "Second" 37 "Relaxed" 1 1
 18 6 "First" 21 "Excitable" 2 1
-18 6 "Second" 21 NA NA NA
+18 6 "Second" 42 NA NA NA
 19 6 "First" 21 "Excitable" 2 1
 19 6 "Second" 42 "Excitable" 2 1
 20 6 "First" 22 "Excitable" 2 1
-20 6 "Second" 22 NA NA NA
+20 6 "Second" 43 NA NA NA
 21 6 "First" 21 "Vocal" 3 1
 21 6 "Second" 49 "Reactive to Dogs Non Aggressive" 6 2
 22 6 "First" 19 "Relaxed" 1 1
@@ -2456,11 +2456,11 @@
 23 6 "First" 19 "Relaxed" 1 1
 23 6 "Second" 42 "Relaxed" 1 1
 24 6 "First" 19 "Stressed +" 5 2
-24 6 "Second" 19 NA NA NA
+24 6 "Second" 40 NA NA NA
 25 6 "First" 20 "Excitable" 2 1
 25 6 "Second" 41 "Relaxed" 1 1
 26 6 "First" 14 "Reactive to Dogs Non Aggressive" 6 2
-26 6 "Second" 14 NA NA NA
+26 6 "Second" 35 NA NA NA
 27 6 "First" 22 "Focused" 8 2
 27 6 "Second" 43 "Focused" 8 2
 28 6 "First" 16 "Relaxed" 1 1
@@ -2468,13 +2468,13 @@
 29 6 "First" 19 "Reactive to Dogs Aggressive" 9 3
 29 6 "Second" 42 "Relaxed" 1 1
 30 6 "First" 27 "Relaxed" 1 1
-30 6 "Second" 27 NA NA NA
+30 6 "Second" 48 NA NA NA
 31 6 "First" 16 "Relaxed" 1 1
-31 6 "Second" 16 NA NA NA
+31 6 "Second" 37 NA NA NA
 32 6 "First" 23 "Excitable" 2 1
-32 6 "Second" 23 NA NA NA
+32 6 "Second" 44 NA NA NA
 33 6 "First" 21 "Relaxed" 1 1
-33 6 "Second" 21 NA NA NA
+33 6 "Second" 42 NA NA NA
 34 6 "First" 24 "Relaxed" 1 1
 34 6 "Second" 41 "No opinion" NA NA
 35 6 "First" 20 "Relaxed" 1 1
@@ -2482,33 +2482,33 @@
 36 6 "First" 18 "Relaxed" 1 1
 36 6 "Second" 38 "Relaxed" 1 1
 37 6 "First" 19 "Excitable" 2 1
-37 6 "Second" 19 NA NA NA
+37 6 "Second" 40 NA NA NA
 38 6 "First" 17 "Excitable" 2 1
-38 6 "Second" 17 NA NA NA
+38 6 "Second" 38 NA NA NA
 39 6 "First" 24 "Relaxed" 1 1
-39 6 "Second" 24 NA NA NA
+39 6 "Second" 45 NA NA NA
 40 6 "First" 19 "Excitable" 2 1
-40 6 "Second" 19 NA NA NA
+40 6 "Second" 40 NA NA NA
 41 6 "First" 14 "Excitable" 2 1
-41 6 "Second" 14 NA NA NA
+41 6 "Second" 35 NA NA NA
 42 6 "First" 17 "Focused" 8 2
-42 6 "Second" 17 NA NA NA
+42 6 "Second" 38 NA NA NA
 43 6 "First" 15 "Excitable" 2 1
 43 6 "Second" 52 "Reactive to Dogs Non Aggressive" 6 2
 44 6 "First" 16 "Relaxed" 1 1
-44 6 "Second" 16 NA NA NA
+44 6 "Second" 37 NA NA NA
 45 6 "First" 17 "No opinion" NA NA
-45 6 "Second" 17 NA NA NA
+45 6 "Second" 38 NA NA NA
 46 6 "First" 19 "No opinion" NA NA
-46 6 "Second" 19 NA NA NA
+46 6 "Second" 40 NA NA NA
 47 6 "First" 18 "Relaxed" 1 1
-47 6 "Second" 18 NA NA NA
+47 6 "Second" 39 NA NA NA
 48 6 "First" 46 "Excitable" 2 1
 48 6 "Second" 67 "Excitable" 2 1
 49 6 "First" 15 "Relaxed" 1 1
-49 6 "Second" 15 NA NA NA
+49 6 "Second" 36 NA NA NA
 50 6 "First" 17 "Excitable" 2 1
-50 6 "Second" 17 NA NA NA
+50 6 "Second" 38 NA NA NA
 51 6 "First" 21 "Relaxed" 1 1
 51 6 "Second" 36 "Relaxed" 1 1
 52 6 "First" 21 "Relaxed" 1 1
@@ -2516,19 +2516,19 @@
 53 6 "First" 15 "Relaxed" 1 1
 53 6 "Second" 51 "Unsure" 4 1
 54 6 "First" 17 "Excitable" 2 1
-54 6 "Second" 17 NA NA NA
+54 6 "Second" 38 NA NA NA
 55 6 "First" 22 "Relaxed" 1 1
 55 6 "Second" 37 "Relaxed" 1 1
 56 6 "First" 35 "Relaxed" 1 1
-56 6 "Second" 35 NA NA NA
+56 6 "Second" 56 NA NA NA
 57 6 "First" 15 "Excitable" 2 1
 57 6 "Second" 44 "Focused" 8 2
 58 6 "First" 16 "No opinion" NA NA
 58 6 "Second" 37 "Relaxed" 1 1
 59 6 "First" 18 "Relaxed" 1 1
-59 6 "Second" 18 NA NA NA
+59 6 "Second" 39 NA NA NA
 60 6 "First" 15 "Unsure" 4 1
-60 6 "Second" 15 NA NA NA
+60 6 "Second" 36 NA NA NA
 61 6 "First" 20 "Relaxed" 1 1
 61 6 "Second" 41 "Relaxed" 1 1
 62 6 "First" 51 "Relaxed" 1 1
@@ -2538,7 +2538,7 @@
 64 6 "First" 15 "Relaxed" 1 1
 64 6 "Second" 50 "Reactive to Dogs Non Aggressive" 6 2
 65 6 "First" 29 "Relaxed" 1 1
-65 6 "Second" 29 NA NA NA
+65 6 "Second" 50 NA NA NA
 66 6 "First" 15 "Stressed +" 5 2
 66 6 "Second" 36 "Stressed +" 5 2
 67 6 "First" 17 "Relaxed" 1 1
@@ -2570,7 +2570,7 @@
 80 6 "First" 16 "Reactive to Dogs Aggressive" 9 3
 80 6 "Second" 37 "Relaxed" 1 1
 81 6 "First" 17 "Relaxed" 1 1
-81 6 "Second" 17 NA NA NA
+81 6 "Second" 38 NA NA NA
 82 6 "First" 16 "Excitable" 2 1
 82 6 "Second" 36 "Excitable" 2 1
 83 6 "First" 16 "Relaxed" 1 1
@@ -2582,13 +2582,13 @@
 86 6 "First" 16 "Excitable" 2 1
 86 6 "Second" 37 "Excitable" 2 1
 87 6 "First" 16 "Relaxed" 1 1
-87 6 "Second" 16 NA NA NA
+87 6 "Second" 37 NA NA NA
 88 6 "First" 19 "Excitable" 2 1
 88 6 "Second" 38 "Relaxed" 1 1
 89 6 "First" 15 "Relaxed" 1 1
 89 6 "Second" 36 "Relaxed" 1 1
 90 6 "First" 25 "Reactive to People Non Aggressive" 7 2
-90 6 "Second" 25 NA NA NA
+90 6 "Second" 46 NA NA NA
 91 6 "First" 16 "Excitable" 2 1
 91 6 "Second" 37 "Excitable" 2 1
 92 6 "First" 23 "Reactive to Dogs Non Aggressive" 6 2
@@ -2610,33 +2610,33 @@
 100 6 "First" 19 "Relaxed" 1 1
 100 6 "Second" 39 "Excitable" 2 1
 101 6 "First" 17 "Relaxed" 1 1
-101 6 "Second" 17 NA NA NA
+101 6 "Second" 38 NA NA NA
 102 6 "First" 22 "Relaxed" 1 1
-102 6 "Second" 22 NA NA NA
+102 6 "Second" 43 NA NA NA
 103 6 "First" 16 "Relaxed" 1 1
 103 6 "Second" 43 "Relaxed" 1 1
 104 6 "First" 17 "Relaxed" 1 1
-104 6 "Second" 17 NA NA NA
+104 6 "Second" 38 NA NA NA
 105 6 "First" 16 "Relaxed" 1 1
 105 6 "Second" 43 "Relaxed" 1 1
 106 6 "First" 23 "Relaxed" 1 1
-106 6 "Second" 23 NA NA NA
+106 6 "Second" 44 NA NA NA
 107 6 "First" 19 "Excitable" 2 1
 107 6 "Second" 40 "Excitable" 2 1
 108 6 "First" 18 "Excitable" 2 1
-108 6 "Second" 18 NA NA NA
+108 6 "Second" 39 NA NA NA
 109 6 "First" 19 "Relaxed" 1 1
-109 6 "Second" 19 NA NA NA
+109 6 "Second" 40 NA NA NA
 110 6 "First" 14 "Relaxed" 1 1
 110 6 "Second" 35 "Excitable" 2 1
 111 6 "First" 17 "Relaxed" 1 1
-111 6 "Second" 17 NA NA NA
+111 6 "Second" 38 NA NA NA
 112 6 "First" 17 "Relaxed" 1 1
 112 6 "Second" 38 "Excitable" 2 1
 113 6 "First" 19 "Relaxed" 1 1
-113 6 "Second" 19 NA NA NA
+113 6 "Second" 40 NA NA NA
 114 6 "First" 17 "Reactive to Dogs Non Aggressive" 6 2
-114 6 "Second" 17 NA NA NA
+114 6 "Second" 38 NA NA NA
 115 6 "First" 26 "Relaxed" 1 1
 115 6 "Second" 41 "Relaxed" 1 1
 116 6 "First" 29 "Relaxed" 1 1
@@ -2644,19 +2644,19 @@
 117 6 "First" 18 "Relaxed" 1 1
 117 6 "Second" 40 "Focused" 8 2
 118 6 "First" 36 "Relaxed" 1 1
-118 6 "Second" 36 NA NA NA
+118 6 "Second" 57 NA NA NA
 119 6 "First" 18 "Excitable" 2 1
 119 6 "Second" 36 "Excitable" 2 1
 120 6 "First" 17 "Relaxed" 1 1
-120 6 "Second" 17 NA NA NA
+120 6 "Second" 38 NA NA NA
 121 6 "First" 23 "Reactive to Dogs Non Aggressive" 6 2
 121 6 "Second" 38 "Reactive to Dogs Aggressive" 9 3
 122 6 "First" 21 "Relaxed" 1 1
-122 6 "Second" 21 NA NA NA
+122 6 "Second" 42 NA NA NA
 123 6 "First" 19 "Focused" 8 2
 123 6 "Second" 40 "Focused" 8 2
 124 6 "First" 38 "Relaxed" 1 1
-124 6 "Second" 38 NA NA NA
+124 6 "Second" 59 NA NA NA
 125 6 "First" 20 "Relaxed" 1 1
 125 6 "Second" 42 "Relaxed" 1 1
 126 6 "First" 21 "Excitable" 2 1
@@ -2666,13 +2666,13 @@
 128 6 "First" 17 "Excitable" 2 1
 128 6 "Second" 42 "Reactive to Dogs Non Aggressive" 6 2
 129 6 "First" 15 "Relaxed" 1 1
-129 6 "Second" 15 NA NA NA
+129 6 "Second" 36 NA NA NA
 130 6 "First" 18 "Reactive to Dogs Non Aggressive" 6 2
 130 6 "Second" 38 "Reactive to Dogs Non Aggressive" 6 2
 131 6 "First" 38 "Relaxed" 1 1
-131 6 "Second" 38 NA NA NA
+131 6 "Second" 59 NA NA NA
 132 6 "First" 22 "Excitable" 2 1
-132 6 "Second" 22 NA NA NA
+132 6 "Second" 43 NA NA NA
 133 6 "First" 19 "Relaxed" 1 1
 133 6 "Second" 40 "Relaxed" 1 1
 134 6 "First" 17 "Relaxed" 1 1
@@ -2688,11 +2688,11 @@
 139 6 "First" 7 "Excitable" 2 1
 139 6 "Second" 41 "Relaxed" 1 1
 140 6 "First" 20 "Relaxed" 1 1
-140 6 "Second" 20 NA NA NA
+140 6 "Second" 41 NA NA NA
 141 6 "First" 27 "Relaxed" 1 1
-141 6 "Second" 27 NA NA NA
+141 6 "Second" 48 NA NA NA
 142 6 "First" 17 "Excitable" 2 1
-142 6 "Second" 17 NA NA NA
+142 6 "Second" 38 NA NA NA
 143 6 "First" 25 "Relaxed" 1 1
 143 6 "Second" 37 "Excitable" 2 1
 144 6 "First" 15 "Focused" 8 2
@@ -2714,9 +2714,9 @@
 152 6 "First" 23 "Relaxed" 1 1
 152 6 "Second" 37 "Relaxed" 1 1
 153 6 "First" 26 "Relaxed" 1 1
-153 6 "Second" 26 NA NA NA
+153 6 "Second" 47 NA NA NA
 154 6 "First" 21 "Excitable" 2 1
-154 6 "Second" 21 NA NA NA
+154 6 "Second" 42 NA NA NA
 155 6 "First" 21 "Reactive to Dogs Non Aggressive" 6 2
 155 6 "Second" 43 "Reactive to Dogs Non Aggressive" 6 2
 156 6 "First" 22 "Relaxed" 1 1
@@ -2730,7 +2730,7 @@
 160 6 "First" 23 "Excitable" 2 1
 160 6 "Second" 37 "Reactive to Dogs Non Aggressive" 6 2
 161 6 "First" 24 "Relaxed" 1 1
-161 6 "Second" 24 NA NA NA
+161 6 "Second" 45 NA NA NA
 162 6 "First" 21 "Excitable" 2 1
 162 6 "Second" 36 "Relaxed" 1 1
 163 6 "First" 23 "Reactive to Dogs Non Aggressive" 6 2
@@ -2742,35 +2742,35 @@
 166 6 "First" 24 "Relaxed" 1 1
 166 6 "Second" 42 "Relaxed" 1 1
 167 6 "First" 19 "Relaxed" 1 1
-167 6 "Second" 19 NA NA NA
+167 6 "Second" 40 NA NA NA
 168 6 "First" 22 "Excitable" 2 1
-168 6 "Second" 22 NA NA NA
+168 6 "Second" 43 NA NA NA
 169 6 "First" 22 "Relaxed" 1 1
 169 6 "Second" 39 "Relaxed" 1 1
 170 6 "First" 20 "Focused" 8 2
 170 6 "Second" 35 "Relaxed" 1 1
 171 6 "First" 20 "Relaxed" 1 1
-171 6 "Second" 20 NA NA NA
+171 6 "Second" 41 NA NA NA
 172 6 "First" 20 "Relaxed" 1 1
-172 6 "Second" 20 NA NA NA
+172 6 "Second" 41 NA NA NA
 173 6 "First" 24 "Excitable" 2 1
-173 6 "Second" 24 NA NA NA
+173 6 "Second" 45 NA NA NA
 174 6 "First" 21 "Relaxed" 1 1
 174 6 "Second" 43 "Relaxed" 1 1
 175 6 "First" 21 "Relaxed" 1 1
 175 6 "Second" 43 "Relaxed" 1 1
 176 6 "First" 16 "Relaxed" 1 1
-176 6 "Second" 16 NA NA NA
+176 6 "Second" 37 NA NA NA
 177 6 "First" 20 "Unsure" 4 1
 177 6 "Second" 41 "Relaxed" 1 1
 178 6 "First" 21 "Reactive to People Non Aggressive" 7 2
-178 6 "Second" 21 NA NA NA
+178 6 "Second" 42 NA NA NA
 179 6 "First" 24 "Excitable" 2 1
-179 6 "Second" 24 NA NA NA
+179 6 "Second" 45 NA NA NA
 180 6 "First" 25 "Relaxed" 1 1
-180 6 "Second" 25 NA NA NA
+180 6 "Second" 46 NA NA NA
 181 6 "First" 27 "Excitable" 2 1
-181 6 "Second" 27 NA NA NA
+181 6 "Second" 48 NA NA NA
 182 6 "First" 20 "Relaxed" 1 1
 182 6 "Second" 42 "Focused" 8 2
 183 6 "First" 16 "Excitable" 2 1
@@ -2780,13 +2780,13 @@
 185 6 "First" 22 "Relaxed" 1 1
 185 6 "Second" 37 "Reactive to Dogs Aggressive" 9 3
 186 6 "First" 20 "Relaxed" 1 1
-186 6 "Second" 20 NA NA NA
+186 6 "Second" 41 NA NA NA
 187 6 "First" 23 "Reactive to Dogs Non Aggressive" 6 2
-187 6 "Second" 23 NA NA NA
+187 6 "Second" 44 NA NA NA
 188 6 "First" 25 "Relaxed" 1 1
 188 6 "Second" 40 "Relaxed" 1 1
 189 6 "First" 20 "Unsure" 4 1
-189 6 "Second" 20 NA NA NA
+189 6 "Second" 41 NA NA NA
 190 6 "First" 22 "Reactive to Dogs Non Aggressive" 6 2
 190 6 "Second" 39 "Reactive to Dogs Non Aggressive" 6 2
 191 6 "First" 15 "Unsure" 4 1
@@ -2794,19 +2794,19 @@
 192 6 "First" 27 "Excitable" 2 1
 192 6 "Second" 40 "Excitable" 2 1
 193 6 "First" 21 "Excitable" 2 1
-193 6 "Second" 21 NA NA NA
+193 6 "Second" 42 NA NA NA
 194 6 "First" 22 "Relaxed" 1 1
-194 6 "Second" 22 NA NA NA
+194 6 "Second" 43 NA NA NA
 195 6 "First" 23 "Excitable" 2 1
-195 6 "Second" 23 NA NA NA
+195 6 "Second" 44 NA NA NA
 196 6 "First" 19 "Relaxed" 1 1
-196 6 "Second" 19 NA NA NA
+196 6 "Second" 40 NA NA NA
 197 6 "First" 20 "Excitable" 2 1
-197 6 "Second" 20 NA NA NA
+197 6 "Second" 41 NA NA NA
 198 6 "First" 20 "Reactive to Dogs Non Aggressive" 6 2
-198 6 "Second" 20 NA NA NA
+198 6 "Second" 41 NA NA NA
 199 6 "First" 19 "Relaxed" 1 1
-199 6 "Second" 19 NA NA NA
+199 6 "Second" 40 NA NA NA
 200 6 "First" 18 "Reactive to Dogs Aggressive" 9 3
 200 6 "Second" 36 "Relaxed" 1 1
 201 6 "First" 18 "Excitable" 2 1
@@ -2820,7 +2820,7 @@
 205 6 "First" 15 "Relaxed" 1 1
 205 6 "Second" 36 "Excitable" 2 1
 206 6 "First" 22 "Relaxed" 1 1
-206 6 "Second" 22 NA NA NA
+206 6 "Second" 43 NA NA NA
 207 6 "First" 19 "Excitable" 2 1
 207 6 "Second" 39 "Reactive to Dogs Aggressive" 9 3
 208 6 "First" 23 "Relaxed" 1 1
@@ -2828,9 +2828,9 @@
 209 6 "First" 19 "Relaxed" 1 1
 209 6 "Second" 44 "Relaxed" 1 1
 210 6 "First" 17 "Unsure" 4 1
-210 6 "Second" 17 NA NA NA
+210 6 "Second" 38 NA NA NA
 211 6 "First" 23 "Relaxed" 1 1
-211 6 "Second" 23 NA NA NA
+211 6 "Second" 44 NA NA NA
 212 6 "First" 21 "Relaxed" 1 1
 212 6 "Second" 37 "Relaxed" 1 1
 213 6 "First" 18 "Relaxed" 1 1
@@ -2838,17 +2838,17 @@
 214 6 "First" 22 "Relaxed" 1 1
 214 6 "Second" 35 "Relaxed" 1 1
 215 6 "First" 17 "Excitable" 2 1
-215 6 "Second" 17 NA NA NA
+215 6 "Second" 38 NA NA NA
 216 6 "First" 20 "Relaxed" 1 1
-216 6 "Second" 20 NA NA NA
+216 6 "Second" 41 NA NA NA
 217 6 "First" 18 "Relaxed" 1 1
-217 6 "Second" 18 NA NA NA
+217 6 "Second" 39 NA NA NA
 218 6 "First" 18 "Relaxed" 1 1
 218 6 "Second" 36 "Relaxed" 1 1
 219 6 "First" 16 "Relaxed" 1 1
-219 6 "Second" 16 NA NA NA
+219 6 "Second" 37 NA NA NA
 220 6 "First" 17 "Relaxed" 1 1
-220 6 "Second" 17 NA NA NA
+220 6 "Second" 38 NA NA NA
 221 6 "First" 15 "Relaxed" 1 1
 221 6 "Second" 43 "Relaxed" 1 1
 222 6 "First" 21 "Relaxed" 1 1
@@ -2866,7 +2866,7 @@
 228 6 "First" 19 "Unsure" 4 1
 228 6 "Second" 40 "Relaxed" 1 1
 229 6 "First" 17 "Relaxed" 1 1
-229 6 "Second" 17 NA NA NA
+229 6 "Second" 38 NA NA NA
 230 6 "First" 21 "Unsure" 4 1
 230 6 "Second" 37 "Stressed +" 5 2
 231 6 "First" 22 "Focused" 8 2
@@ -2874,23 +2874,23 @@
 232 6 "First" 22 "Focused" 8 2
 232 6 "Second" 40 "Relaxed" 1 1
 233 6 "First" 15 "Reactive to Dogs Non Aggressive" 6 2
-233 6 "Second" 15 NA NA NA
+233 6 "Second" 36 NA NA NA
 234 6 "First" 15 "Excitable" 2 1
-234 6 "Second" 15 NA NA NA
+234 6 "Second" 36 NA NA NA
 235 6 "First" 19 "Excitable" 2 1
-235 6 "Second" 19 NA NA NA
+235 6 "Second" 40 NA NA NA
 236 6 "First" 17 "Relaxed" 1 1
-236 6 "Second" 17 NA NA NA
+236 6 "Second" 38 NA NA NA
 237 6 "First" 22 "Excitable" 2 1
 237 6 "Second" 36 "Relaxed" 1 1
 238 6 "First" 22 "Excitable" 2 1
 238 6 "Second" 37 "Vocal" 3 1
 239 6 "First" 17 "Excitable" 2 1
-239 6 "Second" 17 NA NA NA
+239 6 "Second" 38 NA NA NA
 240 6 "First" 16 "Reactive to Dogs Non Aggressive" 6 2
-240 6 "Second" 16 NA NA NA
+240 6 "Second" 37 NA NA NA
 241 6 "First" 15 "Excitable" 2 1
-241 6 "Second" 15 NA NA NA
+241 6 "Second" 36 NA NA NA
 1 7 "First" 16 "Relaxed" 1 1
 1 7 "Second" 20 "Playful" 2 1
 2 7 "First" 18 "Playful" 2 1
@@ -2900,23 +2900,23 @@
 4 7 "First" 26 "Relaxed" 1 1
 4 7 "Second" 47 "Playful" 2 1
 5 7 "First" 21 "Playful" 2 1
-5 7 "Second" 21 NA NA NA
+5 7 "Second" 42 NA NA NA
 6 7 "First" 19 "Playful" 2 1
 6 7 "Second" 40 "Playful" 2 1
 7 7 "First" 24 "Playful" 2 1
 7 7 "Second" 53 "Playful" 2 1
 8 7 "First" 19 "Playful" 2 1
-8 7 "Second" 19 NA NA NA
+8 7 "Second" 40 NA NA NA
 9 7 "First" 15 "Playful" 2 1
 9 7 "Second" 42 "Playful" 2 1
 10 7 "First" 15 "Playful" 2 1
 10 7 "Second" 35 "Playful" 2 1
 11 7 "First" 18 "Playful" 2 1
-11 7 "Second" 18 NA NA NA
+11 7 "Second" 39 NA NA NA
 12 7 "First" 18 "Playful" 2 1
-12 7 "Second" 18 NA NA NA
+12 7 "Second" 39 NA NA NA
 13 7 "First" 21 "Playful" 2 1
-13 7 "Second" 21 NA NA NA
+13 7 "Second" 42 NA NA NA
 14 7 "First" 14 "Playful" 2 1
 14 7 "Second" 56 "Playful" 2 1
 15 7 "First" 19 "Reactive to People Non Aggressive" 7 2
@@ -2926,11 +2926,11 @@
 17 7 "First" 21 "Playful" 2 1
 17 7 "Second" 37 "Playful" 2 1
 18 7 "First" 21 "Playful" 2 1
-18 7 "Second" 21 NA NA NA
+18 7 "Second" 42 NA NA NA
 19 7 "First" 21 "Playful" 2 1
 19 7 "Second" 42 "Playful" 2 1
 20 7 "First" 22 "Playful" 2 1
-20 7 "Second" 22 NA NA NA
+20 7 "Second" 43 NA NA NA
 21 7 "First" 21 "Playful" 2 1
 21 7 "Second" 49 "Relaxed" 1 1
 22 7 "First" 19 "Playful" 2 1
@@ -2938,11 +2938,11 @@
 23 7 "First" 19 "Playful" 2 1
 23 7 "Second" 42 "Playful" 2 1
 24 7 "First" 19 "Playful" 2 1
-24 7 "Second" 19 NA NA NA
+24 7 "Second" 40 NA NA NA
 25 7 "First" 20 "Playful" 2 1
 25 7 "Second" 41 "Playful" 2 1
 26 7 "First" 14 "Relaxed" 1 1
-26 7 "Second" 14 NA NA NA
+26 7 "Second" 35 NA NA NA
 27 7 "First" 22 "Relaxed" 1 1
 27 7 "Second" 43 "Playful" 2 1
 28 7 "First" 16 "Relaxed" 1 1
@@ -2950,13 +2950,13 @@
 29 7 "First" 19 "Playful" 2 1
 29 7 "Second" 42 "Playful" 2 1
 30 7 "First" 27 "Playful" 2 1
-30 7 "Second" 27 NA NA NA
+30 7 "Second" 48 NA NA NA
 31 7 "First" 16 "Playful" 2 1
-31 7 "Second" 16 NA NA NA
+31 7 "Second" 37 NA NA NA
 32 7 "First" 23 "Relaxed" 1 1
-32 7 "Second" 23 NA NA NA
+32 7 "Second" 44 NA NA NA
 33 7 "First" 21 "Not Motivated (to work for, e.g. training)" 3 1
-33 7 "Second" 21 NA NA NA
+33 7 "Second" 42 NA NA NA
 34 7 "First" 24 "Playful" 2 1
 34 7 "Second" 41 "Playful" 2 1
 35 7 "First" 20 "Relaxed" 1 1
@@ -2964,33 +2964,33 @@
 36 7 "First" 18 "Playful" 2 1
 36 7 "Second" 38 "Playful" 2 1
 37 7 "First" 19 "Playful" 2 1
-37 7 "Second" 19 NA NA NA
+37 7 "Second" 40 NA NA NA
 38 7 "First" 17 "Playful" 2 1
-38 7 "Second" 17 NA NA NA
+38 7 "Second" 38 NA NA NA
 39 7 "First" 24 "Playful" 2 1
-39 7 "Second" 24 NA NA NA
+39 7 "Second" 45 NA NA NA
 40 7 "First" 19 "Playful" 2 1
-40 7 "Second" 19 NA NA NA
+40 7 "Second" 40 NA NA NA
 41 7 "First" 14 "Obsessive" 4 2
-41 7 "Second" 14 NA NA NA
+41 7 "Second" 35 NA NA NA
 42 7 "First" 17 "Not Motivated (to work for, e.g. training)" 3 1
-42 7 "Second" 17 NA NA NA
+42 7 "Second" 38 NA NA NA
 43 7 "First" 15 "Not Motivated (to work for, e.g. training)" 3 1
 43 7 "Second" 52 "Playful" 2 1
 44 7 "First" 16 "Playful" 2 1
-44 7 "Second" 16 NA NA NA
+44 7 "Second" 37 NA NA NA
 45 7 "First" 17 "Playful" 2 1
-45 7 "Second" 17 NA NA NA
+45 7 "Second" 38 NA NA NA
 46 7 "First" 19 "Relaxed" 1 1
-46 7 "Second" 19 NA NA NA
+46 7 "Second" 40 NA NA NA
 47 7 "First" 18 "Playful" 2 1
-47 7 "Second" 18 NA NA NA
+47 7 "Second" 39 NA NA NA
 48 7 "First" 46 "Playful" 2 1
 48 7 "Second" 67 "Playful" 2 1
 49 7 "First" 15 "Playful" 2 1
-49 7 "Second" 15 NA NA NA
+49 7 "Second" 36 NA NA NA
 50 7 "First" 17 "Playful" 2 1
-50 7 "Second" 17 NA NA NA
+50 7 "Second" 38 NA NA NA
 51 7 "First" 21 "Playful" 2 1
 51 7 "Second" 36 "Playful" 2 1
 52 7 "First" 21 "Playful" 2 1
@@ -2998,19 +2998,19 @@
 53 7 "First" 15 "Not Motivated (to work for, e.g. training)" 3 1
 53 7 "Second" 51 "Playful" 2 1
 54 7 "First" 17 "Relaxed" 1 1
-54 7 "Second" 17 NA NA NA
+54 7 "Second" 38 NA NA NA
 55 7 "First" 22 "Playful" 2 1
 55 7 "Second" 37 "Playful" 2 1
 56 7 "First" 35 "Playful" 2 1
-56 7 "Second" 35 NA NA NA
+56 7 "Second" 56 NA NA NA
 57 7 "First" 15 "Playful" 2 1
 57 7 "Second" 44 "Playful" 2 1
 58 7 "First" 16 "Playful" 2 1
 58 7 "Second" 37 "Playful" 2 1
 59 7 "First" 18 "Playful" 2 1
-59 7 "Second" 18 NA NA NA
+59 7 "Second" 39 NA NA NA
 60 7 "First" 15 "Playful" 2 1
-60 7 "Second" 15 NA NA NA
+60 7 "Second" 36 NA NA NA
 61 7 "First" 20 "Relaxed" 1 1
 61 7 "Second" 41 "Playful" 2 1
 62 7 "First" 51 "Playful" 2 1
@@ -3020,7 +3020,7 @@
 64 7 "First" 15 "Playful" 2 1
 64 7 "Second" 50 "Playful" 2 1
 65 7 "First" 29 "Playful" 2 1
-65 7 "Second" 29 NA NA NA
+65 7 "Second" 50 NA NA NA
 66 7 "First" 15 "Relaxed" 1 1
 66 7 "Second" 36 "Playful" 2 1
 67 7 "First" 17 "Playful" 2 1
@@ -3052,7 +3052,7 @@
 80 7 "First" 16 "Playful" 2 1
 80 7 "Second" 37 "Playful" 2 1
 81 7 "First" 17 "Relaxed" 1 1
-81 7 "Second" 17 NA NA NA
+81 7 "Second" 38 NA NA NA
 82 7 "First" 16 "Playful" 2 1
 82 7 "Second" 36 "Playful" 2 1
 83 7 "First" 16 "Playful" 2 1
@@ -3064,13 +3064,13 @@
 86 7 "First" 16 "Playful" 2 1
 86 7 "Second" 37 "Playful" 2 1
 87 7 "First" 16 "Not Motivated (to work for, e.g. training)" 3 1
-87 7 "Second" 16 NA NA NA
+87 7 "Second" 37 NA NA NA
 88 7 "First" 19 "Playful" 2 1
 88 7 "Second" 38 "Playful" 2 1
 89 7 "First" 15 "Not Motivated (to work for, e.g. training)" 3 1
 89 7 "Second" 36 "Not Motivated (to work for, e.g. training)" 3 1
 90 7 "First" 25 "Playful" 2 1
-90 7 "Second" 25 NA NA NA
+90 7 "Second" 46 NA NA NA
 91 7 "First" 16 "Relaxed" 1 1
 91 7 "Second" 37 "Playful" 2 1
 92 7 "First" 23 "Playful +" 8 2
@@ -3092,33 +3092,33 @@
 100 7 "First" 19 "Playful" 2 1
 100 7 "Second" 39 "Playful" 2 1
 101 7 "First" 17 "Playful" 2 1
-101 7 "Second" 17 NA NA NA
+101 7 "Second" 38 NA NA NA
 102 7 "First" 22 "Not Motivated (to work for, e.g. training)" 3 1
-102 7 "Second" 22 NA NA NA
+102 7 "Second" 43 NA NA NA
 103 7 "First" 16 "Playful" 2 1
 103 7 "Second" 43 "Playful" 2 1
 104 7 "First" 17 "Relaxed" 1 1
-104 7 "Second" 17 NA NA NA
+104 7 "Second" 38 NA NA NA
 105 7 "First" 16 "Not Motivated (to work for, e.g. training)" 3 1
 105 7 "Second" 43 "Playful" 2 1
 106 7 "First" 23 "Relaxed" 1 1
-106 7 "Second" 23 NA NA NA
+106 7 "Second" 44 NA NA NA
 107 7 "First" 19 "Playful" 2 1
 107 7 "Second" 40 "Relaxed" 1 1
 108 7 "First" 18 "Playful +" 8 2
-108 7 "Second" 18 NA NA NA
+108 7 "Second" 39 NA NA NA
 109 7 "First" 19 "Playful" 2 1
-109 7 "Second" 19 NA NA NA
+109 7 "Second" 40 NA NA NA
 110 7 "First" 14 "Playful" 2 1
 110 7 "Second" 35 "Relaxed" 1 1
 111 7 "First" 17 "Playful" 2 1
-111 7 "Second" 17 NA NA NA
+111 7 "Second" 38 NA NA NA
 112 7 "First" 17 "Playful" 2 1
 112 7 "Second" 38 "Playful" 2 1
 113 7 "First" 19 "Playful" 2 1
-113 7 "Second" 19 NA NA NA
+113 7 "Second" 40 NA NA NA
 114 7 "First" 17 "Playful" 2 1
-114 7 "Second" 17 NA NA NA
+114 7 "Second" 38 NA NA NA
 115 7 "First" 26 "Playful" 2 1
 115 7 "Second" 41 "Playful" 2 1
 116 7 "First" 29 "Playful" 2 1
@@ -3126,19 +3126,19 @@
 117 7 "First" 18 "Relaxed" 1 1
 117 7 "Second" 40 "Not Motivated (to work for, e.g. training)" 3 1
 118 7 "First" 36 "Playful" 2 1
-118 7 "Second" 36 NA NA NA
+118 7 "Second" 57 NA NA NA
 119 7 "First" 18 "Playful" 2 1
 119 7 "Second" 36 "Playful" 2 1
 120 7 "First" 17 "Relaxed" 1 1
-120 7 "Second" 17 NA NA NA
+120 7 "Second" 38 NA NA NA
 121 7 "First" 23 "Playful" 2 1
 121 7 "Second" 38 "Playful" 2 1
 122 7 "First" 21 "Playful" 2 1
-122 7 "Second" 21 NA NA NA
+122 7 "Second" 42 NA NA NA
 123 7 "First" 19 "Playful" 2 1
 123 7 "Second" 40 "Playful" 2 1
 124 7 "First" 38 "Relaxed" 1 1
-124 7 "Second" 38 NA NA NA
+124 7 "Second" 59 NA NA NA
 125 7 "First" 20 "Relaxed" 1 1
 125 7 "Second" 42 "Uncomfortable Avoids" 5 2
 126 7 "First" 21 "Playful" 2 1
@@ -3148,13 +3148,13 @@
 128 7 "First" 17 "Playful" 2 1
 128 7 "Second" 42 "Playful" 2 1
 129 7 "First" 15 "Relaxed" 1 1
-129 7 "Second" 15 NA NA NA
+129 7 "Second" 36 NA NA NA
 130 7 "First" 18 "Playful" 2 1
 130 7 "Second" 38 "Playful" 2 1
 131 7 "First" 38 "Relaxed" 1 1
-131 7 "Second" 38 NA NA NA
+131 7 "Second" 59 NA NA NA
 132 7 "First" 22 "Playful" 2 1
-132 7 "Second" 22 NA NA NA
+132 7 "Second" 43 NA NA NA
 133 7 "First" 19 "Playful" 2 1
 133 7 "Second" 40 "Playful" 2 1
 134 7 "First" 17 "Playful" 2 1
@@ -3170,11 +3170,11 @@
 139 7 "First" 7 "Playful" 2 1
 139 7 "Second" 41 "Playful" 2 1
 140 7 "First" 20 "Playful" 2 1
-140 7 "Second" 20 NA NA NA
+140 7 "Second" 41 NA NA NA
 141 7 "First" 27 "Playful" 2 1
-141 7 "Second" 27 NA NA NA
+141 7 "Second" 48 NA NA NA
 142 7 "First" 17 "Playful" 2 1
-142 7 "Second" 17 NA NA NA
+142 7 "Second" 38 NA NA NA
 143 7 "First" 25 "Playful" 2 1
 143 7 "Second" 37 "Playful" 2 1
 144 7 "First" 15 "Not Motivated (to work for, e.g. training)" 3 1
@@ -3196,9 +3196,9 @@
 152 7 "First" 23 "Not Motivated (to work for, e.g. training)" 3 1
 152 7 "Second" 37 "Playful" 2 1
 153 7 "First" 26 "Playful" 2 1
-153 7 "Second" 26 NA NA NA
+153 7 "Second" 47 NA NA NA
 154 7 "First" 21 "Playful" 2 1
-154 7 "Second" 21 NA NA NA
+154 7 "Second" 42 NA NA NA
 155 7 "First" 21 "Not Motivated (to work for, e.g. training)" 3 1
 155 7 "Second" 43 "Not Motivated (to work for, e.g. training)" 3 1
 156 7 "First" 22 "Playful" 2 1
@@ -3212,7 +3212,7 @@
 160 7 "First" 23 "Not Motivated (to work for, e.g. training)" 3 1
 160 7 "Second" 37 "Not Motivated (to work for, e.g. training)" 3 1
 161 7 "First" 24 "Playful" 2 1
-161 7 "Second" 24 NA NA NA
+161 7 "Second" 45 NA NA NA
 162 7 "First" 21 "Playful" 2 1
 162 7 "Second" 36 "Playful" 2 1
 163 7 "First" 23 "Playful" 2 1
@@ -3224,35 +3224,35 @@
 166 7 "First" 24 "Playful" 2 1
 166 7 "Second" 42 "Relaxed" 1 1
 167 7 "First" 19 "Playful" 2 1
-167 7 "Second" 19 NA NA NA
+167 7 "Second" 40 NA NA NA
 168 7 "First" 22 "Relaxed" 1 1
-168 7 "Second" 22 NA NA NA
+168 7 "Second" 43 NA NA NA
 169 7 "First" 22 "Playful" 2 1
 169 7 "Second" 39 "Playful" 2 1
 170 7 "First" 20 "Playful" 2 1
 170 7 "Second" 35 "Playful" 2 1
 171 7 "First" 20 "Relaxed" 1 1
-171 7 "Second" 20 NA NA NA
+171 7 "Second" 41 NA NA NA
 172 7 "First" 20 "Playful" 2 1
-172 7 "Second" 20 NA NA NA
+172 7 "Second" 41 NA NA NA
 173 7 "First" 24 "Playful" 2 1
-173 7 "Second" 24 NA NA NA
+173 7 "Second" 45 NA NA NA
 174 7 "First" 21 "Playful" 2 1
 174 7 "Second" 43 "Not Motivated (to work for, e.g. training)" 3 1
 175 7 "First" 21 "Playful" 2 1
 175 7 "Second" 43 "Not Motivated (to work for, e.g. training)" 3 1
 176 7 "First" 16 "Playful" 2 1
-176 7 "Second" 16 NA NA NA
+176 7 "Second" 37 NA NA NA
 177 7 "First" 20 "Reactive to People Non Aggressive" 7 2
 177 7 "Second" 41 "Relaxed" 1 1
 178 7 "First" 21 "Not Motivated (to work for, e.g. training)" 3 1
-178 7 "Second" 21 NA NA NA
+178 7 "Second" 42 NA NA NA
 179 7 "First" 24 "Playful" 2 1
-179 7 "Second" 24 NA NA NA
+179 7 "Second" 45 NA NA NA
 180 7 "First" 25 "Playful" 2 1
-180 7 "Second" 25 NA NA NA
+180 7 "Second" 46 NA NA NA
 181 7 "First" 27 "Playful" 2 1
-181 7 "Second" 27 NA NA NA
+181 7 "Second" 48 NA NA NA
 182 7 "First" 20 "Playful" 2 1
 182 7 "Second" 42 "Playful" 2 1
 183 7 "First" 16 "Relaxed" 1 1
@@ -3262,13 +3262,13 @@
 185 7 "First" 22 "Not Motivated (to work for, e.g. training)" 3 1
 185 7 "Second" 37 "Playful" 2 1
 186 7 "First" 20 "Not Motivated (to work for, e.g. training)" 3 1
-186 7 "Second" 20 NA NA NA
+186 7 "Second" 41 NA NA NA
 187 7 "First" 23 "Playful" 2 1
-187 7 "Second" 23 NA NA NA
+187 7 "Second" 44 NA NA NA
 188 7 "First" 25 "Playful" 2 1
 188 7 "Second" 40 "Playful" 2 1
 189 7 "First" 20 "Not Motivated (to work for, e.g. training)" 3 1
-189 7 "Second" 20 NA NA NA
+189 7 "Second" 41 NA NA NA
 190 7 "First" 22 "Not Motivated (to work for, e.g. training)" 3 1
 190 7 "Second" 39 "Not Motivated (to work for, e.g. training)" 3 1
 191 7 "First" 15 "No opinion" NA NA
@@ -3276,19 +3276,19 @@
 192 7 "First" 27 "Playful" 2 1
 192 7 "Second" 40 "Playful" 2 1
 193 7 "First" 21 "Playful" 2 1
-193 7 "Second" 21 NA NA NA
+193 7 "Second" 42 NA NA NA
 194 7 "First" 22 "Playful" 2 1
-194 7 "Second" 22 NA NA NA
+194 7 "Second" 43 NA NA NA
 195 7 "First" 23 "Playful" 2 1
-195 7 "Second" 23 NA NA NA
+195 7 "Second" 44 NA NA NA
 196 7 "First" 19 "Playful" 2 1
-196 7 "Second" 19 NA NA NA
+196 7 "Second" 40 NA NA NA
 197 7 "First" 20 "Playful" 2 1
-197 7 "Second" 20 NA NA NA
+197 7 "Second" 41 NA NA NA
 198 7 "First" 20 "Playful" 2 1
-198 7 "Second" 20 NA NA NA
+198 7 "Second" 41 NA NA NA
 199 7 "First" 19 "Not Motivated (to work for, e.g. training)" 3 1
-199 7 "Second" 19 NA NA NA
+199 7 "Second" 40 NA NA NA
 200 7 "First" 18 "Playful" 2 1
 200 7 "Second" 36 "Playful" 2 1
 201 7 "First" 18 "Playful" 2 1
@@ -3302,7 +3302,7 @@
 205 7 "First" 15 "Playful" 2 1
 205 7 "Second" 36 "Playful" 2 1
 206 7 "First" 22 "Playful" 2 1
-206 7 "Second" 22 NA NA NA
+206 7 "Second" 43 NA NA NA
 207 7 "First" 19 "Playful" 2 1
 207 7 "Second" 39 "Playful" 2 1
 208 7 "First" 23 "Playful" 2 1
@@ -3310,9 +3310,9 @@
 209 7 "First" 19 "Playful" 2 1
 209 7 "Second" 44 "Playful" 2 1
 210 7 "First" 17 "Not Motivated (to work for, e.g. training)" 3 1
-210 7 "Second" 17 NA NA NA
+210 7 "Second" 38 NA NA NA
 211 7 "First" 23 "Playful" 2 1
-211 7 "Second" 23 NA NA NA
+211 7 "Second" 44 NA NA NA
 212 7 "First" 21 "Playful" 2 1
 212 7 "Second" 37 "Playful" 2 1
 213 7 "First" 18 "Uncomfortable Avoids" 5 2
@@ -3320,17 +3320,17 @@
 214 7 "First" 22 "Playful" 2 1
 214 7 "Second" 35 "Playful" 2 1
 215 7 "First" 17 "Playful" 2 1
-215 7 "Second" 17 NA NA NA
+215 7 "Second" 38 NA NA NA
 216 7 "First" 20 "Playful" 2 1
-216 7 "Second" 20 NA NA NA
+216 7 "Second" 41 NA NA NA
 217 7 "First" 18 "Playful" 2 1
-217 7 "Second" 18 NA NA NA
+217 7 "Second" 39 NA NA NA
 218 7 "First" 18 "Playful" 2 1
 218 7 "Second" 36 "Playful" 2 1
 219 7 "First" 16 "Playful" 2 1
-219 7 "Second" 16 NA NA NA
+219 7 "Second" 37 NA NA NA
 220 7 "First" 17 "Playful" 2 1
-220 7 "Second" 17 NA NA NA
+220 7 "Second" 38 NA NA NA
 221 7 "First" 15 "Playful" 2 1
 221 7 "Second" 43 "Relaxed" 1 1
 222 7 "First" 21 "Relaxed" 1 1
@@ -3348,7 +3348,7 @@
 228 7 "First" 19 "Playful" 2 1
 228 7 "Second" 40 "Playful" 2 1
 229 7 "First" 17 "Not Motivated (to work for, e.g. training)" 3 1
-229 7 "Second" 17 NA NA NA
+229 7 "Second" 38 NA NA NA
 230 7 "First" 21 "Playful +" 8 2
 230 7 "Second" 37 "Playful" 2 1
 231 7 "First" 22 "Not Motivated (to work for, e.g. training)" 3 1
@@ -3356,23 +3356,23 @@
 232 7 "First" 22 "Playful" 2 1
 232 7 "Second" 40 "Playful" 2 1
 233 7 "First" 15 "Playful" 2 1
-233 7 "Second" 15 NA NA NA
+233 7 "Second" 36 NA NA NA
 234 7 "First" 15 "Playful" 2 1
-234 7 "Second" 15 NA NA NA
+234 7 "Second" 36 NA NA NA
 235 7 "First" 19 "Playful" 2 1
-235 7 "Second" 19 NA NA NA
+235 7 "Second" 40 NA NA NA
 236 7 "First" 17 "Not Motivated (to work for, e.g. training)" 3 1
-236 7 "Second" 17 NA NA NA
+236 7 "Second" 38 NA NA NA
 237 7 "First" 22 "Relaxed" 1 1
 237 7 "Second" 36 "Relaxed" 1 1
 238 7 "First" 22 "Playful" 2 1
 238 7 "Second" 37 "Playful" 2 1
 239 7 "First" 17 "Playful" 2 1
-239 7 "Second" 17 NA NA NA
+239 7 "Second" 38 NA NA NA
 240 7 "First" 16 "Not Motivated (to work for, e.g. training)" 3 1
-240 7 "Second" 16 NA NA NA
+240 7 "Second" 37 NA NA NA
 241 7 "First" 15 "Playful" 2 1
-241 7 "Second" 15 NA NA NA
+241 7 "Second" 36 NA NA NA
 1 8 "First" 16 "Relaxed" 1 1
 1 8 "Second" 20 "Relaxed" 1 1
 2 8 "First" 18 "Reactive to People Aggressive" 15 3
@@ -3382,23 +3382,23 @@
 4 8 "First" 26 "Relaxed" 1 1
 4 8 "Second" 47 "Relaxed" 1 1
 5 8 "First" 21 "Relaxed" 1 1
-5 8 "Second" 21 NA NA NA
+5 8 "Second" 42 NA NA NA
 6 8 "First" 19 "Eats Quickly" 6 2
 6 8 "Second" 40 "Relaxed" 1 1
 7 8 "First" 24 "Relaxed" 1 1
 7 8 "Second" 53 "Not Motivated (to work for, e.g. training)" 3 1
 8 8 "First" 19 "Relaxed" 1 1
-8 8 "Second" 19 NA NA NA
+8 8 "Second" 40 NA NA NA
 9 8 "First" 15 "Relaxed" 1 1
 9 8 "Second" 42 "Reactive to People Aggressive" 15 3
 10 8 "First" 15 "Relaxed" 1 1
 10 8 "Second" 35 "Relaxed" 1 1
 11 8 "First" 18 "Relaxed" 1 1
-11 8 "Second" 18 NA NA NA
+11 8 "Second" 39 NA NA NA
 12 8 "First" 18 "Relaxed" 1 1
-12 8 "Second" 18 NA NA NA
+12 8 "Second" 39 NA NA NA
 13 8 "First" 21 "Not Motivated (to work for, e.g. training)" 3 1
-13 8 "Second" 21 NA NA NA
+13 8 "Second" 42 NA NA NA
 14 8 "First" 14 "Relaxed" 1 1
 14 8 "Second" 56 "Relaxed" 1 1
 15 8 "First" 19 "Relaxed" 1 1
@@ -3408,11 +3408,11 @@
 17 8 "First" 21 "Relaxed" 1 1
 17 8 "Second" 37 "Relaxed" 1 1
 18 8 "First" 21 "Relaxed" 1 1
-18 8 "Second" 21 NA NA NA
+18 8 "Second" 42 NA NA NA
 19 8 "First" 21 "Relaxed" 1 1
 19 8 "Second" 42 "Relaxed" 1 1
 20 8 "First" 22 "Relaxed" 1 1
-20 8 "Second" 22 NA NA NA
+20 8 "Second" 43 NA NA NA
 21 8 "First" 21 "Relaxed" 1 1
 21 8 "Second" 49 "Relaxed" 1 1
 22 8 "First" 19 "Relaxed" 1 1
@@ -3420,11 +3420,11 @@
 23 8 "First" 19 "Relaxed" 1 1
 23 8 "Second" 42 "Relaxed" 1 1
 24 8 "First" 19 "Relaxed" 1 1
-24 8 "Second" 19 NA NA NA
+24 8 "Second" 40 NA NA NA
 25 8 "First" 20 "Relaxed" 1 1
 25 8 "Second" 41 "Relaxed" 1 1
 26 8 "First" 14 "Relaxed" 1 1
-26 8 "Second" 14 NA NA NA
+26 8 "Second" 35 NA NA NA
 27 8 "First" 22 "Relaxed" 1 1
 27 8 "Second" 43 "Relaxed" 1 1
 28 8 "First" 16 "Not Eating Meal" 4 1
@@ -3432,13 +3432,13 @@
 29 8 "First" 19 "Playful" 2 1
 29 8 "Second" 42 "Relaxed" 1 1
 30 8 "First" 27 "Relaxed" 1 1
-30 8 "Second" 27 NA NA NA
+30 8 "Second" 48 NA NA NA
 31 8 "First" 16 "Not Eating Meal" 4 1
-31 8 "Second" 16 NA NA NA
+31 8 "Second" 37 NA NA NA
 32 8 "First" 23 "Relaxed" 1 1
-32 8 "Second" 23 NA NA NA
+32 8 "Second" 44 NA NA NA
 33 8 "First" 21 "Relaxed" 1 1
-33 8 "Second" 21 NA NA NA
+33 8 "Second" 42 NA NA NA
 34 8 "First" 24 "Relaxed" 1 1
 34 8 "Second" 41 "Relaxed" 1 1
 35 8 "First" 20 "Not Motivated (to work for, e.g. training)" 3 1
@@ -3446,33 +3446,33 @@
 36 8 "First" 18 "Relaxed" 1 1
 36 8 "Second" 38 "Relaxed" 1 1
 37 8 "First" 19 "Relaxed" 1 1
-37 8 "Second" 19 NA NA NA
+37 8 "Second" 40 NA NA NA
 38 8 "First" 17 "Relaxed" 1 1
-38 8 "Second" 17 NA NA NA
+38 8 "Second" 38 NA NA NA
 39 8 "First" 24 "Relaxed" 1 1
-39 8 "Second" 24 NA NA NA
+39 8 "Second" 45 NA NA NA
 40 8 "First" 19 "Relaxed" 1 1
-40 8 "Second" 19 NA NA NA
+40 8 "Second" 40 NA NA NA
 41 8 "First" 14 "Relaxed" 1 1
-41 8 "Second" 14 NA NA NA
+41 8 "Second" 35 NA NA NA
 42 8 "First" 17 "Eats Quickly" 6 2
-42 8 "Second" 17 NA NA NA
+42 8 "Second" 38 NA NA NA
 43 8 "First" 15 "Relaxed" 1 1
 43 8 "Second" 52 "Relaxed" 1 1
 44 8 "First" 16 "Relaxed" 1 1
-44 8 "Second" 16 NA NA NA
+44 8 "Second" 37 NA NA NA
 45 8 "First" 17 "Reactive to People Aggressive" 15 3
-45 8 "Second" 17 NA NA NA
+45 8 "Second" 38 NA NA NA
 46 8 "First" 19 "Relaxed" 1 1
-46 8 "Second" 19 NA NA NA
+46 8 "Second" 40 NA NA NA
 47 8 "First" 18 "Eats Quickly" 6 2
-47 8 "Second" 18 NA NA NA
+47 8 "Second" 39 NA NA NA
 48 8 "First" 46 "Relaxed" 1 1
 48 8 "Second" 67 "Relaxed" 1 1
 49 8 "First" 15 "Reactive to People Aggressive" 15 3
-49 8 "Second" 15 NA NA NA
+49 8 "Second" 36 NA NA NA
 50 8 "First" 17 "Eats Quickly" 6 2
-50 8 "Second" 17 NA NA NA
+50 8 "Second" 38 NA NA NA
 51 8 "First" 21 "Relaxed" 1 1
 51 8 "Second" 36 "Relaxed" 1 1
 52 8 "First" 21 "Relaxed" 1 1
@@ -3480,19 +3480,19 @@
 53 8 "First" 15 "Not Eating Meal" 4 1
 53 8 "Second" 51 "Relaxed" 1 1
 54 8 "First" 17 "Relaxed" 1 1
-54 8 "Second" 17 NA NA NA
+54 8 "Second" 38 NA NA NA
 55 8 "First" 22 "Relaxed" 1 1
 55 8 "Second" 37 "Relaxed" 1 1
 56 8 "First" 35 "Relaxed" 1 1
-56 8 "Second" 35 NA NA NA
+56 8 "Second" 56 NA NA NA
 57 8 "First" 15 "Relaxed" 1 1
 57 8 "Second" 44 "Eats Quickly" 6 2
 58 8 "First" 16 "Eats Quickly" 6 2
 58 8 "Second" 37 "Relaxed" 1 1
 59 8 "First" 18 "Eats Quickly" 6 2
-59 8 "Second" 18 NA NA NA
+59 8 "Second" 39 NA NA NA
 60 8 "First" 15 "Relaxed" 1 1
-60 8 "Second" 15 NA NA NA
+60 8 "Second" 36 NA NA NA
 61 8 "First" 20 "Relaxed" 1 1
 61 8 "Second" 41 "Relaxed" 1 1
 62 8 "First" 51 "Relaxed" 1 1
@@ -3502,7 +3502,7 @@
 64 8 "First" 15 "Relaxed" 1 1
 64 8 "Second" 50 "Relaxed" 1 1
 65 8 "First" 29 "Relaxed" 1 1
-65 8 "Second" 29 NA NA NA
+65 8 "Second" 50 NA NA NA
 66 8 "First" 15 "Relaxed" 1 1
 66 8 "Second" 36 "Relaxed" 1 1
 67 8 "First" 17 "Relaxed" 1 1
@@ -3534,7 +3534,7 @@
 80 8 "First" 16 "Not Eating Meal" 4 1
 80 8 "Second" 37 "Relaxed" 1 1
 81 8 "First" 17 "Eats Quickly" 6 2
-81 8 "Second" 17 NA NA NA
+81 8 "Second" 38 NA NA NA
 82 8 "First" 16 "Relaxed" 1 1
 82 8 "Second" 36 "Relaxed" 1 1
 83 8 "First" 16 "Relaxed" 1 1
@@ -3546,13 +3546,13 @@
 86 8 "First" 16 "Relaxed" 1 1
 86 8 "Second" 37 "Relaxed" 1 1
 87 8 "First" 16 "Relaxed" 1 1
-87 8 "Second" 16 NA NA NA
+87 8 "Second" 37 NA NA NA
 88 8 "First" 19 "Relaxed" 1 1
 88 8 "Second" 38 "Relaxed" 1 1
 89 8 "First" 15 "Eats Quickly" 6 2
 89 8 "Second" 36 "Eats Quickly" 6 2
 90 8 "First" 25 "Relaxed" 1 1
-90 8 "Second" 25 NA NA NA
+90 8 "Second" 46 NA NA NA
 91 8 "First" 16 "Eats Quickly" 6 2
 91 8 "Second" 37 "Eats Quickly" 6 2
 92 8 "First" 23 "Relaxed" 1 1
@@ -3574,33 +3574,33 @@
 100 8 "First" 19 "Playful" 2 1
 100 8 "Second" 39 "Relaxed" 1 1
 101 8 "First" 17 "Eats Quickly" 6 2
-101 8 "Second" 17 NA NA NA
+101 8 "Second" 38 NA NA NA
 102 8 "First" 22 "Relaxed" 1 1
-102 8 "Second" 22 NA NA NA
+102 8 "Second" 43 NA NA NA
 103 8 "First" 16 "Eats Quickly" 6 2
 103 8 "Second" 43 "Relaxed" 1 1
 104 8 "First" 17 "Eats Quickly" 6 2
-104 8 "Second" 17 NA NA NA
+104 8 "Second" 38 NA NA NA
 105 8 "First" 16 "Relaxed" 1 1
 105 8 "Second" 43 "Relaxed" 1 1
 106 8 "First" 23 "Relaxed" 1 1
-106 8 "Second" 23 NA NA NA
+106 8 "Second" 44 NA NA NA
 107 8 "First" 19 "Relaxed" 1 1
 107 8 "Second" 40 "Relaxed" 1 1
 108 8 "First" 18 "Overstimulated" 13 3
-108 8 "Second" 18 NA NA NA
+108 8 "Second" 39 NA NA NA
 109 8 "First" 19 "Eats Quickly" 6 2
-109 8 "Second" 19 NA NA NA
+109 8 "Second" 40 NA NA NA
 110 8 "First" 14 "Relaxed" 1 1
 110 8 "Second" 35 "Relaxed" 1 1
 111 8 "First" 17 "Relaxed" 1 1
-111 8 "Second" 17 NA NA NA
+111 8 "Second" 38 NA NA NA
 112 8 "First" 17 "Relaxed" 1 1
 112 8 "Second" 38 "Relaxed" 1 1
 113 8 "First" 19 "Relaxed" 1 1
-113 8 "Second" 19 NA NA NA
+113 8 "Second" 40 NA NA NA
 114 8 "First" 17 "Relaxed" 1 1
-114 8 "Second" 17 NA NA NA
+114 8 "Second" 38 NA NA NA
 115 8 "First" 26 "Relaxed" 1 1
 115 8 "Second" 41 "Relaxed" 1 1
 116 8 "First" 29 "Relaxed" 1 1
@@ -3608,19 +3608,19 @@
 117 8 "First" 18 "Eats Quickly" 6 2
 117 8 "Second" 40 "Eats Quickly" 6 2
 118 8 "First" 36 "Relaxed" 1 1
-118 8 "Second" 36 NA NA NA
+118 8 "Second" 57 NA NA NA
 119 8 "First" 18 "Eats Quickly" 6 2
 119 8 "Second" 36 "Eats Quickly" 6 2
 120 8 "First" 17 "Relaxed" 1 1
-120 8 "Second" 17 NA NA NA
+120 8 "Second" 38 NA NA NA
 121 8 "First" 23 "Relaxed" 1 1
 121 8 "Second" 38 "Relaxed" 1 1
 122 8 "First" 21 "Relaxed" 1 1
-122 8 "Second" 21 NA NA NA
+122 8 "Second" 42 NA NA NA
 123 8 "First" 19 "Relaxed" 1 1
 123 8 "Second" 40 "Eats Quickly" 6 2
 124 8 "First" 38 "Eats Quickly" 6 2
-124 8 "Second" 38 NA NA NA
+124 8 "Second" 59 NA NA NA
 125 8 "First" 20 "Relaxed" 1 1
 125 8 "Second" 42 "Eats Quickly" 6 2
 126 8 "First" 21 "Relaxed" 1 1
@@ -3630,13 +3630,13 @@
 128 8 "First" 17 "Eats Quickly" 6 2
 128 8 "Second" 42 "Eats Quickly" 6 2
 129 8 "First" 15 "Relaxed" 1 1
-129 8 "Second" 15 NA NA NA
+129 8 "Second" 36 NA NA NA
 130 8 "First" 18 "Playful" 2 1
 130 8 "Second" 38 "Eats Quickly" 6 2
 131 8 "First" 38 "Relaxed" 1 1
-131 8 "Second" 38 NA NA NA
+131 8 "Second" 59 NA NA NA
 132 8 "First" 22 "Relaxed" 1 1
-132 8 "Second" 22 NA NA NA
+132 8 "Second" 43 NA NA NA
 133 8 "First" 19 "Relaxed" 1 1
 133 8 "Second" 40 "Relaxed" 1 1
 134 8 "First" 17 "Relaxed" 1 1
@@ -3652,11 +3652,11 @@
 139 8 "First" 7 "Relaxed" 1 1
 139 8 "Second" 41 "Eats Quickly" 6 2
 140 8 "First" 20 "Obsessive" 7 2
-140 8 "Second" 20 NA NA NA
+140 8 "Second" 41 NA NA NA
 141 8 "First" 27 "Relaxed" 1 1
-141 8 "Second" 27 NA NA NA
+141 8 "Second" 48 NA NA NA
 142 8 "First" 17 "Relaxed" 1 1
-142 8 "Second" 17 NA NA NA
+142 8 "Second" 38 NA NA NA
 143 8 "First" 25 "Relaxed" 1 1
 143 8 "Second" 37 "Relaxed" 1 1
 144 8 "First" 15 "Obsessive" 7 2
@@ -3678,9 +3678,9 @@
 152 8 "First" 23 "Relaxed" 1 1
 152 8 "Second" 37 "Relaxed" 1 1
 153 8 "First" 26 "Relaxed" 1 1
-153 8 "Second" 26 NA NA NA
+153 8 "Second" 47 NA NA NA
 154 8 "First" 21 "Eats Quickly" 6 2
-154 8 "Second" 21 NA NA NA
+154 8 "Second" 42 NA NA NA
 155 8 "First" 21 "Not Motivated (to work for, e.g. training)" 3 1
 155 8 "Second" 43 "Relaxed" 1 1
 156 8 "First" 22 "Relaxed" 1 1
@@ -3694,7 +3694,7 @@
 160 8 "First" 23 "Relaxed" 1 1
 160 8 "Second" 37 "Reactive to People Aggressive" 15 3
 161 8 "First" 24 "Relaxed" 1 1
-161 8 "Second" 24 NA NA NA
+161 8 "Second" 45 NA NA NA
 162 8 "First" 21 "Relaxed" 1 1
 162 8 "Second" 36 "Relaxed" 1 1
 163 8 "First" 23 "Relaxed" 1 1
@@ -3706,35 +3706,35 @@
 166 8 "First" 24 "Relaxed" 1 1
 166 8 "Second" 42 "Relaxed" 1 1
 167 8 "First" 19 "Uncomfortable Avoids" 8 2
-167 8 "Second" 19 NA NA NA
+167 8 "Second" 40 NA NA NA
 168 8 "First" 22 "Eats Quickly" 6 2
-168 8 "Second" 22 NA NA NA
+168 8 "Second" 43 NA NA NA
 169 8 "First" 22 "Eats Quickly" 6 2
 169 8 "Second" 39 "Relaxed" 1 1
 170 8 "First" 20 "Relaxed" 1 1
 170 8 "Second" 35 "Relaxed" 1 1
 171 8 "First" 20 "Relaxed" 1 1
-171 8 "Second" 20 NA NA NA
+171 8 "Second" 41 NA NA NA
 172 8 "First" 20 "Relaxed" 1 1
-172 8 "Second" 20 NA NA NA
+172 8 "Second" 41 NA NA NA
 173 8 "First" 24 "Relaxed" 1 1
-173 8 "Second" 24 NA NA NA
+173 8 "Second" 45 NA NA NA
 174 8 "First" 21 "Not Motivated (to work for, e.g. training)" 3 1
 174 8 "Second" 43 "Relaxed" 1 1
 175 8 "First" 21 "Not Motivated (to work for, e.g. training)" 3 1
 175 8 "Second" 43 "Relaxed" 1 1
 176 8 "First" 16 "Eats Quickly" 6 2
-176 8 "Second" 16 NA NA NA
+176 8 "Second" 37 NA NA NA
 177 8 "First" 20 "Relaxed" 1 1
 177 8 "Second" 41 "Relaxed" 1 1
 178 8 "First" 21 "Relaxed" 1 1
-178 8 "Second" 21 NA NA NA
+178 8 "Second" 42 NA NA NA
 179 8 "First" 24 "Relaxed" 1 1
-179 8 "Second" 24 NA NA NA
+179 8 "Second" 45 NA NA NA
 180 8 "First" 25 "Not Eating Meal" 4 1
-180 8 "Second" 25 NA NA NA
+180 8 "Second" 46 NA NA NA
 181 8 "First" 27 "Eats Quickly" 6 2
-181 8 "Second" 27 NA NA NA
+181 8 "Second" 48 NA NA NA
 182 8 "First" 20 "Eats Quickly" 6 2
 182 8 "Second" 42 "Relaxed" 1 1
 183 8 "First" 16 "Relaxed" 1 1
@@ -3744,13 +3744,13 @@
 185 8 "First" 22 "Relaxed" 1 1
 185 8 "Second" 37 "Relaxed" 1 1
 186 8 "First" 20 "Relaxed" 1 1
-186 8 "Second" 20 NA NA NA
+186 8 "Second" 41 NA NA NA
 187 8 "First" 23 "Relaxed" 1 1
-187 8 "Second" 23 NA NA NA
+187 8 "Second" 44 NA NA NA
 188 8 "First" 25 "Relaxed" 1 1
 188 8 "Second" 40 "Relaxed" 1 1
 189 8 "First" 20 "Relaxed" 1 1
-189 8 "Second" 20 NA NA NA
+189 8 "Second" 41 NA NA NA
 190 8 "First" 22 "Relaxed" 1 1
 190 8 "Second" 39 "Not Motivated (to work for, e.g. training)" 3 1
 191 8 "First" 15 "Eats Quickly" 6 2
@@ -3758,19 +3758,19 @@
 192 8 "First" 27 "Relaxed" 1 1
 192 8 "Second" 40 "Relaxed" 1 1
 193 8 "First" 21 "Relaxed" 1 1
-193 8 "Second" 21 NA NA NA
+193 8 "Second" 42 NA NA NA
 194 8 "First" 22 "Eats Quickly" 6 2
-194 8 "Second" 22 NA NA NA
+194 8 "Second" 43 NA NA NA
 195 8 "First" 23 "Relaxed" 1 1
-195 8 "Second" 23 NA NA NA
+195 8 "Second" 44 NA NA NA
 196 8 "First" 19 "Eats Quickly" 6 2
-196 8 "Second" 19 NA NA NA
+196 8 "Second" 40 NA NA NA
 197 8 "First" 20 "Relaxed" 1 1
-197 8 "Second" 20 NA NA NA
+197 8 "Second" 41 NA NA NA
 198 8 "First" 20 "Eats Quickly" 6 2
-198 8 "Second" 20 NA NA NA
+198 8 "Second" 41 NA NA NA
 199 8 "First" 19 "Relaxed" 1 1
-199 8 "Second" 19 NA NA NA
+199 8 "Second" 40 NA NA NA
 200 8 "First" 18 "Eats Quickly" 6 2
 200 8 "Second" 36 "Relaxed" 1 1
 201 8 "First" 18 "Relaxed" 1 1
@@ -3784,7 +3784,7 @@
 205 8 "First" 15 "Relaxed" 1 1
 205 8 "Second" 36 "Relaxed" 1 1
 206 8 "First" 22 "Relaxed" 1 1
-206 8 "Second" 22 NA NA NA
+206 8 "Second" 43 NA NA NA
 207 8 "First" 19 "Reactive to People Aggressive" 15 3
 207 8 "Second" 39 "Relaxed" 1 1
 208 8 "First" 23 "Not Eating Meal" 4 1
@@ -3792,9 +3792,9 @@
 209 8 "First" 19 "Relaxed" 1 1
 209 8 "Second" 44 "Relaxed" 1 1
 210 8 "First" 17 "Relaxed" 1 1
-210 8 "Second" 17 NA NA NA
+210 8 "Second" 38 NA NA NA
 211 8 "First" 23 "Relaxed" 1 1
-211 8 "Second" 23 NA NA NA
+211 8 "Second" 44 NA NA NA
 212 8 "First" 21 "Relaxed" 1 1
 212 8 "Second" 37 "Relaxed" 1 1
 213 8 "First" 18 "Relaxed" 1 1
@@ -3802,17 +3802,17 @@
 214 8 "First" 22 "Relaxed" 1 1
 214 8 "Second" 35 "Relaxed" 1 1
 215 8 "First" 17 "Relaxed" 1 1
-215 8 "Second" 17 NA NA NA
+215 8 "Second" 38 NA NA NA
 216 8 "First" 20 "Relaxed" 1 1
-216 8 "Second" 20 NA NA NA
+216 8 "Second" 41 NA NA NA
 217 8 "First" 18 "Relaxed" 1 1
-217 8 "Second" 18 NA NA NA
+217 8 "Second" 39 NA NA NA
 218 8 "First" 18 "Relaxed" 1 1
 218 8 "Second" 36 "Relaxed" 1 1
 219 8 "First" 16 "Relaxed" 1 1
-219 8 "Second" 16 NA NA NA
+219 8 "Second" 37 NA NA NA
 220 8 "First" 17 "Relaxed" 1 1
-220 8 "Second" 17 NA NA NA
+220 8 "Second" 38 NA NA NA
 221 8 "First" 15 "Relaxed" 1 1
 221 8 "Second" 43 "Relaxed" 1 1
 222 8 "First" 21 "Relaxed" 1 1
@@ -3830,7 +3830,7 @@
 228 8 "First" 19 "Relaxed" 1 1
 228 8 "Second" 40 "Eats Quickly" 6 2
 229 8 "First" 17 "Relaxed" 1 1
-229 8 "Second" 17 NA NA NA
+229 8 "Second" 38 NA NA NA
 230 8 "First" 21 "Relaxed" 1 1
 230 8 "Second" 37 "Relaxed" 1 1
 231 8 "First" 22 "Relaxed" 1 1
@@ -3838,20 +3838,20 @@
 232 8 "First" 22 "Relaxed" 1 1
 232 8 "Second" 40 "Relaxed" 1 1
 233 8 "First" 15 "Relaxed" 1 1
-233 8 "Second" 15 NA NA NA
+233 8 "Second" 36 NA NA NA
 234 8 "First" 15 "Relaxed" 1 1
-234 8 "Second" 15 NA NA NA
+234 8 "Second" 36 NA NA NA
 235 8 "First" 19 "Relaxed" 1 1
-235 8 "Second" 19 NA NA NA
+235 8 "Second" 40 NA NA NA
 236 8 "First" 17 "Not Motivated (to work for, e.g. training)" 3 1
-236 8 "Second" 17 NA NA NA
+236 8 "Second" 38 NA NA NA
 237 8 "First" 22 "Relaxed" 1 1
 237 8 "Second" 36 "Relaxed" 1 1
 238 8 "First" 22 "Eats Quickly" 6 2
 238 8 "Second" 37 "Eats Quickly" 6 2
 239 8 "First" 17 "Relaxed" 1 1
-239 8 "Second" 17 NA NA NA
+239 8 "Second" 38 NA NA NA
 240 8 "First" 16 "Relaxed" 1 1
-240 8 "Second" 16 NA NA NA
+240 8 "Second" 37 NA NA NA
 241 8 "First" 15 "Eats Quickly" 6 2
-241 8 "Second" 15 NA NA NA
+241 8 "Second" 36 NA NA NA
