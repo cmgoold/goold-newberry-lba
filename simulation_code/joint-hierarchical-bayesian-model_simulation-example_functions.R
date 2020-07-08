@@ -122,7 +122,10 @@ sim_ord_data <- function(
   
   y <- numeric(N)
   for(i in 1:N){
-    y[i] <- ifelse(is_inflated[i] == 1, (1 - is_miss[i]) * 1, (1 - is_miss[i]) * sample(1:K, 1, replace = TRUE, prob = pi_[i,]) )
+    y[i] <- ifelse(is_inflated[i] == 1, # is the code inflated
+                   (1 - is_miss[i]) * 1, # if inflated, then it is 1 providing it's not missing
+                   (1 - is_miss[i]) * sample(1:K, 1, replace = TRUE, prob = pi_[i,]) # not inflated and not missing, then ordinal likelihood
+                   )
   }
   
   # joint model

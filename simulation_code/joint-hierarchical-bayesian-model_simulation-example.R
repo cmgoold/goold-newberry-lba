@@ -113,5 +113,5 @@ print( rstan::read_stan_csv(fit$output_files()), pars = c("alpha", "beta", "sigm
                                                           "delta","epsilon","gamma",
                                                           "delta_miss", "gamma_miss",
                                                           "Rho_j", "Rho_g", "Rho_jg"
-) 
+                                                          ) 
 )

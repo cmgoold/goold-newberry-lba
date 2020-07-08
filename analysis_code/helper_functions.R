@@ -31,10 +31,6 @@ as_numeric_safe <- function(x, remove_NAs=TRUE) {
 inv_logit <- function(x) exp(x) / (1 + exp(x))
 
 #-----------------------------------------------------------------------------------------------
-# my highest density interval function, set with probability = 0.9, i.e. .5% - 95%
-my_HDI <- function(x) HPDinterval( obj = as.mcmc(x), prob = .9 )
-
-#-----------------------------------------------------------------------------------------------
 # clean scale
 center_scale <- function(x, mu, sd){
   return(
@@ -51,7 +47,7 @@ make_cc_interaction <- function(jj, gg){
 
 #-----------------------------------------------------------------------------------------------
 # hdi function
-hdi <- function(x) coda::HPDinterval(coda::as.mcmc(x))
+hdi <- function(x, prob=0.95) coda::HPDinterval(coda::as.mcmc(x), prob=prob)
 
 #-----------------------------------------------------------------------------------------------
 # get_ordinal_probs
@@ -105,4 +101,38 @@ get_marginal_samples <- function(){
   out
 }
 
+#---------------------------------------------------------------------------------------------------------
+# get true positive, true negative, false positive, false negative values
+get_diagnostic <- function(d1, d2, code_colour, type)
+{
+  return(
+    unlist(
+      lapply( split(d1, d1$dog_id), 
+            function(x){
+              any_red_s <- ifelse( any(x$behaviour_code_colour == code_colour, na.rm = T), 1, 0)
+              any_red_a <- ifelse( any(d2[d2$dog_id %in% unique(x$dog_id), "behaviour_code_colour"] == code_colour, na.rm = T), 1, 0)
+              
+              if(type=="fp") if(any_red_s & !any_red_a) return(1) else return(0)
+              if(type=="fn") if(!any_red_s & any_red_a) return(1) else return(0)
+              if(type=="tp") if(any_red_s & any_red_a) return(1) else return(0)
+              if(type=="tn") if(!any_red_s & !any_red_a) return(1) else return(0)
+              
+            })
+    )
+  )
+}
 
+#---------------------------------------------------------------------------------------------------------
+# predictive values
+ppv <- function(tp, fp){  
+  if(!tp & fp > 0) 0 
+  if(!tp & !fp) NA
+  else tp/(tp + fp) 
+  }
+npv <- function(tn, fn){  
+  if(!tn & fn > 0) 0 
+  if(!tn & !fn) NA
+  else tn/(tn + fn) 
+  }
+#end
+#---------------------------------------------------------------------------------------------------------
