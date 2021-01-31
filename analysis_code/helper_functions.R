@@ -8,7 +8,7 @@
 ############################################################################
 
 get_needed_packages <- function(x){
-  needed <- c("rstan", "posterior", "coda")
+  needed <- c("rstan", "posterior", "coda", "scales")
   if(sum(installed.packages() %in% needed) < length(needed)){
     install.packages( needed[which( !(needed %in% installed.packages()))] )
   } 
