@@ -7,15 +7,15 @@
 # c.goold@leeds.ac.uk
 ############################################################################
 
-source("~/Dropbox/PhD/PhD_NMBU/PaperIV/GooldNewberry2020-lba/analysis_code/helper_functions.R")
+source("~/Dropbox/PhD/PhD_NMBU/PaperIV/goold-newberry-lba/analysis-code/helper_functions.R")
 
 # install packages required
 get_needed_packages()
 
 # load the data
-d_s <- read.table("~/Dropbox/PhD/PhD_NMBU/PaperIV/GooldNewberry2020-lba/data/d_shelter_behaviour.txt", header = T)
-d_a <- read.table("~/Dropbox/PhD/PhD_NMBU/PaperIV/GooldNewberry2020-lba/data/d_post_adoption_behaviour.txt", header=T)
-d_dem <- read.csv("~/Dropbox/PhD/PhD_NMBU/PaperIV/GooldNewberry2020-lba/data/d_demographic_details.txt", header = T,
+d_s <- read.table("~/Dropbox/PhD/PhD_NMBU/PaperIV/goold-newberry-lba/data/d_shelter_behaviour.txt", header = T)
+d_a <- read.table("~/Dropbox/PhD/PhD_NMBU/PaperIV/goold-newberry-lba/data/d_post_adoption_behaviour.txt", header=T)
+d_dem <- read.csv("~/Dropbox/PhD/PhD_NMBU/PaperIV/goold-newberry-lba/data/d_demographic_details.txt", header = T,
                     na.strings = ""
                   )
 
