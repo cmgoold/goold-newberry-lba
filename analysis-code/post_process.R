@@ -1,21 +1,22 @@
 ############################################################################
-# Post-processing results for Goold & Newberry (2020):
-#     - Longitudinal behavioural assessment of shelter dogs predicts 
-#       behaviour post-adoption
+# R post-processing script for Goold & Newberry (2021):
+#     - Predicting individual shelter dog behaviour after adoption using 
+#       longitudinal behavioural assessment: a hierarchical Bayesian approach
 
-# Copyright Conor Goold (2020)
-# c.goold@leeds.ac.uk
+# Copyright(C) Conor Goold  2021
+# goold.conor@gmail.com
 ############################################################################
 
-setwd("~/Dropbox/PhD/PhD_NMBU/PaperIV/GooldNewberry2020-lba")
-source("analysis_code/helper_functions.R")
-figure_path <- "~/Dropbox/PhD/PhD_NMBU/PaperIV/GooldNewberry2020-lba/paper/figures"
+path <- "~/Dropbox/PhD/PhD_NMBU/PaperIV/goold-newberry-lba/"
+figure_path <- paste0(path, "paper/figures/")
+source(paste0(path, "analysis-code/helper_functions.R"))
+setwd(path)
 
 get_needed_packages()
 
 # load the posterior distribution
-chain_1 <- rstan::read_stan_csv("analysis_code/jhb_dog_samples1.csv")
-chain_2 <- rstan::read_stan_csv("analysis_code/jhb_dog_samples2.csv")
+chain_1 <- rstan::read_stan_csv(paste0(path, "analysis-code/jhb_dog_samples1.csv"))
+chain_2 <- rstan::read_stan_csv(paste0(path, "analysis_code/jhb_dog_samples2.csv"))
 
 posterior_draws_1 <- posterior::as_draws_df(x = chain_1)
 posterior_draws_2 <- posterior::as_draws_df(x = chain_2)

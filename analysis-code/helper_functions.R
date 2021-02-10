@@ -1,16 +1,27 @@
 ############################################################################
-# R functions for Goold & Newberry (2020):
-#     - Longitudinal behavioural assessment of shelter dogs predicts 
-#       behaviour post-adoption
+# R helper functions for Goold & Newberry (2021):
+#     - Predicting individual shelter dog behaviour after adoption using 
+#       longitudinal behavioural assessment: a hierarchical Bayesian approach
 
-# Copyright Conor Goold (2020)
-# c.goold@leeds.ac.uk
+# Copyright(C) Conor Goold  2021
+# goold.conor@gmail.com
 ############################################################################
 
 get_needed_packages <- function(x){
   needed <- c("rstan", "posterior", "coda", "scales")
-  if(sum(installed.packages() %in% needed) < length(needed)){
-    install.packages( needed[which( !(needed %in% installed.packages()))] )
+  which_not_installed <- needed[which( !(needed %in% installed.packages()))]
+  if(length(which_not_installed) > 0){
+    for(i in which_not_installed){
+      # posterior isn't on CRAN yet
+      if(i == "posterior"){
+        install.packages(
+          "posterior", 
+          repos = c("https://mc-stan.org/r-packages/", getOption("repos"))
+        )
+      } else{
+        install.packages(which_not_installed)
+      }
+    }
   } 
   else{
     "All packages are already installed"
@@ -32,9 +43,18 @@ inv_logit <- function(x) exp(x) / (1 + exp(x))
 
 #-----------------------------------------------------------------------------------------------
 # clean scale
-center_scale <- function(x, mu, sd){
+center_scale <- function(x, center=NULL, scale=NULL){
+  
+  if(is.null(center)){
+    center = mean(x, na.rm = TRUE)
+  }
+  
+  if(is.null(scale)){
+    scale = sd(x, na.rm = TRUE)
+  }
+  
   return(
-    (x - mu)/sd
+    (x - center) / scale
   )
 }
 
@@ -47,8 +67,29 @@ make_cc_interaction <- function(jj, gg){
 
 #-----------------------------------------------------------------------------------------------
 # hdi function
-hdi <- function(x, prob=0.95) coda::HPDinterval(coda::as.mcmc(x), prob=prob)
-
+hdi <- function(x, prob=0.95, type="lower_upper"){
+  
+  types = c("lower_upper", "lower", "upper")
+  
+  if( !sum(types %in% type) ){
+    stop( past0("type must be one of ", types) )
+  }
+  
+  if(all(is.na(x))){
+    return(NA)
+  }
+  
+  hdi_ <- coda::HPDinterval(coda::as.mcmc(x), prob = prob)
+  
+  if(type == "lower"){
+    hdi_ <- hdi_[1]
+  }
+  if(type == "upper"){
+    hdi_ <- hdi_[2] 
+  }
+  
+  return(hdi_)
+}
 #-----------------------------------------------------------------------------------------------
 # get_ordinal_probs
 #   : obtain ordinal category probabilities from latent scale

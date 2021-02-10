@@ -1,23 +1,24 @@
 ############################################################################
-# R analysis script for Goold & Newberry (2020):
-#     - Longitudinal behavioural assessment of shelter dogs predicts 
-#       behaviour post-adoption
+# R analysis script for Goold & Newberry (2021):
+#     - Predicting individual shelter dog behaviour after adoption using 
+#       longitudinal behavioural assessment: a hierarchical Bayesian approach
 
-# Copyright(C) Conor Goold  2020
-# c.goold@leeds.ac.uk
+# Copyright(C) Conor Goold  2021
+# goold.conor@gmail.com
 ############################################################################
 
-source("~/Dropbox/PhD/PhD_NMBU/PaperIV/goold-newberry-lba/analysis-code/helper_functions.R")
+path <- "~/Dropbox/PhD/PhD_NMBU/PaperIV/goold-newberry-lba/"
+figure_path <- paste0(path, "paper/figures/")
+source(paste0(path, "analysis-code/helper_functions.R"))
+setwd(path)
 
 # install packages required
 get_needed_packages()
 
 # load the data
-d_s <- read.table("~/Dropbox/PhD/PhD_NMBU/PaperIV/goold-newberry-lba/data/d_shelter_behaviour.txt", header = T)
-d_a <- read.table("~/Dropbox/PhD/PhD_NMBU/PaperIV/goold-newberry-lba/data/d_post_adoption_behaviour.txt", header=T)
-d_dem <- read.csv("~/Dropbox/PhD/PhD_NMBU/PaperIV/goold-newberry-lba/data/d_demographic_details.txt", header = T,
-                    na.strings = ""
-                  )
+d_s <- read.table(paste0(path, "data/d_shelter_behaviour.txt"), header = T)
+d_a <- read.table(paste0(path, "data/d_post_adoption_behaviour.txt"), header=T)
+d_dem <- read.csv(paste0(path, "data/d_demographic_details.txt"), header = T, na.strings = "")
 
 # // contexts:
 #       1 = Interactions with dogs
@@ -33,7 +34,6 @@ d_dem <- read.csv("~/Dropbox/PhD/PhD_NMBU/PaperIV/goold-newberry-lba/data/d_demo
 
 numeric_dem_vars <- c("length_of_stay", "number_of_total_observations", "latest_weight", "estimated_age_at_departure")
 factor_dem_vars <- c("sex", "neuter_status", "source_type", "adoption_site")
-
 
 d_dem[, numeric_dem_vars] <- apply(d_dem[,numeric_dem_vars], 2, function(x) as_numeric_safe(x, remove_NAs = FALSE))
 d_dem[, factor_dem_vars]  <- apply(d_dem[,factor_dem_vars], 2, function(x) as.factor(x))
