@@ -179,8 +179,8 @@ d_dem[ d_dem$dog_id %in% dogs_missing_age, "estimated_age_at_departure"] <- tabl
 # shelter observation day variable
 d_s$day_since_arrival_Z <- center_scale(x = d_s$day_since_arrival, 
                                         # center around the average length of stay ~ 30 days
-                                        mu = table_1$length_of_stay[[1]], 
-                                        sd = sd(d_s$day_since_arrival)
+                                        center = table_1$length_of_stay[[1]], 
+                                        scale = sd(d_s$day_since_arrival)
                                         )
 
 # post-adoption days_after_adoption variable
@@ -202,26 +202,26 @@ dog_means_days_after_adoption <-
 ))
 
 d_a$days_after_adoption_Z <- center_scale(x = d_a$days_after_adoption, 
-                                          mu = mean(dog_means_days_after_adoption),
-                                          sd = sd(d_a$days_after_adoption)
+                                          center = mean(dog_means_days_after_adoption),
+                                          scale = sd(d_a$days_after_adoption)
                                           )
 
 # length_of_stay_Z
 d_dem$length_of_stay_Z <- center_scale(x = d_dem$length_of_stay, 
-                                       mu = table_1$length_of_stay[[1]],
-                                       sd = table_1$length_of_stay[[2]]
+                                       center = table_1$length_of_stay[[1]],
+                                       scale = table_1$length_of_stay[[2]]
                                        )
 
 # latest_weight_z
 d_dem$latest_weight_Z <- center_scale(x = d_dem$latest_weight, 
-                                      mu = table_1$latest_weight[[1]],
-                                      sd = table_1$latest_weight[[2]]
+                                      center = table_1$latest_weight[[1]],
+                                      scale = table_1$latest_weight[[2]]
                                       )
 
 # estimated_age_at_departure_Z
 d_dem$estimated_age_at_departure_Z <- center_scale(x = d_dem$estimated_age_at_departure, 
-                                                   mu = table_1$estimated_age_at_departure[[1]],
-                                                   sd = table_1$estimated_age_at_departure[[2]]
+                                                   center = table_1$estimated_age_at_departure[[1]],
+                                                   scale = table_1$estimated_age_at_departure[[2]]
                                                    )
 
 # sex_MALE = sum to zero contrasts

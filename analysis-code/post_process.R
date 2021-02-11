@@ -8,24 +8,24 @@
 ############################################################################
 
 path <- "~/Dropbox/PhD/PhD_NMBU/PaperIV/goold-newberry-lba/"
-figure_path <- paste0(path, "paper/figures/")
+figure_path <- paste0(path, "paper/figures")
 source(paste0(path, "analysis-code/helper_functions.R"))
 setwd(path)
+
+# NB: please run the analysis_script.R file first up to line ~ 280 
+# so that the dataframes d_s_stan and d_a_stan are in the current environment
 
 get_needed_packages()
 
 # load the posterior distribution
 chain_1 <- rstan::read_stan_csv(paste0(path, "analysis-code/jhb_dog_samples1.csv"))
-chain_2 <- rstan::read_stan_csv(paste0(path, "analysis_code/jhb_dog_samples2.csv"))
+chain_2 <- rstan::read_stan_csv(paste0(path, "analysis-code/jhb_dog_samples2.csv"))
 
 posterior_draws_1 <- posterior::as_draws_df(x = chain_1)
 posterior_draws_2 <- posterior::as_draws_df(x = chain_2)
 
 # chains combined
-draws <- do.call("rbind.data.frame", list(posterior_draws_1, posterior_draws_2))
-
-# ensure that analysis_script has been ran in this session so that 
-#   we have access to d_s_stan, d_a_stan, X_s_stan, X_a_stan
+draws <- as.data.frame(do.call("rbind.data.frame", list(posterior_draws_1, posterior_draws_2)))
 
 # get the random effects for later plotting using a convenience function
 random_effect_list <- get_marginal_samples()
@@ -432,92 +432,6 @@ points(1:8, inv_logit(apply(draws$alpha_miss + context_intercepts_missing_ordere
        col="steelblue",
        pch=16, cex=1.3)
 dev.off()
-
-# Figure 2a
-# png(paste0(figure_path, "/figure_2_a.png"), width=1000, height=1000, res=200)
-# plot(days_grid_Z, rnorm(length(days_grid_Z), 0, 1), 
-#      type="n", ylim=c(-5, 5), 
-#      bty="n", axes = F, 
-#      xlab="days after arrival", ylab="latent behaviour scale", 
-#      cex.lab=1.5)
-# axis(side = 1, at = c(min(days_grid_Z), median(days_grid_Z), max(days_grid_Z)), 
-#      labels = round(c(min(days_grid), median(days_grid), max(days_grid))), 
-#      lwd = 3, cex.axis=1.25)
-# axis(side = 2, lwd=3,  cex.axis=1.25)
-# mtext("a", line=0, at=min(days_grid_Z), cex = 1.5, font = 2)
-# for(i in seq_along(clean_context_labels)){
-#   lines(days_grid_Z, 
-#         apply(
-#           sapply(days_grid_Z, 
-#                  function(x) {
-#                    draws$alpha + random_effect_list$r_s_g_intercept[,context_labels_numbers[i]] + 
-#                      (draws$beta + random_effect_list$r_s_g_slope[,context_labels_numbers[i]]) * x
-#                  }
-#           ), 
-#           2, mean), 
-#         lwd=3, 
-#         col = RColorBrewer::brewer.pal(n = 8, name = "Dark2")[i]
-#         )
-# }
-# legend("topright", 
-#        inset = c(0.3, 0),
-#        bty="n",
-#        legend = clean_context_labels[1:4], 
-#        lwd = 3, 
-#        col = RColorBrewer::brewer.pal(n = 8, name = "Dark2")[1:4]
-#        )
-# legend("topright", 
-#        inset = c(0, 0),
-#        bty="n",
-#        legend = clean_context_labels[5:8], 
-#        lwd = 3, 
-#        col = RColorBrewer::brewer.pal(n = 8, name = "Dark2")[5:8]
-# )
-# dev.off()
-# 
-# # Figure 2b
-# png(paste0(figure_path, "/figure_2_b.png"), width=1000, height=1000, res=200)
-# plot(days_grid_Z, rnorm(length(days_grid_Z), 0, 1), 
-#      type="n", ylim=c(0, 1.2), 
-#      bty="n", axes = F, 
-#      xlab="days after arrival", ylab="probability missing", 
-#      cex.lab=1.5)
-# axis(side = 1, at = c(min(days_grid_Z), median(days_grid_Z), max(days_grid_Z)), 
-#      labels = round(c(min(days_grid), median(days_grid), max(days_grid))), 
-#      lwd = 3, cex.axis=1.25)
-# axis(side = 2, at = c(0, 0.5, 1), lwd=3,  cex.axis=1.25)
-# mtext("b", line=0, at=min(days_grid_Z), cex = 1.5, font = 2)
-# 
-# for(i in seq_along(clean_context_labels)){
-#   lines(days_grid_Z, 
-#         apply(
-#           sapply(days_grid_Z, 
-#                  function(x) {
-#                    inv_logit(draws$alpha_miss + random_effect_list$r_s_g_missing[,context_labels_numbers[i]] + 
-#                      draws$beta_miss * x
-#                    )
-#                  }
-#           ), 
-#           2, mean), 
-#         lwd=3, 
-#         col = RColorBrewer::brewer.pal(n = 8, name = "Dark2")[i]
-#   )
-# }
-# legend("topright", 
-#        inset = c(0.3, -0),
-#        bty="n",
-#        legend = clean_context_labels[1:4], 
-#        lwd = 3, 
-#        col = RColorBrewer::brewer.pal(n = 8, name = "Dark2")[1:4]
-# )
-# legend("topright", 
-#        inset = c(0, -0),
-#        bty="n",
-#        legend = clean_context_labels[5:8], 
-#        lwd = 3, 
-#        col = RColorBrewer::brewer.pal(n = 8, name = "Dark2")[5:8]
-# )
-# dev.off()
 
 #---------------------------------------------------------------------------------------------
 # Key post-adoption results
@@ -931,134 +845,6 @@ points(1:8, inv_logit(apply(draws$delta_miss + context_intercepts_missing_ordere
        col="steelblue",
        pch=16, cex=1.3)
 dev.off()
-
-# # Figure 2a OLD
-# png(paste0(figure_path, "/figure_2_a.png"), width=1000, height=1000, res=200)
-# plot(days_grid_Z, rnorm(length(days_grid_Z), 0, 1), 
-#      type="n", ylim=c(-5, 5), 
-#      bty="n", axes = F, 
-#      xlab="days after arrival", ylab="latent behaviour scale", 
-#      cex.lab=1.5)
-# axis(side = 1, at = c(min(days_grid_Z), median(days_grid_Z), max(days_grid_Z)), 
-#      labels = round(c(min(days_grid), median(days_grid), max(days_grid))), 
-#      lwd = 3, cex.axis=1.25)
-# axis(side = 2, lwd=3,  cex.axis=1.25)
-# mtext("a", line=0, at=min(days_grid_Z), cex = 1.5, font = 2)
-# for(i in seq_along(clean_context_labels)){
-#   lines(days_grid_Z, 
-#         apply(
-#           sapply(days_grid_Z, 
-#                  function(x) {
-#                    draws$alpha + random_effect_list$r_s_g_intercept[,context_labels_numbers[i]] + 
-#                      (draws$beta + random_effect_list$r_s_g_slope[,context_labels_numbers[i]]) * x
-#                  }
-#           ), 
-#           2, mean), 
-#         lwd=3, 
-#         col = RColorBrewer::brewer.pal(n = 8, name = "Dark2")[i]
-#   )
-# }
-# legend("topright", 
-#        inset = c(0.3, 0),
-#        bty="n",
-#        legend = clean_context_labels[1:4], 
-#        lwd = 3, 
-#        col = RColorBrewer::brewer.pal(n = 8, name = "Dark2")[1:4]
-# )
-# legend("topright", 
-#        inset = c(0, 0),
-#        bty="n",
-#        legend = clean_context_labels[5:8], 
-#        lwd = 3, 
-#        col = RColorBrewer::brewer.pal(n = 8, name = "Dark2")[5:8]
-# )
-# dev.off()
-# 
-# # Figure 4a
-# png(paste0(figure_path, "/figure_4_a.png"), width=1000, height=1000, res=200)
-# plot(days_a_grid_Z, rnorm(length(days_a_grid_Z), 0, 1), 
-#      type="n", ylim=c(-5, 5), 
-#      bty="n", axes = F, 
-#      xlab="days after adoption", ylab="latent behaviour scale", 
-#      cex.lab=1.5)
-# axis(side = 1, at = c(min(days_a_grid_Z), median(days_a_grid_Z), max(days_a_grid_Z)), 
-#      labels = round(c(min(days_a_grid), median(days_a_grid), max(days_a_grid))), 
-#      lwd = 3, cex.axis=1.25)
-# axis(side = 2, lwd=3,  cex.axis=1.25)
-# mtext("a", line=0, at=min(days_a_grid_Z), cex = 1.5, font = 2)
-# for(i in seq_along(clean_context_labels)){
-#   lines(days_a_grid_Z, 
-#         apply(
-#           sapply(days_a_grid_Z, 
-#                  function(x) {
-#                    draws$delta + random_effect_list$r_a_g_intercept[,context_labels_numbers[i]] + 
-#                      (draws$gamma + random_effect_list$r_a_g_slope[,context_labels_numbers[i]]) * x
-#                  }
-#           ), 
-#           2, mean), 
-#         lwd=3, 
-#         col = RColorBrewer::brewer.pal(n = 8, name = "Dark2")[i]
-#   )
-# }
-# legend("topright", 
-#        inset = c(0.3, 0),
-#        bty="n",
-#        legend = clean_context_labels[1:4], 
-#        lwd = 3, 
-#        col = RColorBrewer::brewer.pal(n = 8, name = "Dark2")[1:4]
-# )
-# legend("topright", 
-#        inset = c(0, 0),
-#        bty="n",
-#        legend = clean_context_labels[5:8], 
-#        lwd = 3, 
-#        col = RColorBrewer::brewer.pal(n = 8, name = "Dark2")[5:8]
-# )
-# dev.off()
-
-# # Figure 4b
-# png(paste0(figure_path, "/figure_4_b.png"), width=1000, height=1000, res=200)
-# plot(days_a_grid_Z, rnorm(length(days_a_grid_Z), 0, 1), 
-#      type="n", ylim=c(0, 0.3), 
-#      bty="n", axes = F, 
-#      xlab="days after arrival", ylab="probability missing", 
-#      cex.lab=1.5)
-# axis(side = 1, at = c(min(days_a_grid_Z), median(days_a_grid_Z), max(days_a_grid_Z)), 
-#      labels = round(c(min(days_a_grid), median(days_a_grid), max(days_a_grid))), 
-#      lwd = 3, cex.axis=1.25)
-# axis(side = 2, at = c(0, 0.5, 1), lwd=3,  cex.axis=1.25)
-# mtext("b", line=0, at=min(days_a_grid_Z), cex = 1.5, font = 2)
-# 
-# for(i in seq_along(clean_context_labels)){
-#   lines(days_a_grid_Z, 
-#         apply(
-#           sapply(days_a_grid_Z, 
-#                  function(x) {
-#                    inv_logit(draws$delta_miss + random_effect_list$r_a_g_missing[,context_labels_numbers[i]] + 
-#                                draws$gamma_miss * x
-#                    )
-#                  }
-#           ), 
-#           2, mean), 
-#         lwd=3, 
-#         col = RColorBrewer::brewer.pal(n = 8, name = "Dark2")[i]
-#   )
-# }
-# legend("topright", 
-#        inset = c(0.3, -0),
-#        bty="n",
-#        legend = clean_context_labels[1:4], 
-#        lwd = 3, 
-#        col = RColorBrewer::brewer.pal(n = 8, name = "Dark2")[1:4]
-# )
-# legend("topright", 
-#        inset = c(0, -0),
-#        bty="n",
-#        legend = clean_context_labels[5:8], 
-#        lwd = 3, 
-#        col = RColorBrewer::brewer.pal(n = 8, name = "Dark2")[5:8]
-# )
-# dev.off()
 
 #-----------------------------------------------------------------------------------
 # Figure 3
