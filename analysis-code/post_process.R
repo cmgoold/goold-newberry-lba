@@ -272,7 +272,6 @@ for(i in 1:plot_dogs){
   }
 }
 
-
 polygon(
   x = c(days_grid_Z, rev(days_grid_Z)),
   y = c(
@@ -307,7 +306,6 @@ for(i in 1:plot_dogs){
           lwd=0.5, col=scales::alpha("tomato", 0.6))
   }
 }
-
 
 polygon(
   x = c(days_grid_Z, rev(days_grid_Z)),
@@ -720,7 +718,6 @@ for(i in 1:plot_dogs){
   }
 }
 
-
 polygon(
   x = c(days_a_grid_Z, rev(days_a_grid_Z)),
   y = c(
@@ -951,15 +948,14 @@ legend(
 )
 dev.off()
 
-#------------------------------------------------------------------------------------------------------
-# ANALYSIS OF SHELTER-ADOPTION BEHAVIOUR DIFFERENCES
+# ANALYSIS OF SHELTER-ADOPTION BEHAVIOUR DIFFERENCES --------------------------------------------------------------------
 
 old_context_labels <- c("DOGS", "UFPL", "FPL", "HND", "KNL/HOUSE", "OKNL/OTSD", "TOYS", "FOOD")
 sorted_context_numbers <- c(8, 5, 4, 1, 2, 3, 7, 6)
 clean_context_labels <- c("HND", "KNL/HOUSE", "OKNL/OSTD", "FPL", "UFPL", "FOOD", "TOYS", "DOGS")
 context_labels_numbers <- c(4, 5, 6, 3, 2, 8, 7, 1)
 
-# Figure4
+# Figure 5 (figure 4 below)
 n_dogs <- 4
 sample_dogs <- c(9, 89, 112, 155) #sample(1:241, n_dogs, replace=F)
 which_contexts <- c(8,1,7,6) #sample(1:8, n_dogs, replace = F)
@@ -967,8 +963,9 @@ which_contexts <- c(8,1,7,6) #sample(1:8, n_dogs, replace = F)
 #           oma = c(5,4,0,0) + 0.1,
 #           mar = c(0,0,1,1) + 0.1)
 
+# this sequence creates a combined plot, like figure 4, for the specified sample dogs
 for(i in seq_along(sample_dogs)){  
-    png( paste0(figure_path, "/figure_4_", letters[i], ".png"), width = 2000, height = 500, res=200)
+    png( paste0(figure_path, "/figure_5_", letters[i], ".png"), width = 2000, height = 500, res=200)
     par(mfrow=c(1,3))
     label_size <- 1.5
     dogs_shelter_data <- d_s_stan[d_s_stan$dog_id %in% sample_dogs[i] & d_s_stan$context_id %in% which_contexts[i], 
@@ -1031,6 +1028,7 @@ for(i in seq_along(sample_dogs)){
       )
     )
     
+    # LEFT-HAND PLOT
     plot(dog_predict_df$days, dog_predict_df$codes, type="n", ylim=c(-5,5), 
          axes=F, bty="n",
          xlab = "observation days", ylab = "behaviour", 
@@ -1082,7 +1080,7 @@ for(i in seq_along(sample_dogs)){
            cex = ifelse(dog_predict_df$codes > 0, 1, 0),
            col = scales::alpha(dog_predict_df$code_colour, 1))
     
-    # shelter code probs plot
+    # MIDDLE PLOT
     shelter_code_probs <- table(dog_predict_df[dog_predict_df$codes %in% 1:3 & dog_predict_df$time %in% "shelter", "codes"])/
       length(dog_predict_df[dog_predict_df$codes %in% 1:3 & dog_predict_df$time %in% "shelter", "codes"])
     
@@ -1112,7 +1110,7 @@ for(i in seq_along(sample_dogs)){
     the_colours <- c("darkolivegreen4","darkorange2","firebrick2")
     
     plot(density(rowMeans(dogs_shelter_preds)), lwd=2, col=scales::alpha("slateblue",0.8), 
-         xlim=c(-5,5), ylim=c(0,1.6), bty="n", axes=F, main="", type="n",
+         xlim=c(-5,5), ylim=c(0,2), bty="n", axes=F, main="", type="n",
          xlab = "behaviour", 
          ylab = "probability & density", 
          cex.lab = label_size)
@@ -1134,7 +1132,7 @@ for(i in seq_along(sample_dogs)){
       side = 3, at = -2, cex = 1
     )
     
-    # adoption code probs plot
+    # RIGHT-HAND PLOT
     adoption_code_probs <- table(dog_predict_df[dog_predict_df$codes %in% 1:3 & dog_predict_df$time %in% "adoption", "codes"])/
       length(dog_predict_df[dog_predict_df$codes %in% 1:3 & dog_predict_df$time %in% "adoption", "codes"])
     
@@ -1162,7 +1160,7 @@ for(i in seq_along(sample_dogs)){
                                    apply(dogs_adoption_preds, 2, function(x) get_ordinal_probs(x, draws$epsilon)))
     
     plot(density(rowMeans(dogs_adoption_preds)), lwd=2,
-         xlim=c(-5,5), ylim=c(0,1.6), bty="n", axes=F, main="", type="n",
+         xlim=c(-5,5), ylim=c(0,2), bty="n", axes=F, main="", type="n",
          xlab = "behaviour", 
          ylab = "probability & density", 
          cex.lab = label_size)
@@ -1188,169 +1186,16 @@ for(i in seq_along(sample_dogs)){
 
 par(mfrow=c(1,1))
 
-# # Figure 4
-# png(paste0(figure_path, "/figure_4.png"), width=1400, height=1400, res=200)
-# set.seed(2020)
-# n_dogs <- 8
-# sample_dogs <- sample(1:length(unique(d_s_stan$dog_id)), n_dogs, replace=F)
-# which_contexts <- context_labels_numbers #1:8 #sample(1:8, n_dogs, replace=T)
-# op <- par(mfrow = c(n_dogs/2,2),
-#           oma = c(5,4,0,0) + 0.1,
-#           mar = c(2,0,1,1) + 0.1)
-# 
-# for(i in seq_along(sample_dogs)){
-#   dogs_shelter_data <- d_s_stan[d_s_stan$dog_id %in% sample_dogs[i] & d_s_stan$context_id %in% which_contexts[i], 
-#                                 c("day_since_arrival_Z", "day_since_arrival", "behaviour_code_colour")]
-#   
-#   dogs_adoption_data <- d_a_stan[d_a_stan$dog_id %in% sample_dogs[i] & d_a_stan$context_id %in% which_contexts[i], 
-#                                  c("days_after_adoption_Z", "days_after_adoption", "behaviour_code_colour")]
-#   
-#   total_length <- nrow(dogs_shelter_data) + nrow(dogs_adoption_data)
-#   
-#   dogs_shelter_preds <- sapply(dogs_shelter_data$day_since_arrival_Z, 
-#                                function(x){
-#                                  draws$alpha + 
-#                                    random_effect_list$r_s_j_intercept[,sample_dogs[i]] + 
-#                                    random_effect_list$r_s_g_intercept[,which_contexts[i]] + 
-#                                    random_effect_list$r_s_jg_intercept[, make_cc_interaction(sample_dogs[i],which_contexts[i])] + 
-#                                    (
-#                                      draws$beta + 
-#                                        random_effect_list$r_s_j_slope[,sample_dogs[i]] + 
-#                                        random_effect_list$r_s_g_slope[,which_contexts[i]] + 
-#                                        random_effect_list$r_s_jg_slope[, make_cc_interaction(sample_dogs[i],which_contexts[i])]
-#                                    ) * x
-#                                })
-#   
-#   dogs_adoption_preds <- sapply(dogs_adoption_data$days_after_adoption_Z, 
-#                                 function(x){
-#                                   draws$delta + 
-#                                     random_effect_list$r_a_j_intercept[,sample_dogs[i]] + 
-#                                     random_effect_list$r_a_g_intercept[,which_contexts[i]] + 
-#                                     random_effect_list$r_a_jg_intercept[, make_cc_interaction(sample_dogs[i],which_contexts[i])] + 
-#                                     (
-#                                       draws$gamma + 
-#                                         random_effect_list$r_a_j_slope[,sample_dogs[i]] + 
-#                                         random_effect_list$r_a_g_slope[,which_contexts[i]] + 
-#                                         random_effect_list$r_a_jg_slope[, make_cc_interaction(sample_dogs[i],which_contexts[i])]
-#                                     ) * x
-#                                 })
-#   
-#   
-#   dog_predict_df <- data.frame(
-#     dog_id = rep(sample_dogs[i], total_length),
-#     which_context = rep(which_contexts[i], total_length),
-#     days = c(dogs_shelter_data$day_since_arrival, max(dogs_shelter_data$day_since_arrival) + dogs_adoption_data$days_after_adoption),
-#     codes = c(ifelse(is.na(dogs_shelter_data$behaviour_code_colour), 0, dogs_shelter_data$behaviour_code_colour), 
-#               ifelse(is.na(dogs_adoption_data$behaviour_code_colour), 0, dogs_adoption_data$behaviour_code_colour)),
-#     time = rep(c("shelter","adoption"), c(nrow(dogs_shelter_data), nrow(dogs_adoption_data))),
-#     mu = c(apply(dogs_shelter_preds, 2, mean), apply(dogs_adoption_preds, 2, mean)),
-#     hdi_2.5 = c(apply(dogs_shelter_preds, 2, hdi)[1,], apply(dogs_adoption_preds, 2, hdi)[1,]),
-#     hdi_97.5 = c(apply(dogs_shelter_preds, 2, hdi)[2,], apply(dogs_adoption_preds, 2, hdi)[2,])
-#   )
-#   
-#   dog_predict_df$code_colour <- ifelse(
-#     dog_predict_df$codes %in% 0, scales::alpha("black", 0.1), 
-#     ifelse(
-#       dog_predict_df$codes %in% 1, "darkolivegreen4", 
-#       ifelse(
-#         dog_predict_df$codes %in% 2, "darkorange2",
-#         "red"
-#       )
-#     )
-#   )
-#   
-#   plot(dog_predict_df$days, dog_predict_df$codes, type="n", ylim=c(-5,5), axes=F, bty="n",
-#        #xlab = "observation days", ylab = "behaviour", 
-#        cex.lab = 1)
-#   abline(h=c(1, 2, 3), lty=3, 
-#          col=scales::alpha("black", 0.5))
-#   polygon(x=c(min(dog_predict_df[dog_predict_df$time %in% "shelter", "days"])-5, 
-#               min(dog_predict_df[dog_predict_df$time %in% "shelter", "days"])-5,
-#               max(dog_predict_df[dog_predict_df$time %in% "shelter", "days"])+1, 
-#               max(dog_predict_df[dog_predict_df$time %in% "shelter", "days"])+1), 
-#           y = c(-10, 10, 10, -10), 
-#           col = scales::alpha("black", 0.1), border = NA
-#   )
-#   polygon(x=c(min(dog_predict_df[dog_predict_df$time %in% "adoption", "days"])-1, 
-#               min(dog_predict_df[dog_predict_df$time %in% "adoption", "days"])-1,
-#               max(dog_predict_df[dog_predict_df$time %in% "adoption", "days"])+5, 
-#               max(dog_predict_df[dog_predict_df$time %in% "adoption", "days"])+5), 
-#           y = c(-10, 10, 10, -10), 
-#           col = scales::alpha("black", 0.1), border = NA
-#   )
-#   if(i %in% seq(1,20,2)){
-#     axis(side = 2, cex.axis=1, las=1,
-#          at = c(-5, 1,2,3,5))
-#   }
-#   axis(side=1, cex.axis=1,
-#        at = c(0, 
-#               max(dog_predict_df[dog_predict_df$time %in% "shelter", "days"]),
-#               min(dog_predict_df[dog_predict_df$time %in% "adoption", "days"]),
-#               max(dog_predict_df$days))
-#   )
-#   
-#   if(i == 0){
-#     mtext("shelter", line = 0, at = mean(dog_predict_df[dog_predict_df$time %in% "shelter", "days"]), cex = 0.8)
-#     mtext("adoption", line=0, at = mean(dog_predict_df[dog_predict_df$time %in% "adoption", "days"]), cex = 0.8)
-#   }
-#   
-#    mtext(paste0(sample_dogs[i], " ", clean_context_labels[which(context_labels_numbers %in% which_contexts[i])]),
-#          cex = 0.7, adj = 0)
-#   
-#   # shelter preds
-#   sample_lines <- sample(1:nrow(draws), 50, replace=T)
-#   for(i in seq_along(sample_lines)){
-#     lines(dog_predict_df[dog_predict_df$time %in% "shelter", "days"],
-#           dogs_shelter_preds[sample_lines[i], ],
-#           col = scales::alpha("slateblue", 0.2))
-#   } 
-#   for(i in seq_along(sample_lines)){
-#     lines(dog_predict_df[dog_predict_df$time %in% "adoption", "days"],
-#           dogs_adoption_preds[sample_lines[i], ],
-#           col = scales::alpha("slateblue", 0.2))
-#   }
-#    
-#   # lines(dog_predict_df[dog_predict_df$time %in% "shelter", "days"], 
-#   #       dog_predict_df[dog_predict_df$time %in% "shelter", "mu"], 
-#   #       lwd=2)
-#   # lines(dog_predict_df[dog_predict_df$time %in% "shelter", "days"], 
-#   #       dog_predict_df[dog_predict_df$time %in% "shelter", "hdi_2.5"], 
-#   #       lwd=2, lty=2)
-#   # lines(dog_predict_df[dog_predict_df$time %in% "shelter", "days"], 
-#   #       dog_predict_df[dog_predict_df$time %in% "shelter", "hdi_97.5"], 
-#   #       lwd=2, lty=2)
-#   # adoption preds
-#   # lines(dog_predict_df[dog_predict_df$time %in% "adoption", "days"], 
-#   #       dog_predict_df[dog_predict_df$time %in% "adoption", "mu"], 
-#   #       lwd=2)
-#   # lines(dog_predict_df[dog_predict_df$time %in% "adoption", "days"], 
-#   #       dog_predict_df[dog_predict_df$time %in% "adoption", "hdi_2.5"], 
-#   #       lwd=2, lty=2)
-#   # lines(dog_predict_df[dog_predict_df$time %in% "adoption", "days"], 
-#   #       dog_predict_df[dog_predict_df$time %in% "adoption", "hdi_97.5"], 
-#   #       lwd=2, lty=2)
-#   
-#   points(dog_predict_df$days, ifelse(is.na(dog_predict_df$codes), 0, dog_predict_df$codes), 
-#          pch=ifelse(dog_predict_df$codes > 0, 16, 1), 
-#          cex = ifelse(dog_predict_df$codes > 0, 1, 0),
-#          col = scales::alpha(dog_predict_df$code_colour, 1))
-#   
-# }
-# title(
-#   xlab = "observation days (shelter & rehoming)",
-#   ylab = "behaviour (ordinal & latent scales)",
-#   outer = TRUE, line = 2, 
-#   cex.lab = 2
-#   )
-# par(op)
-# par(mfrow=c(1,1))
-# dev.off()
-
-
 #-------------------------------------------------------------------------------------------------------
+# CRUDE DIAGNOSTICS (FALSE POSITIVE, FALSE NEGATIVES etc.)
+
 # raw data - for each context, count up fp, fn, tp, tn for chosen code
 # this is a CRUDE estimate!
-# Should not be trusted because it does not take into account measurement error, differing amounts of data etc.
+# Should not be trusted because it does not take into account measurement error, 
+# differing amounts of data, or that dogs' behaviours might be different than
+# their 'true' latent chances of showing behaviours. E.g. a dog which has a 95%
+# chance of green codes could still show aggression, but that doesn't make the 
+# situation a false negative. 
 diagnostics_vec <- c("fp", "fn", "tp", "tn")
 diagnostics_green <- diagnostics_amber <- diagnostics_red <- array(NA, dim=c(4, 8), dimnames = list(c(diagnostics_vec), c(old_context_labels)))
 for(k in 1:length(unique(d_s_stan$context_id))){
@@ -1386,8 +1231,8 @@ print( npvs_amber <- apply(diagnostics_amber, 2, function(x) npv(x["tn"], x["fn"
 print( ppvs_red <- apply(diagnostics_red, 2, function(x) ppv(x["tp"], x["fp"])) )
 print( npvs_red <- apply(diagnostics_red, 2, function(x) npv(x["tn"], x["fn"])) )
 
-
-# now make predictions from the model posterior distributions - better method!
+# INSTEAD, WE CAN MAKE PREDICTIONS FROM THE POSTERIOR DISTRIBUTION
+# A better method!
 green_diff_es <- amber_diff_es <- red_diff_es <- array(NA, 
                                                        dim=c( length(unique(d_s_stan$dog_id)),
                                                               length(unique(d_s_stan$context_id))*4))
@@ -1536,8 +1381,8 @@ apply(red_diff_es, 2, function(x) which(!is.na(x))) # which dogs differ
 
 colour_diffs_df_ordered <- colour_diffs_df[order(colour_diffs_df$contexts_num), ]
 
-# figure 5 - depending on days chosen
-png(paste0(figure_path, "/figure_5.png"), width=1400, height=1200, res=200)
+# figure 4 - depending on days chosen
+png(paste0(figure_path, "/figure_4.png"), width=1400, height=1200, res=200)
 barplot_axis_names <- as.vector(sapply(clean_context_labels, function(x) c(x, " ")))
 op <- par(mfrow = c(3, 2),
           oma = c(5,4,0,0) + 0.1,
