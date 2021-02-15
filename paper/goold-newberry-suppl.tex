@@ -99,9 +99,63 @@ to score behaviour in particular contexts and how they are ordered.
   \item \textbf{Reactive to People Aggressive}: growls, snarls, shows teeth and/or snaps when seeing/meeting other people, potentially pulling or lunging towards them (state radius).
 
 \end{itemize}
+\newpage
+
+\section{Model description}
+
+\newpage
+\section{Variation across contexts}
+Figure \ref{fig_1} demonstrates the variation across contexts for the latent behavioural scores (intercepts and slopes) and missing data, for an average dog, at the shelter. Figure \ref{fig_2} displays the same information for the post-adoption reports. For the shelter estimates, the intercepts in Figure \ref{fig_1}a and the values in Figure \ref{fig_1}b are evaluated at 32 days after arrival, and the slopes in \ref{fig_1}a illustrate the amount of behavioural change for every 73 days (1 standard deviation of days after arrival) spent at the shelter. The intercepts \ref{fig_2}a and the values in Figure \ref{fig_2}b are evaluated at 30 days post adoption, and the slopes in \ref{fig_2}a illustrate the amount of behavioural change for every 11 days after adoption.
 
 
+\begin{figure}[]
+  \centering
+  \begin{subfigure}{0.5\textwidth}
+    \includegraphics[scale=0.6]{figures/figure_S1_a}
+  \end{subfigure}%
+  ~
+  \begin{subfigure}{0.5\textwidth}
+    \includegraphics[scale=0.6]{figures/figure_S1_b}
+  \end{subfigure}%
+\caption{Variation across contexts at the shelter for latent behavioural scores (panel a; higher intercept scores indicate higher changes of amber and red codes, more positive slopes indicate higher chances of amber and red codes through time) and the probability of missing data (panel b). The red dotted line in panel a highlights zero, while the dashed coloured lines in both panels indicate the average values across contexts.
+}
+\label{fig_1}
+\end{figure}
 
+\begin{figure}[]
+  \centering
+  \begin{subfigure}{0.5\textwidth}
+    \includegraphics[scale=0.6]{figures/figure_S2_a}
+  \end{subfigure}%
+  ~
+  \begin{subfigure}{0.5\textwidth}
+    \includegraphics[scale=0.6]{figures/figure_S2_b}
+  \end{subfigure}%
+\caption{Variation across contexts post-adoption for latent behavioural scores (panel a; higher intercept scores indicate higher changes of amber and red codes, more positive slopes indicate higher chances of amber and red codes through time) and the probability of missing data (panel b). The red dotted line in panel a highlights zero, while the dashed coloured lines in both panels indicate the average values across contexts.
+}
+\label{fig_2}
+\end{figure}
+
+\newpage
+\section{Repeatability}
+Repeatability is the proportion of behavioural variance attributable to between-individual differences. The model used here had four sources of behavioural variance (i.e. not including the missing data component) for both the shelter ($s$) and post adoption ($a$) sub-models: variation across dogs ($\sigma_{j}^{s,a}$), variation across contexts ($\sigma_{g}^{s,a}$), variation across dog $\times$ context combinations ($\sigma_{j \times g}^{s,a}$), and error variance ($\sigma$ or $\epsilon$, respectively). Therefore, we estimated repeatability across dogs, across contexts, and across dog $\times$ context combinations separately. For example, repeatability for dog $\times$ context combinations at the shelter was calculated as:
+
+\begin{equation}
+  R_{j \times g}^{\text{shelter}} = \frac{(\sigma_{j \times g}^{s})^2}{(\sigma_{j}^{s})^2 + (\sigma_{g}^{s})^2 + (\sigma_{j \times g}^{s})^2 + \sigma^2}
+\end{equation}
+%
+and repeatability for contexts post adoption was calculated as:
+
+\begin{equation}
+  R_{g}^{\text{adoption}} = \frac{(\sigma_{g}^{a})^2}{(\sigma_{j}^{a})^2 + (\sigma_{g}^{a})^2 + (\sigma_{j \times g}^{a})^2 + \epsilon^2}
+\end{equation}
+
+\newpage
+\section{Random effect correlations}
+The full list of random effect correlations estimated by the above model is presented in Table S1 found at \href{https://github.com/cmgoold/goold-newberry-lba/tree/master/paper}{https://github.com/cmgoold/goold-newberry-lba/tree/master/paper}.
+
+\newpage
+\section{Examples of individual-level posterior predictions}
 
 
 \end{document}

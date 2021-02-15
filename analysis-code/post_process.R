@@ -767,7 +767,7 @@ dev.off()
 
 
 #---------------------------------------------------------------------------------------------------------------
-# FIGURE S2 & 4: variation between the contexts post-adoption
+# FIGURE S2: variation between the contexts post-adoption
 
 # make clean labels
 clean_context_labels <- c("HND", "HOUSE", "OTSD", "FPL", "UFPL", "FOOD", "TOYS", "DOGS")
