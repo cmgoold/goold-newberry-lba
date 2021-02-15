@@ -7,7 +7,7 @@
 # goold.conor@gmail.com
 ############################################################################
 
-path <- "~/Dropbox/PhD/PhD_NMBU/PaperIV/goold-newberry-lba/"
+path <- ""
 figure_path <- paste0(path, "paper/figures/")
 source(paste0(path, "analysis-code/helper_functions.R"))
 setwd(path)

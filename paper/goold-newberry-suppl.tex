@@ -129,41 +129,90 @@ This custom likelihood function is defined in the log probability mass function 
 \begin{lstlisting}
 /* log-PDF for a single response from the custom ordinal-hurdle model with one-inflation
  *    y:   ordinal data point
- *    eta: linear predictor for the hurdle model
+ *    pi: linear predictor for the hurdle model
  *    theta: vector of ordinal category probabilities
  *    kappa: probability of one-inflation
 */
-real ordinal_hurdle_one_inflated_lpmf(int y, real eta, vector theta, real kappa){
+real ordinal_hurdle_one_inflated_lpmf(int y, real eta, vector pi, real kappa){
 
-  real lp = 0;
+    real lp = 0;
 
-  if(y == 0){
-    lp += bernoulli_logit_lpmf(1 | eta);
+    if(y == 0){
+      lp += bernoulli_logit_lpmf(1 | eta);
+    }
+
+    if(y == 1){
+      vector[2] lp1;
+      lp1[1] = bernoulli_logit_lpmf(0 | eta) + log(kappa);
+      lp1[2] = bernoulli_logit_lpmf(0 | eta) + log1m(kappa) + categorical_lpmf(y | pi);
+      lp += log_sum_exp(lp1);
+    }
+
+    if(y > 1){
+      lp += bernoulli_logit_lpmf(0 | eta) + log1m(kappa) + categorical_lpmf(y | pi);
+    }
+
+    return lp;
   }
-
-  if(y == 1){
-    vector[2] lp1;
-    lp1[1] = bernoulli_logit_lpmf(0 | eta) + log(kappa);
-    lp1[2] = bernoulli_logit_lpmf(0 | eta) + log1m(kappa) + categorical_lpmf(y | theta);
-    lp += log_sum_exp(lp1);
-  }
-
-  if(y > 1){
-    lp += bernoulli_logit_lpmf(0 | eta) + log1m(kappa) + categorical_lpmf(y | theta);
-  }
-
-  return lp;
-}
 \end{lstlisting}
 %
-The above code defines a log-probability accumulator variable \texttt{lp}, and adds the relevant probability components the latter variable depending on the data point \texttt{y} passed to the function. When \texttt{y==1}, the mixture probabilities are defined, and we use the \texttt{log\_sum\_exp} function to safely take the log of the summed probabilites of the mixture components.
+The above code defines a log-probability accumulator variable \texttt{lp}, and adds the relevant probability components the latter variable depending on the data point \texttt{y} passed to the function. When \texttt{y==1}, the mixture components are defined with probability $\kappa$, and we use the \texttt{log\_sum\_exp} function to safely take the log of the summed probabilites of the mixture components.
 
-The vector \texttt{theta} passed to the above function holds the probabilities of green, amber and red codes, which are determined based on the cumulative ordinal probit model:
+The vector \texttt{pi} passed to the above function holds the probabilities of green, amber and red codes, which are determined based on a cumulative ordinal probit model. For the shelter sub-model, this is defined as:
 
 \begin{equation}
-  \pi_{ijg}^c = \Phi \Big( \frac{\theta_{c} - \mu_{ijg}}{\sigma} \Big) - \Phi \Big( \frac{\theta_{c-1} - \mu_{ijg}}{\sigma} \Big)
-  \label{eq_ordprob}
+  \pi_{ijg_{s}}^c = \Phi \Big( \frac{\theta_{c_{s}} - \mu_{ijg}}{\sigma} \Big) - \Phi \Big( \frac{\theta_{c-1_{s}} - \mu_{ijg}}{\sigma} \Big)
+  \label{eq_ordprob_shelter}
 \end{equation}
+%
+and, similarly, for the post adoption sub-model as:
+
+\begin{equation}
+  \pi_{ijg_{a}}^c = \Phi \Big( \frac{\theta_{c_{a}} - \zeta_{ijg}}{\epsilon} \Big) - \Phi \Big( \frac{\theta_{c-1_{a}} - \zeta_{ijg}}{\epsilon} \Big)
+  \label{eq_ordprob_adoption}
+\end{equation}
+%
+where the $s$ and $a$ subscripts denote the shelter and post-adoption parameters, respectively. The $\mu$ and $\zeta$ parameters hold the latent behavioural scale means for the shelter and post adoption sub-models, which are specified as the following additive functions:
+
+\begin{equation}
+  \mu_{ijk} = \alpha + r_{j}^{1} + r_{g}^{1} + r_{j \times g}^{1} +
+              \big(\beta +  r_{j}^{2} + r_{g}^{2} + r_{j \times g}^{2}\big) x_{1} + \mathbf{X_{1}} \mathbf{B}
+\end{equation}
+
+\begin{equation}
+  \zeta_{ijk} = \delta + r_{j}^{4} + r_{g}^{4} + r_{j \times g}^{4} +
+              \big(\gamma +  r_{j}^{5} + r_{g}^{5} + r_{j \times g}^{5}\big) x_{2} + \mathbf{X_{2}} \mathbf{\Gamma}
+\end{equation}
+%
+where the random effects are denoted by $r$ (see below), $x_{1,2}$ denote the days after arrival and days after adoption with coefficients $\beta$ and $\gamma$, respectively, and $\mathbf{X_{1,2}}$ are the matrices of dog-level predictor variables with coefficient vectors $\mathbf{B}$ and $\mathbf{\Gamma}$.
+
+The probability of missing data in each sub-model is modelled as:
+
+\begin{equation}
+  y_{ijg_{s}}^{c} \big|_{c=0} \sim \text{Bernoulli}( logit^{-1}(\eta_{ijg}))
+  \label{eq_missing_shelter}
+\end{equation}
+
+\begin{equation}
+  y_{ijg_{a}}^{c} \big|_{c=0} \sim \text{Bernoulli}( logit^{-1}(\nu_{ijg}))
+  \label{eq_missing_adoption}
+\end{equation}
+%
+where $y_{ijg} = 0$ denotes a missing data point. The parameters $\eta$ and $\nu$ are additive functions on the linear log-odds scale, hence the use of the inverse logit link above to map to the probability space required by the Bernoulli likelihood. The additive functions were defined as:
+
+\begin{equation}
+  \eta_{ijg} = \alpha_{miss} + r_{j}^{3} + r_{g}^{3} + r_{j \times g}^{3} +
+               \beta_{miss} x_{1} + \mathbf{X_{1}} \mathbf{B_{miss}}
+\end{equation}
+
+\begin{equation}
+  \nu_{ijg} = \delta_{miss} + r_{j}^{6} + r_{g}^{6} + r_{j \times g}^{6} +
+               \gamma_{miss} x_{2} + \mathbf{X_{2}} \mathbf{\Gamma_{miss}}
+\end{equation}
+
+A key component of our model is the correlated random effect parameters between shelter and post adoption time periods, which defines the `joint' parameterisation of our model. The correlations enable for information to flow between shelter and post adoption sub-models. The random effects on the intercept and slope (days after arrival to the shelter/after adoption) parameters above are present for dogs, contexts and dogs $\times$ context combinations, each of which are packaged into a $6 \times 6$ covariance matrix. To speed up the MCMC computations, we use the `non-centered' parameterisation of the random-effect parameters and a Cholesky factorisation of their correlation matrices using the LKJ prior distribution in Stan.
+
+As can be seen in the model file, we use weakly-informative prior distributions to aid computation and inference. Predictor coefficients were all given standard normal (i.e. $Normal(0, 1)$) prior distributions, all intercepts were given $Normal(0, 5)$ prior distributions, all standard deviations were given half standard normal priors (i.e. constrained to be positive), and LKJ priors were given to the Cholesky factors of the correlation matrices. The ordinal thresholds parameters $\theta$ have uniform priors. 
 
 \newpage
 \section{Variation across contexts}

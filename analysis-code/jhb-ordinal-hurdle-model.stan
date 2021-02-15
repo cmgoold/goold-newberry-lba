@@ -6,7 +6,7 @@ functions{
   /****************************************************/
   /* log-PDF for a single response from the custom ordinal-hurdle model with one-inflation
    *    y:   ordinal data point
-   *    eta: linear predictor for the hurdle model
+   *    pi: linear predictor for the hurdle model
    *    pi: vector of ordinal category probabilities
    *    kappa: probability of one-inflation
   */
