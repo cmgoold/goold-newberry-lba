@@ -9,6 +9,14 @@
 \usepackage{authblk}
 \usepackage{lineno}
 \usepackage{graphicx}
+\usepackage{listings}
+\usepackage{lstbayes}
+\usepackage{xcolor}
+\lstset { %
+    language=Stan,
+    backgroundcolor=\color{black!5}, % set backgroundcolor
+    basicstyle=\scriptsize% basic font setting
+}
 \graphicspath{{/Users/cmgoold/Dropbox/PhD/PhD_NMBU/PaperIV/goold-newberry-lba/paper/figures/}}
 \linespread{1.15}
 \usepackage{hyperref}
@@ -102,6 +110,60 @@ to score behaviour in particular contexts and how they are ordered.
 \newpage
 
 \section{Model description}
+As summarised in the main text, we specified a custom mixture model for the probability of different codes ($c = {\text{missing}, \text{green}, \text{amber}, \text{red}} = {0, 1, 2, 3}$) for case $i$ (either the days after arriving at the shelter or the days after adoption), dog $j$ and context $k$:
+
+\begin{equation}
+  p(y_{ijg}^{c}) =
+  \begin{cases}
+      \psi_{ijg} & \text{if } y_{ijg} = 0 \\
+      (1-\psi_{ijg})\big[\kappa + (1-\kappa)\pi_{ijg}^c\big]
+      & \text{if } y_{ijg} = 1 \\
+      (1-\psi_{ijg})(1-\kappa)\pi_{ijg}^c
+      & \text{if } 1 < y_{ijg} \leq 3
+  \end{cases}
+  \label{eq_mixture}
+\end{equation}
+
+This custom likelihood function is defined in the log probability mass function \\\texttt{ordinal\_hurdle\_one\_inflated\_lpmf} in the Stan model file (\href{https://github.com/goold-newberry-lba/analysis-code/jhb-ordinal-hurdle-model.stan}{https://github.com/goold-newberry-lba/analysis-code/jhb-ordinal-hurdle-model.stan}) as:
+
+\begin{lstlisting}
+/* log-PDF for a single response from the custom ordinal-hurdle model with one-inflation
+ *    y:   ordinal data point
+ *    eta: linear predictor for the hurdle model
+ *    theta: vector of ordinal category probabilities
+ *    kappa: probability of one-inflation
+*/
+real ordinal_hurdle_one_inflated_lpmf(int y, real eta, vector theta, real kappa){
+
+  real lp = 0;
+
+  if(y == 0){
+    lp += bernoulli_logit_lpmf(1 | eta);
+  }
+
+  if(y == 1){
+    vector[2] lp1;
+    lp1[1] = bernoulli_logit_lpmf(0 | eta) + log(kappa);
+    lp1[2] = bernoulli_logit_lpmf(0 | eta) + log1m(kappa) + categorical_lpmf(y | theta);
+    lp += log_sum_exp(lp1);
+  }
+
+  if(y > 1){
+    lp += bernoulli_logit_lpmf(0 | eta) + log1m(kappa) + categorical_lpmf(y | theta);
+  }
+
+  return lp;
+}
+\end{lstlisting}
+%
+The above code defines a log-probability accumulator variable \texttt{lp}, and adds the relevant probability components the latter variable depending on the data point \texttt{y} passed to the function. When \texttt{y==1}, the mixture probabilities are defined, and we use the \texttt{log\_sum\_exp} function to safely take the log of the summed probabilites of the mixture components.
+
+The vector \texttt{theta} passed to the above function holds the probabilities of green, amber and red codes, which are determined based on the cumulative ordinal probit model:
+
+\begin{equation}
+  \pi_{ijg}^c = \Phi \Big( \frac{\theta_{c} - \mu_{ijg}}{\sigma} \Big) - \Phi \Big( \frac{\theta_{c-1} - \mu_{ijg}}{\sigma} \Big)
+  \label{eq_ordprob}
+\end{equation}
 
 \newpage
 \section{Variation across contexts}
@@ -155,6 +217,6 @@ and repeatability for contexts post adoption was calculated as:
 The full list of random effect correlations estimated by the above model is presented in Table S1 found at \href{https://github.com/cmgoold/goold-newberry-lba/tree/master/paper}{https://github.com/cmgoold/goold-newberry-lba/tree/master/paper}.
 
 \section{Examples of individual-level posterior predictions}
-A sample of 50 dogs' posterior predictions, each within a random context, is shown at \href{https://github.com/cmgoold/goold-newberry-lba/tree/master/analysis-code/sample-dog-plots}{https://github.com/cmgoold/goold-newberry-lba/tree/master/analysis-code/sample-dog-plots}. 
+A sample of 50 dogs' posterior predictions, each within a random context, is shown at \href{https://github.com/cmgoold/goold-newberry-lba/tree/master/analysis-code/sample-dog-plots}{https://github.com/cmgoold/goold-newberry-lba/tree/master/analysis-code/sample-dog-plots}.
 
 \end{document}

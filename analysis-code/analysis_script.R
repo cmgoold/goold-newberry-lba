@@ -296,7 +296,7 @@ stan_data <- list(
   y = ifelse( is.na(d_s_stan$behaviour_code_colour), 0, d_s_stan$behaviour_code_colour),
   y_joint = ifelse( is.na(d_a_stan$behaviour_code_colour), 0, d_a_stan$behaviour_code_colour),
   K = 3, 
-  thresh = c(1.5, 2.5),
+  theta = c(1.5, 2.5),
   jj_1 = d_s_stan$dog_id, 
   jj_2 = d_a_stan$dog_id, 
   gg_1 = d_s_stan$context_id, 
@@ -311,15 +311,15 @@ stan_data <- list(
 rstan::stan_rdump( list = ls(stan_data), file = "~/Documents/cmdstan-2.23.0/jhb-shelterdogs/real_analysis/dog_data_for_cmdstan.R", envir = list2env(stan_data))
 
 # OR USING CMDSTANR
-# cmdstanr::set_cmdstan_path("~/Documents/cmdstan-2.23.0")
-# jhb_model <- cmdstanr::cmdstan_model("jhb-ordinal-hurdle-model.stan", cpp_options = list(stan_threads = TRUE))
+# install.packages("cmdstanr", repos = c("https://mc-stan.org/r-packages/", getOption("repos")))
+# cmdstanr::set_cmdstan_path("~/.cmdstan/cmdstan-2.26.0")
+# jhb_model <- cmdstanr::cmdstan_model(paste0(path, "analysis-code/jhb-ordinal-hurdle-model.stan"), cpp_options = list(stan_threads = TRUE))
 # 
-# cmdstanr::set_num_threads(2)
 # 
 # start <- Sys.time()
 # fit <- jhb_model$sample(
 #   data = stan_data,
-#   chains = 2, cores = 4,
+#   chains = 2, paralel_chains=2, threads_per_chain=2,
 #   init = 0, refresh = 100,
 #   iter_warmup = 1000, iter_sampling = 5000
 # )

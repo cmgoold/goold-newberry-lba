@@ -152,43 +152,43 @@ The green, amber and red codes from shelter and post-adoption time points were a
 
 A second complexity was the high proportion ($\sim$ 90\%) of green codes, which was found in previous analysis of the same shelter assessment (\cite{goold2017modelling}). Some proportion of the green codes may have been recorded due to other processes, such as staff members not observing the dog’s behaviour directly or forgetting how a dog behaved but inputting a green code anyway. Adopters may have also described their dog’s behaviour in terms consistent with green codes (i.e. not reporting any problems) during phone calls even if the dog’s behaviour might be more consistent with amber or red code behaviour. Thus, some green codes were potentially ‘inflated’, leading to a greater probability mass for green codes beyond that explained by the data generating processes of the behavioural scale alone. Similar assumptions are applied to count data with a high number of zero values (zero inflation; \cite{lambert1992}), and have also been used to understand a high probability mass for ‘I don’t know’ responses (\cite{kelley2008}) and presumed face-saving ‘Neither agree nor disagree’ responses (\cite{bagozzi2012}) on ordinal survey scales.
 
-To account for the above complexities, we specified a custom mixture model for the probability of different codes ($c = {\text{missing}, \text{green}, \text{amber}, \text{red}} = {0, 1, 2, 3}$) for case $i$ (either the days after arriving at the shelter or the days after adoption), dog $j$ and context $k$:
+To account for the above complexities, we specified a custom mixture model for the probability of different codes ($c = {\text{missing}, \text{green}, \text{amber}, \text{red}} = {0, 1, 2, 3}$) for case $i$ (either the days after arriving at the shelter or the days after adoption), dog $j$ and context $g$:
 
 \begin{equation}
-  p(y_{ijk}^{c}) =
+  p(y_{ijg}^{c}) =
   \begin{cases}
-      \psi_{ijk} & \text{if } y_{ijk} = 0 \\
-      (1-\psi_{ijk})\big[\kappa + (1-\kappa)\pi_{ijk}^c\big]
-      & \text{if } y_{ijk} = 1 \\
-      (1-\psi_{ijk})(1-\kappa)\pi_{ijk}^c
-      & \text{if } 1 < y_{ijk} \leq 3
+      \psi_{ijg} & \text{if } y_{ijg} = 0 \\
+      (1-\psi_{ijg})\big[\kappa + (1-\kappa)\pi_{ijg}^c\big]
+      & \text{if } y_{ijg} = 1 \\
+      (1-\psi_{ijg})(1-\kappa)\pi_{ijg}^c
+      & \text{if } 1 < y_{ijg} \leq 3
   \end{cases}
   \label{eq_mixture}
 \end{equation}
 
-The parameter $\psi_{ijk}$ is a ‘hurdle’ probability of missing data for each dog and context (see \cite{kubinec2019} for a similar approach to handling missing data), which is modelled as a Bernoulli trial from the data:
+The parameter $\psi_{ijg}$ is a ‘hurdle’ probability of missing data for each dog and context (see \cite{kubinec2019} for a similar approach to handling missing data), which is modelled as a Bernoulli trial from the data:
 
 \begin{equation}
-  y_{ijk}^{c} \big|_{c=0} \sim \text{Bernoulli}(\psi_{ijk})
+  y_{ijg}^{c} \big|_{c=0} \sim \text{Bernoulli}(\psi_{ijg})
   \label{eq_missing}
 \end{equation}
 
-The complement, $1 - \psi_{ijk}$, is the probability of either a staff member choosing to input an observation in the shelter or an adopter participating in the telephone survey, respectively. The $\kappa$ parameter is a mixing term that describes the probability of a green code being drawn from the inflation component. Consequently,  $1 - \kappa$ is the probability of a code being non-inflated. A non-missing and non-inflated code of category $c$ (for a specific case, dog and context) occurs with probability $(1-\psi_{ijk})(1-\kappa)\pi_{ijk}^c$, where $\pi_{ijk}^c$ is defined using a cumulative ordinal probit model:
+The complement, $1 - \psi_{ijg}$, is the probability of either a staff member choosing to input an observation in the shelter or an adopter participating in the telephone survey, respectively. The $\kappa$ parameter is a mixing term that describes the probability of a green code being drawn from the inflation component. Consequently,  $1 - \kappa$ is the probability of a code being non-inflated. A non-missing and non-inflated code of category $c$ (for a specific case, dog and context) occurs with probability $(1-\psi_{ijg})(1-\kappa)\pi_{ijg}^c$, where $\pi_{ijg}^c$ is defined using a cumulative ordinal probit model:
 
 \begin{equation}
-  y_{ijk}^{c} \big|_{c=\{1,2,3\}, 1 - \kappa} \sim \text{Categorical}(\pi_{ijk}^c)
+  y_{ijg}^{c} \big|_{c=\{1,2,3\}, 1 - \kappa} \sim \text{Categorical}(\pi_{ijg}^c)
   \label{eq_cat}
 \end{equation}
 
 \begin{equation}
-  \pi_{ijk}^c = \Phi \Big( \frac{\theta_{c} - \mu_{ijk}}{\sigma} \Big) - \Phi \Big( \frac{\theta_{c-1} - \mu_{ijk}}{\sigma} \Big)
+  \pi_{ijg}^c = \Phi \Big( \frac{\theta_{c} - \mu_{ijg}}{\sigma} \Big) - \Phi \Big( \frac{\theta_{c-1} - \mu_{ijg}}{\sigma} \Big)
   \label{eq_ordprob}
 \end{equation}
 
-Equation \ref{eq_cat} describes the non-missing and non-inflated code as categorically distributed with probability $\pi_{ijk}^c$, which is defined in equation \ref{eq_ordprob} as the cumulative area under a latent standard normal distribution (where $\Phi$ is the standard normal cumulative distribution function) between threshold parameters $\theta_{c}$ and $\theta_{c-1}$ ($\boldsymbol{\theta} = {\theta_{0}, \theta_{1}, \theta_{2}, \theta_{3}}$). The probability of the first and last threshold parameters (i.e. $\Phi({\theta_{0}})$, $\Phi({\theta_{3}})$) were set to 0 and 1, respectively. To estimate the mean ($\mu_{ijk}$) and standard deviation ($\sigma$) on the scale of the ordinal data, we fixed $\theta_{1} = 1.5$ and $\theta_{2} = 2.5$ (see \cite{kruschke2014}).
+Equation \ref{eq_cat} describes the non-missing and non-inflated code as categorically distributed with probability $\pi_{ijg}^c$, which is defined in equation \ref{eq_ordprob} as the cumulative area under a latent standard normal distribution (where $\Phi$ is the standard normal cumulative distribution function) between threshold parameters $\theta_{c}$ and $\theta_{c-1}$ ($\boldsymbol{\theta} = {\theta_{0}, \theta_{1}, \theta_{2}, \theta_{3}}$). The probability of the first and last threshold parameters (i.e. $\Phi({\theta_{0}})$, $\Phi({\theta_{3}})$) were set to 0 and 1, respectively. To estimate the mean ($\mu_{ijk}$) and standard deviation ($\sigma$) on the scale of the ordinal data, we fixed $\theta_{1} = 1.5$ and $\theta_{2} = 2.5$ (see \cite{kruschke2014}).
 
 \subsubsection{Joint modelling}
-The data from the shelter and post-adoption time periods were each analysed by the model described above, which we describe as two distinct `sub-models', both predicting the probability of missing data ($\psi_{ijk}$ in equation \ref{eq_missing} using a logit link function) and the predicted mean of the latent behavioural scale scores ($\mu_{ijk}$ in equation \ref{eq_ordprob} using the identity link function). Each sub-model included the dog-, context-, and dog $\times$ context-varying intercept and slope parameters (for the number of days after arrival at the shelter or days after adoption, respectively). The joint structure of our model derives from correlations between these parameters across the shelter and post-adoption sub-models. For the ordinal probit regressions (equation \ref{eq_ordprob}), we included random intercepts and slope terms for dogs, contexts and the interaction between dogs and contexts ($1,928$ unique dog $\times$ contexts combinations). Dog- and context-varying effects capture additive variation due to dogs and contexts, respectively, while the dog $\times$ context interaction describes the non-additive, unique variation attributed to specific dogs in specific contexts. For the missing data regressions, we included only random intercepts. For each random effect term (dogs, contexts, and dogs $\times$ contexts), this led to a 6 x 6 covariance matrix capturing the relationship between random intercepts and slopes for the shelter and post-adoption behaviours.
+The data from the shelter and post-adoption time periods were each analysed by the model described above, which we describe as two distinct `sub-models', both predicting the probability of missing data ($\psi_{ijg}$ in equation \ref{eq_missing} using a logit link function) and the predicted mean of the latent behavioural scale scores ($\mu_{ijg}$ in equation \ref{eq_ordprob} using the identity link function). Each sub-model included the dog-, context-, and dog $\times$ context-varying intercept and slope parameters (for the number of days after arrival at the shelter or days after adoption, respectively). The joint structure of our model derives from correlations between these parameters across the shelter and post-adoption sub-models. For the ordinal probit regressions (equation \ref{eq_ordprob}), we included random intercepts and slope terms for dogs, contexts and the interaction between dogs and contexts ($1,928$ unique dog $\times$ contexts combinations). Dog- and context-varying effects capture additive variation due to dogs and contexts, respectively, while the dog $\times$ context interaction describes the non-additive, unique variation attributed to specific dogs in specific contexts. For the missing data regressions, we included only random intercepts. For each random effect term (dogs, contexts, and dogs $\times$ contexts), this led to a 6 x 6 covariance matrix capturing the relationship between random intercepts and slopes for the shelter and post-adoption behaviours.
 
 \subsubsection{Predictor variables}
 For the shelter sub-model, we included days after arrival at the shelter as an observation-level predictor and the variables from Table \ref{table_demoshelter} as dog-level predictors, excluding the total number of observations (which was nearly perfectly collinear with length of stay) and rehoming centre (which was not of interest \textit{a priori}). The post-adoption sub-model included days after adoption as an observation-level predictor and the same shelter demographic variables as in the shelter sub-model as retrospective dog-level predictors, as well as the number of post-adoption surveys about each dog. Sum-to-zero coding was used for categorical predictors. Dog-level metric predictors were mean-centred and standardised by 1 standard deviation. The number of days after arrival at the shelter was centered around the average length of stay at the shelter (32.1 days; Table \ref{table_demoshelter}) and scaled by 1 standard deviation (73 days). The number of days after adoption was centered around the average of each dog's mean number of days after adoption (26.3 days) and scaled by its standard deviation ($\sim$ 12 days). One dog had missing neuter status data, two dogs were missing weight data and two dogs were missing age at departure data. Due to the small amount of missing data, we imputed the missing neuter status data point with the most frequent category (neutered on site; Table \ref{table_demoshelter}), and mean imputed the missing weight and age data points.
