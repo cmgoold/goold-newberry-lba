@@ -28,7 +28,7 @@ posterior_draws_2 <- posterior::as_draws_df(x = chain_2)
 draws <- as.data.frame(do.call("rbind.data.frame", list(posterior_draws_1, posterior_draws_2)))
 
 # get the random effects for later plotting using a convenience function
-random_effect_list <- get_marginal_samples()
+random_effect_list <- get_marginal_samples(draws)
 
 #---------------------------------------------------------------------------------------------
 # Key shelter results

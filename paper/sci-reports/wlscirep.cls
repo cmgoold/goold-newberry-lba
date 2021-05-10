@@ -209,3 +209,4 @@ THE ABSTRACT\vskip12pt}\let\go\relax\fi
 }
 %% Automatically abbreviate journal names
 \RequirePackage{jabbrv}
+\DefineJournalAbbreviation{Applied Animal Behaviour Science}{Appl. Anim. Behav. Sci.}
