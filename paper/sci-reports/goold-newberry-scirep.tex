@@ -1,0 +1,348 @@
+\documentclass[fleqn,10pt]{wlscirep}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{subcaption}
+\graphicspath{{/Users/cmgoold/Dropbox/PhD/PhD_NMBU/PaperIV/goold-newberry-lba/paper/figures/}}
+
+\title{Predicting individual shelter dog behaviour after adoption using longitudinal behavioural assessment: a hierarchical Bayesian approach}
+
+\author[1]{Conor Goold}
+\author[2*]{Ruth C. Newberry}
+\affil[1]{School of Biology, Faculty of Biological Sciences, University of Leeds, Leeds, LS2 9JT, UK}
+\affil[2]{Department of Animal and Aquacultural Sciences, Faculty of Biosciences, Norwegian University of Life Sciences, \r{A}s, 1400, Norway}
+
+\affil[*]{ruth.newberry@nmbu.no}
+
+\keywords{animal personality, individual variation, behavioural plasticity}
+
+\begin{abstract}
+Predicting the behaviour of shelter dogs after adoption is an important, but difficult, endeavour. Differences between shelter and post-adoption environments, between- and within-individual heterogeneity in behaviour, uncertainty in behavioural predictions and measurement error all hinder the accurate assessment of future behaviour. This study integrates 1) a longitudinal behavioural assessment with 2) a novel joint hierarchical Bayesian mixture model that accounts for individual variation, missing data and measurement error to predict behaviour post-adoption. We analysed shelter observations ($> 28,000$ records) and post-adoption reports (from telephone surveys) on the behaviour of 241 dogs across eight contexts. Dog behaviour at the shelter correlated positively with behaviour post-adoption within contexts ($r =$ 0.38; 95\% highest density interval: [0.20, 0.55]), and behaviour within contexts explained more variance than differences between dogs or between contexts alone. Although measurement error was higher post-adoption than at the shelter, we found few differences in individual-level, latent probabilities of different behaviours post-adoption versus at the shelter. This good predictive ability was aided by accurate representation of uncertainty in individual-level predictions. We conclude that longitudinal assessment paired with a sufficient inferential framework to model latent behavioural profiles with uncertainty enables reasonably accurate estimation of post-adoption behaviour.
+\end{abstract}
+\begin{document}
+
+\flushbottom
+\maketitle
+\thispagestyle{empty}
+
+\section*{Introduction}
+Prediction is a defining, yet challenging, goal of science \cite{hofstadter1951}, uniting a diverse range of disciplines including climate research, personality psychology, social policy, medicine, conservation biology, and complex systems science \cite{sarewitz1999}. More specifically, research aimed at predicting the future behaviour of domestic animals is of both basic interest in evaluating our understanding of biological processes and applied interest for decision-making relating to animal use and human safety. One important application concerns accurately predicting the future behaviour of domestic dogs (\textit{Canis familiaris}), which represents a challenge for professional organisations, dog breeders, and dog owners alike. In particular, animal shelters have the difficult task of assessing how dogs will behave in a variety of circumstances from limited behavioural information and making decisions about the suitability of those dogs for placement into new homes.
+
+Animal shelters frequently employ standardised behaviour tests that evaluate specific behavioural or \textit{personality} traits through reconstructions of situations relevant to life outside the shelter environment \cite{vanderborg1991,marston2003,mornement2010,taylor2006,rayment2015,clay2020behaviour}. For example, to assess a dog's level of aggressiveness around food (i.e. food guarding), shelter staff may present a dog with a bowl of food and record the dog's response to a plastic hand approaching, touching or trying to remove the food bowl \cite{mohangibbons2012,mohangibbons2018,marder2013}. Such tests are usually conducted once, soon after arrival at the shelter, yielding an overall score used to help determine a dog's suitability for adoption. However, criticisms have been raised about the ability for these protocols to provide accurate predictions of future dog behaviour. For example, the feasibility of carrying out a battery of such behaviour tests with high reliability and standardisation in the time-constrained shelter environment is limited given that test batteries often require at least an hour per dog \cite{vanderborg1991,mornement2009} (although see Poulsen \textit{et al.} \cite{poulsen2010} for a shorter protocol). Moreover, a high number of false positives have been recorded for food guarding behaviour (i.e. displaying food aggression during shelter evaluations but not in the new home \cite{mohangibbons2012,marder2013}) and has led to calls for abandoning standardised food tests given dog return rates to shelters do not appear to increase if the tests are not conducted \cite{mohangibbons2018}. Behaviour in other contexts might be similarly difficult to predict post-adoption \cite{christensen2007,mornement2015} (although see Bollen and Horowitz \cite{bollen2008}).
+
+Ways to improve predictions about individual dog behaviour post-adoption are not entirely clear. While emphasis has been placed on improving the reliability and validity of shelter dog tests, progress is hampered by a lack of clarity of what those terms mean \cite{patronek2019,rayment2015}, which is also a problem for the wider scientific community \cite{borsboom2004,borsboom2009,maul2016}. For instance, Patronek and Bradley \cite{patbrad2016} demonstrate that even with high sensitivity and specificity, the probability of a dog showing aggression in the new home after a positive test in the shelter is unlikely to be higher than 50\% and is probably closer to $\sim$ 30\% (see also Patronek \textit{et al.} \cite{patronek2019}). Tests reported to predict post-adoption behaviour successfully \cite{valsecchi2011,poulsen2010,bollen2008} have been supported based on the statistical significance of linear associations (e.g. significant correlations or regression coefficients) between shelter and post-adoption behaviour (i.e. predictive `validity' \cite{patronek2019}). In contrast, arguments against the efficacy of behavioural tests highlight evidence of low predictive `ability' for individual dogs (i.e. estimates of true/false positive and negative rates \cite{patronek2019}).
+
+As an alternative to standardised testing, several authors and organisations have emphasised the collection of daily behavioural observation records from dogs in shelters, in addition to other information (e.g. foster reports, pre-surrending interviews). A holistic profile of each dog's behaviour and welfare needs is then formulated and used to inform adoption decisions \cite{patronek2019,ASPCA2018,rayment2015,mornement2015,clay2020}. Such longitudinal approaches refrain from crudely labelling individual dogs as, for example, aggressive or non-aggressive based on a single behavioural testing outcome. However, research is still scarce on how best to implement this approach, which requires summarising swathes of information generated on each dog, in a manner that is of practical use for shelters.
+
+We have previously reported on the behaviour of dogs while in shelters based on data collected using the longitudinal assessment methodology implemented by a large UK shelter organisation \cite{goold2017aggressiveness,goold2017modelling}. The assessment relies on the spontaneous reporting of behavioural observations made by shelter staff during everyday contexts (e.g. walking past the dog's kennel, putting a food bowl into the kennel, clipping on the lead or touching the collar). From these accumulated reports, Goold and Newberry \cite{goold2017modelling} used the framework of behavioural reaction norms \cite{dingemanse2010,cleasby2015} to partition individual variation in the behaviour of over 3,000 dogs when around unknown people (from almost 20,000 behavioural reports in total) into three components: personality (i.e. difference in average behaviour between individuals), plasticity (i.e. within-individual behavioural change over time) and predictability (i.e. within-individual residual variance). Accounting for all three components improved the estimated out-of-sample predictive accuracy of the statistical models.
+
+While accounting for individual variation in behaviour across time at the shelter is important, making predictions about dog behaviour post-adoption based on longitudinal information about behaviour at the shelter brings its own challenges. Deciding on what statistical moments (e.g. location, scale) of the longitudinal shelter data should predict post-adoption behaviour is not obvious. Diagnostic statistics such as false positives or false negatives lose clarity because longitudinal assessments acknowledge that dog behaviour can change depending on time and context \cite{goold2017modelling}. Inferential tools that can estimate the individual-level, latent probabilities of dogs showing different behaviours at different time points are required, rather than focusing on single occurrences of behaviours. The reality of collecting observational data in busy shelter environments also means that data may present significant patterns of non-ignorable missingness and substantially unbalanced repeated measures, and be subject to more measurement error than standardised assessments. Altogether, determining the predictive value of `on-going' shelter assessments requires careful analysis of longitudinal data using statistical models that appropriately account for the data-generating processes.
+
+The goal of the present study was to assess the correspondence between behaviour shown at the shelter, collected using the longitudinal assessment methodology, and the behaviour reported during telephone interviews post-adoption. Our secondary goal was to apply a novel application of joint Bayesian hierarchical mixture modelling to compare predictions about dog behaviour in shelters and post-adoption. Importantly, our approach accounts for i) individual variation in both average behaviour (i.e. personality) and behavioural change (i.e. plasticity; due to only two post-adoption interviews, predictability was not estimated) across shelter and post-adoption time periods, ii) missing data and their potential correlates, and iii) measurement error in the behavioural reports. We report on predictive validity by estimating correlations between personality and plasticity between shelter and post-adoption time periods. Predictive ability is examined by comparing model predictions for each dog's average behaviour in the shelter and post-adoption to determine whether dogs exhibited credible changes in their behaviour. We present specific examples of individual-level behaviour in our results and discussion.
+
+\section*{Methods}
+
+\subsection*{Subjects}
+Behavioural data were gathered retrospectively from new owners of 265 dogs adopted from Battersea Dogs and Cats Home, United Kingdom between May 2016 and May 2017. Details of the shelter environment can be found in Goold and Newberry \cite{goold2017aggressiveness,goold2017modelling}. Of the 265 dogs, only 241 dogs could be matched with behavioural and demographic data from the shelter's database. Demographic information about these dogs is presented in Table \ref{table_demoshelter}. These dogs ranged from approximately 8 weeks old to 13 years old (age estimated by shelter staff when unknown) and were generally of unknown heritage (i.e. not in a breed registry). Demographic information of the new owners was collected but not analysed here due to inconsistencies in the responses. The original dog identification numbers assigned to dogs by the shelter were removed prior to analysis.
+
+\begin{table}
+  \centering
+  \begin{tabular}{ll}
+  \textbf{Demographic variable} & \textbf{Mean (SD) or $\boldsymbol{n}$ dogs}\\ \hline
+  Number of observations per dog & 140.7 (224.3) \\
+  Days at the shelter per dog & 32.1 (41.4)\\
+  Estimated age at departure from shelter (years) & 3.6 (2.8)\\
+  Weight (kg; last record at shelter) & 16.5 (9.6)\\
+  Source (before surveys): gift/stray/return ($n$) & 164/51/26\\
+  Sex: female/male ($n$) & 102/139\\
+  Neutered: before arrival/at shelter/not/missing ($n$) & 84/145/11/1\\
+  Rehoming centre: London/Old Windsor/Brands Hatch ($n$) & 71/93/77\\
+  \hline
+  \end{tabular}
+  \caption{Dog demographic variables collected at the shelter.}
+  \label{table_demoshelter}
+\end{table}
+
+\subsection*{Data collection}
+
+\subsubsection*{Shelter behaviour}
+As previously described by Goold and Newberry \cite{goold2017modelling,goold2017aggressiveness}, shelter employees observed dogs in a variety of naturally occurring contexts and recorded each dog's behaviour using a context-specific list of mutually exclusive behavioural codes. The analysis presented here focussed on eight core ‘on-site' contexts (Table \ref{table_contexts}). The \textit{Interactions with dogs} context was a combination of the original \textit{Interactions with female} and \textit{male dogs} contexts, respectively, because the post-adoption data did not distinguish between interactions with male and female dogs (as adopters may not have been fully aware of the sex of other dogs that their dog met). Observation records were entered as often as possible given the frequency at which the context occurred and time constraints on shelter staff entering data. We considered any day that a dog did not receive an observation record in a context as a missing observation so that patterns of missingness could be modelled (see Table \ref{table_contexts} for frequency of missing daily observation records). In total, there were $28,445$ complete observation records and $33,507$ missing observation records for the 241 studied dogs in the shelter dataset.
+
+There were between ten and sixteen possible behavioural codes depending on the context, arranged on a scale of perceived ease of adoption or desirability to adopters (see Supplementary Materials for the full list of behavioural codes). The longitudinal assessment further categorised the behavioural codes into green, amber and red categories: green codes indicated that the dog's behaviour was suitable for immediate adoption and/or would be easy for all owners to manage once adopted (e.g. the dog was friendly or excited when meeting new people), amber codes indicated that some training or management might be needed to manage or improve behaviour (e.g. the dog was nervous when meeting new people and slow to meet with them), and red codes that the dog needed an individualised training program and improvement in behaviour to facilitate adoption or would be the most difficult for adopters to manage (e.g. the dog showed aggression when meeting unfamiliar people). A dog's suitability for adoption was decided based on behaviour across all contexts and days after arrival.
+
+The behavioural scores were analysed using the green, amber and red ordinal scale, rather than using the individual behavioural codes of each ethogram. This was chosen: i) to place the behaviour records across contexts on a comparable scale, allowing all the data to be analysed within the same statistical model; ii) to capture the main variation in the data given that some individual codes were seldom used; iii) because previous analysis indicated higher consensus among shelter staff when rating behaviour using the green, amber and red codes than the individual codes (see Goold and Newberry \cite{goold2017modelling}); and iv) it was more practically relevant to know whether there was a large change in behaviour between shelter and post-adoption time periods (i.e. there was a change from green to red codes), but not necessarily if there was a change between codes within the same colour category. When more than one record was made of the same dog in the same context on the same day, the most `severe' code assigned was retained for analysis.
+
+\begin{table}[t!]
+  \centering
+  \small
+  \begin{tabular}{p{4cm}p{6cm}p{3cm}p{3cm}}
+    \textbf{Context} & \textbf{Description} & \textbf{Median (IQR)} & \textbf{\% Missing (SD)}\\ \hline
+    Handling (HND) & \footnotesize{Informal handling by people (e.g. stroking non-sensitive areas, touching or holding the collar, fitting a harness or lead).} & 13 (14) & 40 (20) \\
+    In kennel (KNL) & \footnotesize{Inside the kennel} & 14 (14) & 37 (21) \\
+    Outside the kennel (OKNL) & \footnotesize{Outside the kennel} & 13 (14) & 42 (19)\\
+    Interactions with familiar people (FPL) & \footnotesize{Interacts with familiar people (interacted with at least once before) outside the kennel who approach, make eye contact, speak to or attempt to make physical contact with the dog.} & 13 (14) & 44 (18)\\
+    Interactions with unfamiliar people (UFPL) & \footnotesize{Interacts with familiar people (never interacted with before) outside the kennel who approach, make eye contact, speak to or attempt to make physical contact with the dog.} & 6 (5) & 75 (15)\\
+    Eating food (FOOD) & \footnotesize{Eating food from a container, toy or while being hand-fed} & 14 (13) & 39 (20)\\
+    Interactions with toys (TOYS) & \footnotesize{Interacting with dog toys} & 8 (13) & 58 (25) \\
+    Interactions with dogs (DOGS) & \footnotesize{Meeting dogs outside the kennel during structured interactions and/or sponataneous meetings} & 5 (4) & 76 (12) \\
+    \hline
+  \end{tabular}
+  \caption{Observational contexts at the shelter with corresponding median and interquartile range (IQR; due to skewness) of the number of records per dog, and average percentage (standard deviation) of missing daily records per dog.}
+  \label{table_contexts}
+\end{table}
+
+\subsubsection*{Post-adoption behaviour}
+On the point of adoption, adopters were asked to participate in a study evaluating the predictive accuracy of the shelter's behavioural assessment and were given full details of the procedure (consent form provided in the Supplementary Materials). Consenting adopters each received two phone calls from a canine behaviourist at the shelter who surveyed them about their dog's behaviour using a standardised set of questions (provided in the Supplementary Materials). The majority of phone calls were made by one behaviourist although no records were kept on which behaviourist made the calls. The study plan was to record behaviour using telephone interviews at approximately 2-3 weeks and 5-6 weeks after adoption but the actual days after adoption were more variable due to time constraints at the shelter to conduct all telephone surveys at the right times. The average number of days after adoption for the first phone call was 19.8 (sd = 4.9; range = 7 to 51), and 32.7 days (sd = 11.1; range = 14 to 72) for the second call, with an average of 20.7 (sd = 5.6; range = 4 to 42) days between first and second interviews for those dogs with two completed surveys. Only 150 dogs (62\%) had two fully complete surveys. One dog was returned after two post-adoption surveys and was subsequently adopted and received two surveys from their second owner; we randomly chose the first set of surveys on this dog for inclusion in the analysis. A different dog had been returned after the first survey and was subsequently adopted and received two surveys from their second owner; we chose the second owners' surveys for this dog. Six additional dogs with only the first survey completed were subsequently returned to the shelter.
+
+During the telephone survey, the first questions gathered information about an adopter's dog ownership experience and the post-adoption environment. The remaining questions (Table \ref{table_postadoptq}) enquired about how the dog reacted in situations comparable to the eight behavioural observation contexts in the shelter assessment (Table \ref{table_contexts}). The questions were used as a guide during the post-adoption interviews, with the behaviourists providing more detailed descriptions as needed. The \textit{In kennel} and \textit{Out of kennel} contexts at the shelter were transformed to \textit{In house} and \textit{Out of house} (where house referred to the residence in which the dog lived with the adopter). The questions were open-ended, with the behaviourist encouraging adopters to describe the dog's behaviour in each situation rather than label the behaviour. Subsequently, the behaviourist chose the behavioural code for each context that best described the behaviour. Adopters were allowed to respond `No opinion', which was treated as a missing value. Phone calls were not recorded, precluding assessment of the reliability of behaviour coding during phone calls. Data were handled anonymously by the authors, who received only the dogs' identification numbers to enable matching of the post-adoption reports with the shelter records.
+
+
+\begin{table}[t!]
+  \centering
+  \begin{tabular}{p{6cm}p{6cm}p{5cm}}
+    \textbf{Context (abbreviation)} & \textbf{Survey question} & \textbf{$\boldsymbol{n}$ (\%) with 2 surveys}\\ \hline
+    Handling (HND) & \footnotesize{How has the dog behaved while being handled or restrained (informal, i.e. not in a veterinary context)?} & 149 (61.8)\\
+    In house (HOUSE) & \footnotesize{How has the dog behaved in the house?} & 149 (61.8)\\
+    Outside of house (OTSD) & \footnotesize{How has the dog behaved outside on walks?} & 147 (61.0)\\
+    Interactions with familiar people (FPL) & \footnotesize{How has the dog behaved when meeting familiar people?} & 144 (59.8)\\
+    Interactions with unfamiliar people (UFPL) & \footnotesize{How has the dog behaved when meeting unfamiliar people} & 149 (61.8)\\
+    Eating food (FOOD) & \footnotesize{How has the dog behaved with their food?} & 150 (62.2)\\
+    Interactions with toys (TOYS) & \footnotesize{How has the dog behaved with toys?} & 149 (61.8)\\
+    Interactions with dogs (DOGS) & \footnotesize{How has the dog behaved when meeting another dog for the first time?} & 144 (59.8)\\
+    \hline
+  \end{tabular}
+  \caption{Post-adoption survey behaviour questions and response rates (number and percentage of owners responding to the question over two surveys).}
+  \label{table_postadoptq}
+\end{table}
+
+\subsection*{Statistical analysis}
+
+\subsubsection*{Theoretical approach}\label{sec_theoretical_approach}
+The green, amber and red codes from shelter and post-adoption time points were analysed using a joint or `shared parameter' \cite{vonesh2006,tseng2016} Bayesian hierarchical model, which accounted for two data complexities. First, we treated the missing data present in the shelter records (Table \ref{table_contexts}) and post-adoption surveys (Table \ref{table_postadoptq}) as non-ignorable (i.e. not random) because they likely depended on other variables. For example, the number of people unfamiliar to a dog decreases with time spent at the shelter or time after adoption, leading to potentially more missing records in the \textit{Interactions with unfamiliar people} context. A dog’s overall behaviour could also impact missing values. For example, dogs with more green codes overall and who do not change their behaviour may not receive as many records due to a lack of priority relative to dogs who show more worrying or varying behaviour. The participation or attrition rate of adopters in the telephone surveys may also have depended on their dog’s behaviour post-adoption.
+
+A second complexity was implied by the high proportion ($\sim$ 90\%) of green codes, found in a previous analysis of data collected using the same shelter assessment \cite{goold2017modelling}. Some proportion of the green codes may have been recorded due to other processes, such as staff members not observing the dog’s behaviour directly or forgetting how a dog behaved but inputting a green code anyway. Adopters may have also described their dog’s behaviour in terms consistent with green codes (i.e. not reporting any problems) during phone calls even if the dog’s behaviour might be more consistent with amber or red code behaviour. Thus, some green codes were potentially ‘inflated’, leading to a greater probability mass for green codes beyond that explained by the data generating processes of the behavioural scale alone. This `green code inflation` assumption is similar to assumptions made when analysing count data with a high number of zero values (zero inflation \cite{lambert1992}), or ordinal data a high probability mass for ‘I don’t know’ responses \cite{kelley2008} or presumed face-saving ‘Neither agree nor disagree’ responses \cite{bagozzi2012}.
+
+To account for the above complexities, we specified a custom mixture model for the probability of different codes ($c = {\text{missing}, \text{green}, \text{amber}, \text{red}} = {0, 1, 2, 3}$) for case $i$ (either the days after arriving at the shelter or the days after adoption), dog $j$ and context $g$:
+
+\begin{equation}
+  p(y_{ijg}^{c}) =
+  \begin{cases}
+      \psi_{ijg} & \text{if } y_{ijg} = 0 \\
+      (1-\psi_{ijg})\big[\kappa + (1-\kappa)\pi_{ijg}^c\big]
+      & \text{if } y_{ijg} = 1 \\
+      (1-\psi_{ijg})(1-\kappa)\pi_{ijg}^c
+      & \text{if } 1 < y_{ijg} \leq 3
+  \end{cases}
+  \label{eq_mixture}
+\end{equation}
+
+The parameter $\psi_{ijg}$ is a ‘hurdle’ probability of missing data for each dog and context (see Kubinec  \cite{kubinec2019} for a similar approach to handling missing data), which is modelled as a Bernoulli trial from the data:
+
+\begin{equation}
+  y_{ijg}^{c} \big|_{c=0} \sim \text{Bernoulli}(\psi_{ijg})
+  \label{eq_missing}
+\end{equation}
+
+The complement, $1 - \psi_{ijg}$, is the probability of either a staff member choosing to input an observation in the shelter or an adopter participating in the telephone survey, respectively. The $\kappa$ parameter is a mixing term that describes the probability of a green code being drawn from the inflation component. Consequently,  $1 - \kappa$ is the probability of a code being non-inflated. A non-missing and non-inflated code of category $c$ (for a specific case, dog and context) occurs with probability $(1-\psi_{ijg})(1-\kappa)\pi_{ijg}^c$, where $\pi_{ijg}^c$ is defined using a cumulative ordinal probit model:
+
+\begin{equation}
+  y_{ijg}^{c} \big|_{c=\{1,2,3\}, 1 - \kappa} \sim \text{Categorical}(\pi_{ijg}^c)
+  \label{eq_cat}
+\end{equation}
+
+\begin{equation}
+  \pi_{ijg}^c = \Phi \Big( \frac{\theta_{c} - \mu_{ijg}}{\sigma} \Big) - \Phi \Big( \frac{\theta_{c-1} - \mu_{ijg}}{\sigma} \Big)
+  \label{eq_ordprob}
+\end{equation}
+
+Equation \ref{eq_cat} describes the non-missing and non-inflated code as categorically distributed with probability $\pi_{ijg}^c$, which is defined in equation \ref{eq_ordprob} as the cumulative area under a latent standard normal distribution (where $\Phi$ is the standard normal cumulative distribution function) between threshold parameters $\theta_{c}$ and $\theta_{c-1}$ ($\boldsymbol{\theta} = {\theta_{0}, \theta_{1}, \theta_{2}, \theta_{3}}$). The probability of the first and last threshold parameters were set to 0 and 1, respectively. To estimate the mean ($\mu_{ijk}$) and standard deviation ($\sigma$) on the scale of the ordinal data, we fixed $\theta_{1} = 1.5$ and $\theta_{2} = 2.5$ (see Kruschke \cite{kruschke2014}).
+
+\subsubsection*{Joint modelling}
+The data from the shelter and post-adoption time periods were each analysed by the model described above, which we describe as two distinct `sub-models', both predicting the probability of missing data ($\psi_{ijg}$ in equation \ref{eq_missing} using a logit link function) and the predicted mean of the latent behavioural scale scores ($\mu_{ijg}$ in equation \ref{eq_ordprob} using the identity link function). Each sub-model included the dog-, context-, and dog $\times$ context-varying intercept and slope parameters (for the number of days after arrival at the shelter or days after adoption, respectively), which represent personality (intercept parameters) and plasticity (slope parameters), respectively.  The joint structure of our model accounts for correlations between these parameters across the shelter and post-adoption sub-models. For the ordinal probit regressions (equation \ref{eq_ordprob}), we included random intercepts and slope terms for dogs, contexts and the interaction between dogs and contexts ($1,928$ unique dog $\times$ contexts combinations). Dog- and context-varying effects capture additive variation due to dogs and contexts, respectively, while the dog $\times$ context interaction describes the non-additive, unique variation attributed to specific dogs in specific contexts. For the missing data regressions, we included only random intercepts. For each random effect term (dogs, contexts, and dogs $\times$ contexts), this led to a 6 x 6 covariance matrix capturing the relationship between random intercepts and slopes for the shelter and post-adoption behaviours.
+
+\subsubsection*{Predictor variables}
+For the shelter sub-model, we included days after arrival at the shelter as an observation-level predictor and the variables from Table \ref{table_demoshelter} as dog-level predictors, excluding the total number of observations (which was nearly perfectly collinear with length of stay) and rehoming centre (which was not of interest \textit{a priori}). The post-adoption sub-model included days after adoption as an observation-level predictor and the same shelter demographic variables as in the shelter sub-model as retrospective dog-level predictors, as well as the number of post-adoption surveys about each dog. Sum-to-zero coding was used for categorical predictors. Dog-level metric predictors were mean-centred and standardised by 1 standard deviation. The number of days after arrival at the shelter was centered around the average length of stay at the shelter (32.1 days; Table \ref{table_demoshelter}) and scaled by 1 standard deviation (73 days). The number of days after adoption was centered around the average of each dog's mean number of days after adoption (30.1 days) and scaled by its standard deviation ($\sim$ 11.6 days). One dog had missing neuter status data, two dogs were missing weight data and two dogs were missing age at departure data. Due to the small amount of missing data, we imputed the missing neuter status data point with the most frequent category (neutered on site; Table \ref{table_demoshelter}), and mean imputed the missing weight and age data points.
+
+\subsubsection*{Estimation \& inference}
+All data cleaning and post-processing was conducted in R version 3.6.1 \cite{rcoreteam2019}. We fit our model using Bayesian estimation in the Stan programming language \cite{stan2018} using the terminal interface CmdStan version 2.23.0 \cite{cmdstan2018}. Stan employs Hamiltonian Monte Carlo, a type of Markov chain Monte Carlo (MCMC) sampling algorithm, to sample from the posterior distribution. After ensuring adequate mixing of multiple chains from the model ran on smaller sub-sets of the data, we took 10,000 iterations from the posterior distribution using 2 MCMC chains (1000 warmup and 5000 sampling). We summarise parameters by their means and 95\% highest density intervals (HDIs). For the ordinal data, we make predictions using both the latent metric scale (parameters denoted by $\beta$) and the corresponding posterior probabilities of each ordinal category (probabilities denoted by $\pi$). When evaluating population-level parameters, we highlight discrepancies, where appropriate, between the estimates for average dogs and contexts, and estimates that incorporate uncertainty due to variation across dogs and contexts. The former represent estimates made at the mean of the random effects, while the latter are made by marginalising over the random-effect distributions and are particularly important for making accurate future predictions in hierarchical models \cite{inthout2016,wang2019}.
+
+\subsection*{Ethical statement}
+Approval for the processing of personal data was obtained from the Norwegian Social Science Data Services (approval number 47080). Names and addresses of the participating new owners and their dogs were anonymised before data were passed to the authors.
+
+\subsection*{Data \& code accessibility}
+We provide complete mathematical details of the above model, supplementary files, the data, the Stan code, and the R code to reproduce the results reported here at \url{https://github.com/cmgoold/goold-newberry-lba}. Due to the non-standard statistical model, we also provide R and Stan code to simulate data and fit the model to recover parameter values for model validation at the same Github repository.
+
+\section*{Results}
+
+\subsection*{Average behaviour}
+Green codes accounted for more than 95\% of the observations in the raw shelter and post-adoption datasets. For an average dog in an average context (i.e. at the mean of the random effects, where all dog-level predictors equalled 0), there were no credible differences between the probabilities of green, amber and red codes at the shelter (at approximately 32.1 days after arrival) and post-adoption (at 30.1 days post-adoption; probability differences: $\pi_{\text{green}} = 0.00$, 95\% HDI = [-0.05, 0.06]; $\pi_{\text{amber}} = 0.00$, 95\% HDI: [-0.06, 0.05]; $\pi_{\text{red}} = 0.00$, 95\% HDI: [0.00, 0.00]). For an average dog in an average context, behaviour tended to improve with every additional week at the shelter ($\beta = -0.08$; 95\% HDI: [-0.14, -0.02]), although due to ceiling effects the practical increase in green codes was minimal (from around 98\% on arrival day to 99\% on day 30). There was no clear relationship between days after adoption and post-adoption behaviour ($\beta = 0.01$; 95\% HDI: [-0.21, 0.24]). A dog's average probability of missing data at the shelter ($\pi_{\text{missing}}$) was $0.54$ (95\% HDI: [0.37, 0.73]), and the odds of missing codes increased with every additional week after arrival (odds: 1.04; 95\% HDI: [1.03, 1.05]). The odds of missing data post-adoption increased sharply with every additional week after adoption (odds: 11.62; 95\% HDI: [8.90, 14.00]), although this was mainly a between-survey phenomenon driven by dogs with only 1 completed survey, whereas within-survey missing data for dogs with two completed surveys was highly infrequent (approximately zero).
+
+The probability of green-code inflation was $\kappa = 0.04$ (95\% HDI: [0.00, 0.09]) at the shelter and $\kappa = 0.20$ (95\% HDI: [0.03, 0.36]) post-adoption.
+
+\subsection*{Variation within dogs and across contexts}
+When accounting for variation across dogs and contexts, there was substantially more uncertainty in the model estimates both at the shelter (Fig. \ref{fig_shelter_behaviour}) and post-adoption (Fig. \ref{fig_adoption_behaviour}). At the shelter, the \textit{Interactions with dogs} context had the highest probability of red codes ($\pi_{red} = 0.04$; 95\% HDI: [0.02, 0.06]; Supplementary Fig. S1a), and dogs changed their behaviour the most in the \textit{Handling} context ($\beta = -0.20$ 95\% HDI: [-0.28, -0.14]; Supplementary Fig. S1b). Post-adoption, the \textit{Eating food}
+context had the highest probability of red codes ($\pi_{red} = 0.01$; 95\% HDI: [0.00, 0.05]; Supplementary Fig. S2a), although there were no strong differences between contexts in the average amount of behavioural change across days after adoption (Supplementary Fig. S2b). Missing codes were particularly prominent at the shelter for the \textit{Interactions with unfamiliar people} context ($\pi_{missing} = 0.81$; 95\% HDI: [0.74, 0.89]).
+
+
+\begin{figure}[t!]
+  %\centering
+  \hspace{-2cm}%
+  \begin{subfigure}{0.4\textwidth}
+    \centering
+    \includegraphics[scale=0.4]{figure_1_a.png}
+  \end{subfigure}%
+  ~%
+  \hspace{-2cm}
+  \begin{subfigure}{0.4\textwidth}
+    \centering
+    \includegraphics[scale=0.4]{figure_1_b.png}
+  \end{subfigure}%
+  ~%
+  \hspace{-2cm}
+  \begin{subfigure}{0.4\textwidth}
+    \centering
+    \includegraphics[scale=0.4]{figure_1_c.png}
+  \end{subfigure}%
+  ~%
+  \hspace{-2cm}
+  \begin{subfigure}{0.4\textwidth}
+    \centering
+    \includegraphics[scale=0.4]{figure_1_d.png}
+  \end{subfigure}%
+
+  \caption{Probability of different behaviour codes across days after arrival at the shelter (average length of stay + 1 standard deviation) accounting for variation in behaviour across dogs, contexts and dog $\times$ context; (a) green, (b) amber, (c) red, (d) missing. Thick black lines show posterior mean estimates, coloured bands show the 95\% highest density interval of the mean, and thin coloured lines ($n = 241$) show one random sample from one randomly-chosen context from each dog's posterior distribution.}
+  \label{fig_shelter_behaviour}
+\end{figure}
+
+\subsection*{Interaction between dogs and contexts}
+Both at the shelter and post-adoption, behaviour of dogs within contexts (the dog $\times$ context-varying intercepts) varied more than between dogs across all contexts or between contexts across all dogs. This is illustrated by higher repeatability (i.e. proportion of total variance explained; see Supplementary Materials for calculation) of the dog $\times$ context-varying intercept parameters compared to the additive effects of dogs or contexts alone (Fig. \ref{fig_corrs_rept}a). Repeatability for dogs within contexts was approximately 20\% higher post-adoption than at the shelter ($R_{diff} = -0.23$; 95\% HDI: [-0.41, -0.05]) but was more uncertain, with the standard deviation of the dog $\times$ context-varying intercepts being 1.40 (95\% HDI: [1.10, 1.72]) times higher post-adoption than at the shelter. The standard deviation of the dog $\times$ context slope parameters was considerably larger at the shelter (describing behaviour over days after arrival) than post-adoption (describing behaviour over days after adoption), but had substantial uncertainty (ratio of standard deviations: 45.54; 95\% HDI: [1.61, 96.43]).
+
+\begin{figure}
+  %\centering
+  \hspace{-2cm}%
+  \begin{subfigure}{0.4\textwidth}
+    \centering
+    \includegraphics[scale=0.4]{figure_2_a.png}
+  \end{subfigure}%
+  ~%
+  \hspace{-2cm}
+  \begin{subfigure}{0.4\textwidth}
+    \centering
+    \includegraphics[scale=0.4]{figure_2_b.png}
+  \end{subfigure}%
+  ~%
+  \hspace{-2cm}
+  \begin{subfigure}{0.4\textwidth}
+    \centering
+    \includegraphics[scale=0.4]{figure_2_c.png}
+  \end{subfigure}%
+  ~%
+  \hspace{-2cm}
+  \begin{subfigure}{0.4\textwidth}
+    \centering
+    \includegraphics[scale=0.4]{figure_2_d.png}
+  \end{subfigure}%
+
+  \caption{Probability of different behaviour codes across days after adoption (average days after adoption interview + 1 standard deviation) accounting for variation across dogs, contexts and dog $\times$ context behaviour; (a) green, (b) amber, (c) red, (d) missing. Thick black lines show posterior mean estimates, coloured bands show the 95\% highest density interval of the mean, and thin coloured lines ($n = 241$) show one random sample from one randomly-chosen context from each dog's posterior distribution.}
+  \label{fig_adoption_behaviour}
+\end{figure}
+
+\subsection*{Random effect correlations}
+The dog $\times$ context-varying intercept parameters at the shelter and post-adoption had a moderate positive correlation ($\rho = 0.38$; 95\% HDI: [0.20, 0.55]; Fig. \ref{fig_corrs_rept}b), whereas the correlations between dog-varying and context-varying intercepts were largely positive but their 95\% HDIs spanned zero (Supplementary Table S1). Correlations between the random-slope parameters at the shelter and post-adoption included zero. At the shelter, the dog $\times$ context intercept and slope parameters were positively correlated ($\rho = 0.26$; 95\% HDI: [0.02, 0.47]), meaning that dogs with higher values on the latent behavioural scale (higher changes of red codes) changed their behaviour less over time or, in some rare cases, had positive slope parameters meaning they had increased chances of exhibiting amber and red codes over time. Dogs with more positive slope parameters across contexts at the shelter had slightly higher chances of missing data at the shelter ($\rho = 0.28$; 95\% HDI: [0.01, 0.54]). Dogs with fewer missing data on average post-adoption also had larger intercept parameters ($\rho = -0.38$; 95\% HDI: [-0.71, -0.04]) and more positive slopes ($\rho = -0.36$; 95\% HDI: [-0.69, -0.02]) at the shelter, suggesting that adopters of dogs with overall higher chances of amber and red codes at the shelter had better response rates in the post-adoption phone calls. We note that average post-adoption behaviour had a mostly positive correlation with the amount of missing data post-adoption, although the 95\% HDI was wide and included zero ($\rho = 0.25$; 95\% HDI: [-0.07, 0.53]).
+
+\subsection*{Individual-level prediction of post-adoption behaviour}
+Behaviour was not static across shelter and post-adoption time points. A median of 48.50 (inter-quartile range: 32.75) and 39 (inter-quartile range: 66.75) dogs who received at least one amber and red code, respectively, within contexts at the shelter did not show amber or red codes post-adoption for the same contexts. Similarly, a median of 29.50 (inter-quartile range: 56.75) and 13 (inter-quartile range: 65.25) dogs who only showed green or amber codes at the shelter within contexts, received red codes in the post-adoption reports. As mentioned earlier, these diagnostic values only provide a crude estimate of behavioural differences between the shelter and post-adoption time periods, ignoring unbalanced repeated measures, measurement error and missing data. They further ignore each dog's latent probabilities of showing green, amber and red behaviours.
+
+\begin{figure}[t!]
+  \centering
+  \begin{subfigure}{0.5\textwidth}
+    \centering
+    \includegraphics[scale=0.6]{figure_3_a.png}
+  \end{subfigure}%
+  ~
+  \begin{subfigure}{0.5\textwidth}
+    \centering
+    \includegraphics[scale=0.6]{figure_3_b.png}
+  \end{subfigure}
+  \caption{Behavioural differences between dogs, contexts and dogs within contexts at the shelter and post-adoption; (a) proportions of total behavioural variance (repeatability) explained by dog-, context- and dog $\times$ context-varying intercepts for shelter and post-adoption time periods, and (b) correlations between shelter and post-adoption time periods for dog-, context- and dog $\times$ context-varying intercepts (Supplementary Table S1).}
+  \label{fig_corrs_rept}
+\end{figure}
+
+Therefore, we compared the posterior probabilities of green, amber and red codes on each dog's mean day after arrival at the shelter with the equivalent codes' predicted probabilities on the day of the first and second telephone survey (where dogs with only the first survey had their second survey predictions estimated by the model). We summarised the resulting differences ($\delta$) in code probabilities by counting the number and proportion of dogs whose 95\% HDIs of the differences did not contain zero (Fig. \ref{fig_num_dogs}). In general, the number of dogs who had significantly different probabilities of green, amber or red codes post-adoption than at the shelter was low (mean of estimates: 2.83; median: 0; sd: 7.51; range: 0 to 53). There were fewer overall differences between behaviour reported at the second surveys versus at the shelter than between the first survey versus at the shelter, likely due to fewer second surveys being available resulting in increased uncertainty in the predictions. Notably, approximately 10\% of dogs (n = 24) had lower probabilities of green codes, and 10\% (n = 24) and 13\% (n = 31) of dogs had higher chances of amber and red codes, respectively, in the \textit{In kennel} context at the shelter than the corresponding \textit{In house} context at the first survey, although this discrepancy had largely disappeared by the second survey phone call. Around 20\% of dogs (n = 53) had higher probabilities of green codes in the \textit{Eating food} context at the shelter compared to the first survey, dropping to approximately 11\% (n = 26) at the second survey. A smaller number of dogs (9 and 5 at first and second surveys, respectively) had increased chances of red codes post-adoption in the \textit{Eating food} context.
+
+
+\begin{figure}[t!]
+  \centering
+  %\hspace{-1cm}
+  \includegraphics[scale=0.3]{figure_4.png}
+  \caption{The proportion (bars) and number of dogs (text above each bar) who had significantly different probabilities of green (a-b), amber (c-d), and red (e-f) codes within contexts at the shelter compared to behaviour reported at the first (a, c, e) and second (b, d, f) post-adoption phone calls (HND=handling, KNL/HOUSE=in kennel/house, OKNL/OSTD=outside of kennel/house, FPL/UFPL=interactions with familiar/unfamiliar people, FOOD=eating food, TOYS/DOGS=interactions with toys/dogs). Positive bars illustrate the proportion of dogs with higher code probabilities at the shelter compared to post-adoption; negative bars illustrate the proportion of dogs with lower probabilities at the shelter compared to post-adoption. A dog was included in the count if the 95\% highest density interval of the differences in code probabilities for a dog did not include zero. The mean ($\delta = [0,1]$) and 95\% highest density interval absolute probability difference is shown above each plot, except for panels c and d where there were too few dogs for its calculation.}
+  \label{fig_num_dogs}
+\end{figure}
+
+\subsection*{Dog-level predictors}
+Length of stay at the shelter had a positive (higher latent scale scores) but weak relationship with dogs' average behaviour at the shelter ($\beta = 0.02$; 95\% HDI: [0.01, 0.03]) and post-adoption ($\beta = 0.02$; 95\% HDI: [0.00, 0.03]), meaning that dogs that remained longer at the shelter had more amber and red codes. Dogs neutered before arrival at the shelter had higher latent scale scores on average than intact dogs ($\beta_{[\text{no}-\text{yes}]} = -0.38$; 95\% HDI: [-0.73, -0.07]), with dogs neutered at the shelter and dogs of unknown neuter status having intermediate scores. Weight had a negative relationship (green codes increased with weight) with average behaviour post-adoption ($\beta = -0.15$, 95\% HDI: [-0.26, -0.05]). Approximate age when leaving the shelter, source (gift/stray/return) and sex of dog were not significantly predictive of personality or plasticity at the shelter or post-adoption. None of the predictors significantly predicted the probability of missing data.
+
+
+\section*{Discussion}
+This study provides the first comprehensive analysis for predicting shelter dog behaviour post-adoption from a longitudinal behavioural assessment. We applied a novel Bayesian hierarchical model to account for both shelter and post-adoption behaviour, missing data, and measurement error within a single statistical framework, which allowed individual-level inferences regarding how dogs would behave in specific contexts at the shelter and in their new home. We found few differences between how likely dogs were to show green, amber and red-coded behaviour on average at the shelter, and their corresponding chances of showing the same behavioural codes post-adoption. Moreover, in contrast to some previous studies reporting high numbers of behavioural problems in shelter dogs (e.g. Gates \textit{et al.} \cite{gates2018}), the behavioural reports in this study were largely dominated by green codes (i.e. the most favourable behaviour). This does not imply that dogs behaved exactly the same post-adoption as they did in the shelter, however. Due to the varying amounts of data available per dog per context, there was considerable uncertainty in individual-level, latent probabilities of green, amber and red codes, particularly in the post-adoption reports where dogs had a maximum of two records per context. This makes it plausible, for example, that a dog who only displayed green or amber codes at the shelter but showed red code behaviour post-adoption could have statistically similar latent probabilities of different behaviours at the shelter and post-adoption. Far from simply being categorised as a `false negative', longitudinal assessment and our inferential framework provides a richer, probabilistic assessment of individual dog behaviour on which to make more holistic assessments.
+
+\begin{figure}[t!]
+  \centering
+  \begin{subfigure}{1\textwidth}
+    \centering
+    \includegraphics[scale=0.23]{figure_5_a.png}
+  \end{subfigure}
+  %
+  \begin{subfigure}{1\textwidth}
+    \centering
+    \vspace{-0.6cm}
+    \includegraphics[scale=0.23]{figure_5_b.png}
+  \end{subfigure}
+  %
+  \begin{subfigure}{1\textwidth}
+    \centering
+    \vspace{-0.6cm}
+    \includegraphics[scale=0.23]{figure_5_c.png}
+  \end{subfigure}
+  %
+  \begin{subfigure}{1\textwidth}
+    \centering
+    \vspace{-0.6cm}
+    \includegraphics[scale=0.23]{figure_5_d.png}
+  \end{subfigure}%
+  \caption{
+  Posterior predictions for 4 specific dogs and contexts (a-d; anonymous dog ID number and context abbreviation shown above first panel of each plot; OKNL/OSTD = outside of kennel/house, FOOD = eating food, TOYS/DOGS = interactions with toys/dogs; see Supplementary Materials for more examples). Left panels show behaviour over days after arrival at the shelter (first gray area) and behaviour over days after adoption (second gray area), where the coloured dots denote the raw ordinal data (green=1, amber=2, red=3, where red denotes the most undesirable behaviour) and blue lines 50 samples from the posterior distribution on the latent behavioural scale. Middle and right panels show the raw proportions of green, amber and red codes (coloured bars) at the shelter (middle) and post-adoption (right), with the number of observations and percent missing data displayed above; black dots and vertical line segments denote the mean and 95\% highest density interval of the predicted probabilities of each code. Blue density curves show the estimated latent scale generating the ordinal codes for each dog.}
+  \label{fig_pps}
+\end{figure}
+
+The hierarchical structure of our data allowed comparing variation in the behavioural records across dogs, across contexts, and across specific dogs $\times$ contexts combinations. Both at the shelter and post-adoption, the dog $\times$ context interaction explained the largest portion of behavioural variance (Fig. \ref{fig_corrs_rept}a), and the correlations between shelter and post-adoption behaviour were only credibly larger than zero for the dog $\times$ context-varying intercept parameters (Fig. \ref{fig_corrs_rept}b). Neither how individual dogs behaved across contexts on average, nor average dog behaviour within contexts, were particularly illuminating for predicting behaviour post-adoption. Repeatability was also around 20\% higher post-adoption than in the shelter for the dog $\times$ context behaviour, driven by greater heterogeneity in the post-adoption behaviour estimates than the shelter reports. This means that personality variation was more evident post-adoption than at the shelter.
+
+The positive correlation between dog behaviour within contexts at the shelter and post-adoption informs us about their linear association, but the practical implications of this positive correlation are not easy to discern. One option is to compute rates of false positives and negatives \cite{marder2013} or positive and negative predictive values \cite{patbrad2016} to understand an assesment's predictive `ability' \cite{patronek2019}. This medical diagnostic approach lends itself easily to scenarios whereby behavioural testing is conducted once at the shelter and once post-adoption, and for test protocols where the outcome measure is a binary pass or fail result. However, moving away from battery-style behavioural testing at shelters necessitates moving away from labelling dogs as either problematic or not problematic, or aggressive or non-aggressive, from limited behavioural information. Such sharp behavioural categorisations are at odds with the rationale for longitudinal assessments \cite{ASPCA2018,rayment2015} that encourage forming a holistic profile of a dog's behaviour over different contexts, rather than focusing on any one single behaviour. Instead, we leveraged the posterior predictions of our model to determine how similar dog behaviour was across the post-adoption behaviour reports compared to each dog's behaviour on average at the shelter. Hierarchical models are excellently suited to this task because they balance the information from each dog with what is typical across the whole sample. This `partial pooling' of information across dogs and contexts makes better predictions than non-hierarchical models or raw data because it balances over- or under-fitting to the data \cite{gelman2007, mcelreath2014}.
+
+To pick a few representative examples (see Supplementary Materials for more examples), Fig. \ref{fig_pps} illustrates the posterior predictions for four dogs, each in a different context, with the raw data for comparison. On the estimated latent scale generating the ordinal data, predictions for dogs' post-adoption behaviour (indicated by the sample of regression lines in the left-hand plots) tended to be more uncertain than their in-shelter predictions, where more data was available overall (e.g. compare shelter and post-adoption results in Fig. \ref{fig_pps}a). The impact of the amount of data available can also be seen by inspecting the overall probabilities of different code colours, shown in the middle and right panels of each plot, where behaviour of dogs with fewer data points was more uncertain (e.g. the 95\% HDIs in the middle panel of Fig. \ref{fig_pps}b). What occurs on average in certain contexts also affects the individual-level predictions. For instance, the dog in Fig. \ref{fig_pps}b received no red codes at the shelter in the \textit{Interactions with dogs} context, but received red codes post-adoption. The overall increase in this dog's probability of red codes in the latter context compared to the shelter was 56\%, but with a 95\% highest density interval that spans from 100\% to -1\%, meaning there was a small chance that red codes were just as, or more, likely at the shelter than post-adoption. While this might seem surprising, it occurs because red codes were most probable at the shelter in the \textit{Interactions with dogs} context overall, so even dogs with no red codes in this context had an increased chance of red codes compared to other contexts. The \textit{Interactions with dogs} context also had one of the highest amounts of missing data (e.g. dog 89 in Fig. \ref{fig_pps}b has only 7 observations, with 61\% missing data), and thus the predictions are more uncertain overall. By contrast, green codes were particularly dominant in the \textit{Interactions with toys} context, and the amount of missing data was lower than average (Supplementary Fig. S1b), so dogs showing green codes in this context at the shelter and post-adoption had much tighter posterior estimates (e.g. see the predicted probabilities for the dog in Fig. \ref{fig_pps}c).
+
+For most contexts, the number of dogs likely to show differences in probabilities of green, amber and red codes at the shelter compared to post-adoption was low (Fig. \ref{fig_num_dogs}). This supports the ability of the longitudinal assessment to predict post-adoption behaviour, although we emphasise that this good predictive ability is in part due to the appropriate representation of uncertainty in the estimates. The greatest discrepancies between shelter and post-adoption behaviour appeared in the \textit{In kennel/In house} and \textit{Eating food} contexts. Between 10 and 15\% of dogs in the former context were predicted to show more green codes, and fewer amber and red codes, at the first post-adoption phone call than at the shelter (Fig. \ref{fig_num_dogs}). This is perhaps unsurprising as the \textit{In kennel} and \textit{In house} contexts were the least comparable contexts across shelter and post-adoption periods, and a kennel would be expected to be a more stressful environment than the adoptive home. In contrast, around 20\% of dogs at the first post-adoption survey, and around 11\% at the second survey, showed lower chances of green codes than at the shelter in how they behaved around their food. The latter result is partly consistent with previous research questioning whether reasonable predictions about how dogs behave around food in the adopted home can be made from their behaviour at the shelter \cite{marder2013,mohangibbons2012,clay2020behaviour}. We also found that, post-adoption, the probability of red codes was highest in the \textit{Eating food} context. However, the latter probability was still very low ($\sim$ 1\%), and apart from nine dogs at the first survey and five dogs at the second, we found no evidence for increased probabilities of red codes post-adoption for behaviour around the food bowl. Thus, repeated observational data collected on how dogs behave around their food bowl at the shelter may provide a more valid (in the predictive ability sense) indicator of post-adoption behaviour, even in this historically difficult-to-infer context.
+
+Longitudinal behavioural assessments and adopter-reported behaviour are at risk of both missing data and measurement error, which are unlikely to be avoided entirely. Instead, understanding when and how they emerge is key to accounting for any deleterious effects they have on behavioural predictions. We found that dogs' odds of missing data at the shelter were positively correlated with behavioural change across days after arrival. Given that the average coefficient describing behavioural change at the shelter was negative (indicating an improvement in behaviour through time), and that most dogs had largely negative slope estimates (i.e. deterioration in behaviour was rare), the latter correlation means that dogs who had shallower slopes (i.e. less plastic) were more likely to have missing data on average at the shelter. Importantly, there was no evidence to suggest that dogs with less favourable behaviour at the shelter on average were more likely to have missing data (Supplementary Table S1). We further found that owner response rates in the post-adoption surveys correlated more clearly with dog behaviour reported in the shelter than behaviour reported post-adoption: dogs with higher latent scale averages at the shelter, as well as dogs who changed less over time at the shelter, had lower chances of missing data post-adoption. We refrain from hypothesising-after-the-results-are-known (i.e. HARKing \cite{kerr1998}) on the causal mechanisms driving these correlations, but do emphasise the importance of understanding how response patterns (from shelter staff and new owners) are impacted by dog behaviour for the efficacy of longitudinal behaviour assessments. We also avoid speculating about reasons for the associations found between the dogs' behaviour and length of stay at the shelter, body weight (which is related to breed type) and neuter status, but note that these variables explained some of the variance, supporting their inclusion in models of shelter dog behaviour. Age, sourcing from different shelter facilities and sex of dog did not contribute significantly to behaviour when assessed on the shelter's `desirability for adoption' scale, although these factors could contribute to more specific behavioural differences and to interactions that were not evaluated.
+
+The post-adoption behaviour reports had larger measurement error estimates than the shelter reports. Like estimates of zero-inflation in count data \cite{lambert1992}, we estimated `green code inflation', that is, the proportion of green codes reported due to processes different from the process generating the behavioural data. In reality, the inflation component is a place-holder for more complex mechanisms, which could include shelter staff not observing a dog's behaviour but inputting a green code anyway, or adopters reporting behaviours consistent with green codes, even when the real behaviour was less favourable. Green codes had approximately a 20\% chance of being drawn from the inflation component of the model post-adoption, although there was large uncertainty (95\% HDI: [3, 36]). By comparison, green code inflation was estimated at only 4\% at the shelter. While we cannot disentangle the adopters' own behavioural reports from how the shelter behaviourists interpreted the behavioural descriptions from the adopters, this implies that systematic error in the adopter-reported behavioural reports is important to quantify further. Unfortunately, no previous studies have assessed patterns of measurement error in shelter or post-adoption behaviour.
+
+The modelling approach in this study is provided completely open source, and we encourage future studies predicting shelter dog behaviour to consider principled statistical frameworks such as hierarchical Bayesian methods. For example, if a larger sample of data was available, this study could have trained the model on a sub-sample of the data and made out-of-sample predictions about post-adoption for the remaining data. Moreover, due to the cumulative nature of Bayesian inference \cite{mcelreath2020}, the modelling approach here could be applied in real-time at shelters to provide predictions for shelter dog behaviour both while at the shelter and post-adoption. The relative probabilities of dogs showing different types of behaviours could be integrated with qualitative information on each individual dog (e.g. pre-surrending surveys \cite{ASPCA2018}) and expert knowledge to form an informed adoption decision and find a suitable new home.
+
+\section*{Conclusion}
+Predicting the future behaviour of shelter dogs is a difficult task. Longitudinal assessments have been proposed as an alternative to battery-style, standardised testing, but research is still scarce on their implementation and efficacy. We have provided the first comprehensive analysis of a longitudinal assessment to predict the behaviour of shelter dogs post-adoption using a novel application of Bayesian hierarchical modelling. While dog behaviour was not static, few dogs showed marked changes in their latent behavioural profiles at the shelter and post-adoption, supporting the use of longitudinal assessments and our inferential framework to inform adoption decisions alongside additional information and expert judgement. We have, further, demonstrated links between dog behaviour, missing data and measurement error, which should be accounted for in future analyses of longitudinal assessment data.
+
+\bibliography{goold-newberry-refs}
+
+\section*{Acknowledgements}
+
+We thanks the staff at Battersea Dogs and Cats Home for allowing us access to the data used in this paper.
+
+\section*{Author contributions statement}
+
+C.G. and R.C.N conceptualised the study. C.G. retrieved the data, conducted the statistical analyses and wrote the first draft of the manuscript. C.G. and R.C.N reviewed and wrote the final manuscript.
+
+\section*{Additional information}
+
+\textbf{Competing interests} C.G. previously worked at Battersea Dogs and Cats Home, but this did not have any bearing on the current research or results.
+
+\end{document}

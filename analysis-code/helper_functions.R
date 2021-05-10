@@ -112,7 +112,7 @@ get_ordinal_probs <- function(latent_mu, latent_sigma)
 #-----------------------------------------------------------------------------------------------
 # get_marginal_samples
 #   : obtain samples of parameters marginal of the random effects
-get_marginal_samples <- function(){
+get_marginal_samples <- function(draws){
   
   out <- rep(list(list()), 18)
   

@@ -46,6 +46,8 @@
 \end{quote}
 }
 
+\renewcommand{\thefigure}{S\arabic{figure}}
+
 \title{Predicting individual shelter dog behaviour after adoption using longitudinal behavioural assessment: a hierarchical Bayesian approach.\\ Supplementary materials}
 \author[1,2]{Conor Goold}
 \author[2]{Ruth C. Newberry}
@@ -64,8 +66,7 @@ to score behaviour in particular contexts and how they are ordered.
 \subsection{Green codes}
 \begin{itemize}
   \item \textbf{Friendly}: dog initiates interaction with people or dogs in an appropriate social manner. A dog in this category may display an appropriate level of reprimand towards other dogs but must be predominantly social.
-  \item \textbf{Relaxed}: free from tension and anxiety, body movements should be fluid. The dog responds positively to his environment (interactive, free from stress or overstim-
-  ulation).
+  \item \textbf{Relaxed}: free from tension and anxiety, body movements should be fluid. The dog responds positively to his environment (interactive, free from stress or overstimulation).
   \item \textbf{Excitable}: the dog will have an enthusiastic attitude with animated interaction, showing behaviours such as jumping up, mouthing, an inability to stand still, playful towards people, dogs and resources.
   \item \textbf{Playful}: the dog has an interactive attitude towards wanting to engage in activities or social games.
   \item \textbf{Vocal}: dog barks, whines, howls or makes any other vocalisation in a non-aggressive manner. The dog is generally vocal, not in response to the presence or absence of people or other dogs.
@@ -87,7 +88,7 @@ to score behaviour in particular contexts and how they are ordered.
   \item \textbf{Uncomfortable Static}: the dog has tense and stiff posture and/or shows anxious behaviour (potentially giving calming signals or distance increasing/decreasing signals) but doesn’t attempt to move away from the situation (another dog, person, resources, handling, traffic etc.).
   \item \textbf{Uncomfortable Approaches:} the dog has tense and stiff posture and/or shows anxious behaviour (potentially giving calming signals or distance increasing/decreasing signals) and approaches the situation (e.g. another dog, person, traffic etc.)
   \item \textbf{Sexual}: the dog will be showing mounting behaviours or is especially interested in the genital area (e.g. sniffing licking) towards dogs but can be distracted away.
-  \item \textbf{Sexual +}: the dogs will be showing high frequency/intensity of the sexual be- haviours not offering any other social interaction, very difficult to distract.
+  \item \textbf{Sexual +}: the dogs will be showing high frequency/intensity of the sexual behaviours not offering any other social interaction, very difficult to distract.
   \item \textbf{Chases}: the dog has a tendency to be motivated and wants to run after the movement of people/dogs/joggers and will become stimulated by this.
   \item \textbf{Focused}: the dog is fixated on stimulus (must state what). It is difficult to get their attention back on to the handler. The dog may have lowered posture or stalk them but is not vocal.
   \item \textbf{Playful +}: the dog will be showing high frequency/intensity of the playful behaviours, don’t seem to have any boundaries within their interaction (includes rude).
@@ -156,7 +157,7 @@ real ordinal_hurdle_one_inflated_lpmf(int y, real eta, vector pi, real kappa){
   }
 \end{lstlisting}
 %
-The above code defines a log-probability accumulator variable \texttt{lp}, and adds the relevant probability components the latter variable depending on the data point \texttt{y} passed to the function. When \texttt{y==1}, the mixture components are defined with probability $\kappa$, and we use the \texttt{log\_sum\_exp} function to safely take the log of the summed probabilites of the mixture components.
+The above code defines a log-probability accumulator variable \texttt{lp}, and adds the relevant probability components to the latter variable depending on the data point \texttt{y} passed to the function. When \texttt{y==1}, the mixture components are defined with probability $\kappa$, and we use the \texttt{log\_sum\_exp} function to safely take the log of the summed probabilites of the mixture components.
 
 The vector \texttt{pi} passed to the above function holds the probabilities of green, amber and red codes, which are determined based on a cumulative ordinal probit model. For the shelter sub-model, this is defined as:
 
@@ -184,7 +185,7 @@ where the $s$ and $a$ subscripts denote the shelter and post-adoption parameters
               \big(\gamma +  r_{j}^{5} + r_{g}^{5} + r_{j \times g}^{5}\big) x_{2} + \mathbf{X_{2}} \mathbf{\Gamma}
 \end{equation}
 %
-where the random effects are denoted by $r$ (see below), $x_{1,2}$ denote the days after arrival and days after adoption with coefficients $\beta$ and $\gamma$, respectively, and $\mathbf{X_{1,2}}$ are the matrices of dog-level predictor variables with coefficient vectors $\mathbf{B}$ and $\mathbf{\Gamma}$.
+where the random effects are denoted by $r$ (see below), $x_{1,2}$ denote the days after arrival and days after adoption with coefficients $\beta$ and $\gamma$, respectively, and $\mathbf{X_{1,2}}$ are the matrices of dog-level predictor variables with coefficient vectors $\mathbf{B}$ and $\mathbf{\Gamma}$, which are detailed in Table 1 and in section `Predictor variables' in the statistical methods of the main text.
 
 The probability of missing data in each sub-model is modelled as:
 
@@ -210,15 +211,15 @@ where $y_{ijg} = 0$ denotes a missing data point. The parameters $\eta$ and $\nu
                \gamma_{miss} x_{2} + \mathbf{X_{2}} \mathbf{\Gamma_{miss}}
 \end{equation}
 
-A key component of our model is the correlated random effect parameters between shelter and post adoption time periods, which defines the `joint' parameterisation of our model. The correlations enable for information to flow between shelter and post adoption sub-models. The random effects on the intercept and slope (days after arrival to the shelter/after adoption) parameters above are present for dogs, contexts and dogs $\times$ context combinations, each of which are packaged into a $6 \times 6$ covariance matrix. To speed up the MCMC computations, we use the `non-centered' parameterisation of the random-effect parameters and a Cholesky factorisation of their correlation matrices using the LKJ prior distribution in Stan.
+A key component of our model is the correlated random effect parameters between shelter and post adoption time periods, which defines the `joint' parameterisation of our model. The correlations enable information to flow between shelter and post adoption sub-models. The random effects on the intercept and slope (days after arrival to the shelter/after adoption) parameters above are present for dogs, contexts and dogs $\times$ context combinations, each of which are packaged into a $6 \times 6$ covariance matrix. To speed up the MCMC computations, we use the `non-centered' parameterisation of the random-effect parameters and a Cholesky factorisation of their correlation matrices using the LKJ prior distribution in Stan.
 
-As can be seen in the model file, we use weakly-informative prior distributions to aid computation and inference. Predictor coefficients were all given standard normal (i.e. $Normal(0, 1)$) prior distributions, all intercepts were given $Normal(0, 5)$ prior distributions, all standard deviations were given half standard normal priors (i.e. constrained to be positive), and LKJ priors were given to the Cholesky factors of the correlation matrices. The ordinal thresholds parameters $\theta$ have uniform priors. 
+As can be seen in the model file, we use weakly-informative prior distributions to aid computation and inference. Predictor coefficients were all given standard normal (i.e. $Normal(0, 1)$) prior distributions, all intercepts were given $Normal(0, 5)$ prior distributions, all standard deviations were given half standard normal priors (i.e. constrained to be positive), and LKJ priors were given to the Cholesky factors of the correlation matrices. The ordinal thresholds parameters $\theta$ have uniform priors.
 
 \newpage
 \section{Variation across contexts}
-Figure \ref{fig_1} demonstrates the variation across contexts for the latent behavioural scores (intercepts and slopes) and missing data, for an average dog, at the shelter. Figure \ref{fig_2} displays the same information for the post-adoption reports. For the shelter estimates, the intercepts in Figure \ref{fig_1}a and the values in Figure \ref{fig_1}b are evaluated at 32 days after arrival, and the slopes in \ref{fig_1}a illustrate the amount of behavioural change for every 73 days (1 standard deviation of days after arrival) spent at the shelter. The intercepts \ref{fig_2}a and the values in Figure \ref{fig_2}b are evaluated at 30 days post adoption, and the slopes in \ref{fig_2}a illustrate the amount of behavioural change for every 11 days after adoption.
+Figure \ref{fig_1} demonstrates the variation across contexts for the latent behavioural scores (intercepts and slopes) and missing data, for an average dog, at the shelter. Figure \ref{fig_2} displays the same information for the post-adoption reports. For the shelter estimates, the intercepts in Figure \ref{fig_1}a and the values in Figure \ref{fig_1}b are evaluated at 32.1 days after arrival, and the slopes in \ref{fig_1}a illustrate the amount of behavioural change for every 73 days (1 standard deviation of days after arrival) spent at the shelter. The intercepts \ref{fig_2}a and the values in Figure \ref{fig_2}b are evaluated at 30.1 days post adoption, and the slopes in \ref{fig_2}a illustrate the amount of behavioural change for every 11.6 days after adoption. The missing probabilities in Figure \ref{fig_2}b are low (approximately 1\%) because they represent the average probability of missing data within contexts across dogs with either one and two surveys. The mean missingness decreases to essentially zero for dogs with two surveys, and increases to approximately 45\% for dogs with only one completed survey.
 
-
+\newpage
 \begin{figure}[]
   \centering
   \begin{subfigure}{0.5\textwidth}
@@ -228,7 +229,7 @@ Figure \ref{fig_1} demonstrates the variation across contexts for the latent beh
   \begin{subfigure}{0.5\textwidth}
     \includegraphics[scale=0.6]{figures/figure_S1_b}
   \end{subfigure}%
-\caption{Variation across contexts at the shelter for latent behavioural scores (panel a; higher intercept scores indicate higher changes of amber and red codes, more positive slopes indicate higher chances of amber and red codes through time) and the probability of missing data (panel b). The red dotted line in panel a highlights zero, while the dashed coloured lines in both panels indicate the average values across contexts.
+\caption{Variation across contexts at the shelter  (HND=handling, KNL=in kennel, OKNL=outside of kennel, FPL/UFLP=interactions with familiar/unfamiliar people, FOOD=eating food, TOYS/DOGS=interactions with toys/dogs) for latent behavioural scores (panel a; higher intercept scores indicate higher chances of amber and red codes, more positive slopes indicate higher chances of amber and red codes through time) and the probability of missing data within surveys (panel b). The red dotted line in panel a highlights zero, while the dashed line in both panels indicates the average values across contexts.
 }
 \label{fig_1}
 \end{figure}
@@ -242,7 +243,7 @@ Figure \ref{fig_1} demonstrates the variation across contexts for the latent beh
   \begin{subfigure}{0.5\textwidth}
     \includegraphics[scale=0.6]{figures/figure_S2_b}
   \end{subfigure}%
-\caption{Variation across contexts post-adoption for latent behavioural scores (panel a; higher intercept scores indicate higher changes of amber and red codes, more positive slopes indicate higher chances of amber and red codes through time) and the probability of missing data (panel b). The red dotted line in panel a highlights zero, while the dashed coloured lines in both panels indicate the average values across contexts.
+\caption{Variation across contexts post-adoption  (HND=handling, KNL=in kennel, OKNL=outside of house, FPL/UFLP=interactions with familiar/unfamiliar people, FOOD=eating food, TOYS/DOGS=interactions with toys/dogs) for latent behavioural scores (panel a; higher intercept scores indicate higher chances of amber and red codes, more positive slopes indicate higher chances of amber and red codes through time) and the probability of missing data within contexts, within surveys (panel b). The red dotted line in panel a highlights zero, while the dashed line in both panels indicates the average values across contexts.
 }
 \label{fig_2}
 \end{figure}

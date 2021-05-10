@@ -28,7 +28,7 @@ posterior_draws_2 <- posterior::as_draws_df(x = chain_2)
 draws <- as.data.frame(do.call("rbind.data.frame", list(posterior_draws_1, posterior_draws_2)))
 
 # get the random effects for later plotting using a convenience function
-random_effect_list <- get_marginal_samples()
+random_effect_list <- get_marginal_samples(draws)
 
 #---------------------------------------------------------------------------------------------
 # Key shelter results
@@ -1412,6 +1412,7 @@ barplot( green1_mat/241, beside = T, ylim=c(-1,1), col = "darkolivegreen2", axes
 rect(par("usr")[1],par("usr")[3],par("usr")[2],par("usr")[4],col = scales::alpha("lightgray", 0.6), border = NA)
 gbp1 <- barplot( green1_mat/241, beside = T, ylim=c(-1,1), col = "darkolivegreen2", axes=F, add = T)
 mtext(at=1, text="a", font=2)
+title("Shelter vs. first survey")
 axis(side=2, at=c(-1, 0, 1), lwd=1, las=2)
 abline(h=0, col=scales::alpha("black",0.8), lty=1)
 text(x = gbp1, y=as.vector(green1_mat/241) + 0.2*rep(c(1,-1), 8), labels = abs(as.vector(green1_mat)))
@@ -1424,6 +1425,7 @@ barplot( green2_mat/241, beside = T, ylim=c(-1,1), col = "darkolivegreen2", axes
 rect(par("usr")[1],par("usr")[3],par("usr")[2],par("usr")[4],col = scales::alpha("lightgray", 0.6), border = NA)
 gbp2 <- barplot( green2_mat/241, beside = T, ylim=c(-1,1), col = "darkolivegreen2", axes=F, add = T)
 mtext(at=1, text="b", font=2)
+title("Shelter vs. second survey")
 #axis(side=2, at=c(-1, 0, 1), lwd=1)
 abline(h=0, col=scales::alpha("black",0.8), lty=1)
 text(x = gbp2, y=as.vector(green2_mat/241) + 0.2*rep(c(1,-1), 8), labels = abs(as.vector(green2_mat)))
